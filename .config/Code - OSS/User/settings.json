@@ -1,0 +1,451 @@
+{
+    "workbench.colorTheme": "Wal",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontLigatures": true,
+    "window.customMenuBarAltFocus": false,
+    "window.menuBarVisibility": "hidden",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipes":[
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex x2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "/usr/bin/xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.class": true,
+        "**/*.log": true,
+        "**/*.synctex.gz": true
+    },
+    "python.jediEnabled": false,
+    "editor.fontFamily": "'JetBrains Mono'",
+    "cSpell.language": ",ru",
+    "window.zoomLevel": 0,
+    "C_Cpp.updateChannel": "Insiders",
+    "java.codeGeneration.generateComments": true,
+    "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+    "workbench.colorCustomizations": {
+        "[Wal]": {
+            "editorError.foreground": "#ff6969",
+        },
+        // "[SynthWave '84]": {
+        //     "activityBar.background": "#0c0d15",
+        //     "activityBar.border": "#0c0d15",
+        //     "activityBar.foreground": "#979098",
+        //     "activityBarBadge.background": "#626a90",
+        //     "activityBarBadge.foreground": "#0c0d15",
+        //     "badge.background": "#626a90",
+        //     "badge.foreground": "#0c0d15",
+        //     "button.background": "#626a90",
+        //     "button.foreground": "#0c0d15",
+        //     "debugExceptionWidget.background": "#0e1019",
+        //     "debugExceptionWidget.border": "#97909833",
+        //     "debugToolBar.background": "#0c0d15",
+        //     "diffEditor.insertedTextBackground": "#af708e33",
+        //     "diffEditor.removedTextBackground": "#7984aa33",
+        //     "dropdown.background": "#0e1019",
+        //     "dropdown.border": "#97909877",
+        //     "dropdown.foreground": "#d9ceda99",
+        //     "editor.background": "#0c0d15",
+        //     "editor.findMatchBackground": "#626a900e",
+        //     "editor.findMatchBorder": "#626a90",
+        //     "editor.findMatchHighlightBackground": "#626a900e",
+        //     "editor.findMatchHighlightBorder": "#626a9066",
+        //     "editor.findRangeHighlightBackground": "#97909844",
+        //     "editor.findRangeHighlightBorder": "#0c0d1500",
+        //     "editor.foreground": "#d9ceda",
+        //     "editor.inactiveSelectionBackground": "#97909844",
+        //     "editor.lineHighlightBackground": "#d9ceda22",
+        //     "editor.rangeHighlightBackground": "#97909833",
+        //     "editor.selectionBackground": "#97909877",
+        //     "editor.selectionHighlightBackground": "#97909844",
+        //     "editor.selectionHighlightBorder": "#979098",
+        //     "editor.wordHighlightBackground": "#97909844",
+        //     "editor.wordHighlightStrongBackground": "#af708e77",
+        //     "editorBracketMatch.background": "#97909833",
+        //     "editorBracketMatch.border": "#97909855",
+        //     "editorCodeLens.foreground": "#979098b0",
+        //     "editorCursor.foreground": "#626a90",
+        //     "editorError.foreground": "#ff6969",
+        //     "editorGroup.border": "#97909833",
+        //     "editorGroupHeader.noTabsBackground": "#0c0d15",
+        //     "editorGroupHeader.tabsBackground": "#0c0d15",
+        //     "editorGroupHeader.tabsBorder": "#0c0d15",
+        //     "editorGutter.addedBackground": "#af708ebb",
+        //     "editorGutter.deletedBackground": "#938fb2bb",
+        //     "editorGutter.modifiedBackground": "#7984aabb",
+        //     "editorHoverWidget.background": "#0e1019",
+        //     "editorHoverWidget.border": "#97909822",
+        //     "editorIndentGuide.activeBackground": "#97909877",
+        //     "editorIndentGuide.background": "#97909844",
+        //     "editorLineNumber.activeForeground": "#979098",
+        //     "editorLineNumber.foreground": "#97909892",
+        //     "editorLink.activeForeground": "#626a90",
+        //     "editorMarkerNavigation.background": "#0e1019",
+        //     "editorOverviewRuler.addedForeground": "#af708ebb",
+        //     "editorOverviewRuler.border": "#97909833",
+        //     "editorOverviewRuler.deletedForeground": "#938fb2bb",
+        //     "editorOverviewRuler.errorForeground": "#938fb2",
+        //     "editorOverviewRuler.modifiedForeground": "#7984aabb",
+        //     "editorOverviewRuler.warningForeground": "#626a90",
+        //     "editorRuler.foreground": "#97909844",
+        //     "editorSuggestWidget.background": "#0e1019",
+        //     "editorSuggestWidget.border": "#97909822",
+        //     "editorSuggestWidget.highlightForeground": "#626a90",
+        //     "editorSuggestWidget.selectedBackground": "#97909833",
+        //     "editorWarning.foreground": "#626a90",
+        //     "editorWhitespace.foreground": "#97909866",
+        //     "editorWidget.background": "#0e1019",
+        //     "extensionButton.prominentBackground": "#626a90",
+        //     "extensionButton.prominentForeground": "#0c0d15",
+        //     "extensionButton.prominentHoverBackground": "#626a90b3",
+        //     "focusBorder": "#97909877",
+        //     "foreground": "#d9ceda99",
+        //     "gitDecoration.deletedResourceForeground": "#938fb2cc",
+        //     "gitDecoration.ignoredResourceForeground": "#d9ceda66",
+        //     "gitDecoration.modifiedResourceForeground": "#7984aacc",
+        //     "gitDecoration.submoduleResourceForeground": "#ae95b8b0",
+        //     "gitDecoration.untrackedResourceForeground": "#af708ecc",
+        //     "input.background": "#0e1019",
+        //     "input.border": "#97909855",
+        //     "input.foreground": "#d9ceda",
+        //     "input.placeholderForeground": "#97909877",
+        //     "inputOption.activeBorder": "#626a90",
+        //     "inputValidation.errorBackground": "#0c0d15",
+        //     "inputValidation.errorBorder": "#938fb2",
+        //     "inputValidation.infoBackground": "#0c0d15",
+        //     "inputValidation.infoBorder": "#af708e",
+        //     "inputValidation.warningBackground": "#0c0d15",
+        //     "inputValidation.warningBorder": "#7984aa",
+        //     "list.activeSelectionBackground": "#97909833",
+        //     "list.activeSelectionForeground": "#d9ceda",
+        //     "list.focusBackground": "#97909833",
+        //     "list.focusForeground": "#d9ceda99",
+        //     "list.highlightForeground": "#626a90",
+        //     "list.hoverBackground": "#97909833",
+        //     "list.hoverForeground": "#d9ceda99",
+        //     "list.inactiveSelectionBackground": "#97909833",
+        //     "list.inactiveSelectionForeground": "#d9ceda99",
+        //     "list.invalidItemForeground": "#d9ceda77",
+        //     "panel.background": "#0c0d15",
+        //     "panel.border": "#97909833",
+        //     "panelTitle.activeBorder": "#626a90",
+        //     "panelTitle.activeForeground": "#d9ceda",
+        //     "panelTitle.inactiveForeground": "#d9ceda99",
+        //     "peekView.border": "#97909833",
+        //     "peekViewEditor.background": "#0e1019",
+        //     "peekViewEditor.matchHighlightBackground": "#626a9044",
+        //     "peekViewResult.background": "#0e1019",
+        //     "peekViewResult.fileForeground": "#d9ceda99",
+        //     "peekViewResult.matchHighlightBackground": "#626a9044",
+        //     "peekViewTitle.background": "#0e1019",
+        //     "peekViewTitleDescription.foreground": "#d9ceda99",
+        //     "peekViewTitleLabel.foreground": "#d9ceda99",
+        //     "pickerGroup.border": "#97909833",
+        //     "pickerGroup.foreground": "#d9cedab3",
+        //     "progressBar.background": "#626a90",
+        //     "scrollbar.shadow": "#97909833",
+        //     "scrollbarSlider.activeBackground": "#d9ceda92",
+        //     "scrollbarSlider.background": "#d9ceda44",
+        //     "scrollbarSlider.hoverBackground": "#d9ceda77",
+        //     "selection.background": "#d9ceda77",
+        //     "settings.headerForeground": "#d9ceda",
+        //     "settings.modifiedItemIndicator": "#af708e",
+        //     "sideBar.background": "#0c0d15",
+        //     "sideBar.border": "#0c0d15",
+        //     "sideBarSectionHeader.background": "#0c0d15",
+        //     "sideBarSectionHeader.foreground": "#d9ceda99",
+        //     "sideBarTitle.foreground": "#d9ceda99",
+        //     "statusBar.background": "#0c0d15",
+        //     "statusBar.border": "#0c0d15",
+        //     "statusBar.debuggingBackground": "#7984aa",
+        //     "statusBar.debuggingForeground": "#0c0d15dd",
+        //     "statusBar.foreground": "#d9ceda",
+        //     "statusBar.noFolderBackground": "#0e1019",
+        //     "statusBarItem.activeBackground": "#00000050",
+        //     "statusBarItem.hoverBackground": "#00000030",
+        //     "statusBarItem.prominentBackground": "#97909833",
+        //     "statusBarItem.prominentHoverBackground": "#00000030",
+        //     "tab.activeBackground": "#0c0d15",
+        //     "tab.activeBorder": "#626a90",
+        //     "tab.activeForeground": "#d9ceda",
+        //     "tab.border": "#0c0d15",
+        //     "tab.inactiveBackground": "#0c0d15",
+        //     "tab.inactiveForeground": "#d9ceda99",
+        //     "tab.unfocusedActiveBorder": "#d9ceda99",
+        //     "tab.unfocusedActiveForeground": "#d9ceda99",
+        //     "tab.unfocusedInactiveForeground": "#d9ceda99",
+        //     "terminal.ansiBlack": "#0c0d15",
+        //     "terminal.ansiBlue": "#938fb2",
+        //     "terminal.ansiBrightBlack": "#979098",
+        //     "terminal.ansiBrightBlue": "#938fb2",
+        //     "terminal.ansiBrightCyan": "#dc9aae",
+        //     "terminal.ansiBrightGreen": "#af708e",
+        //     "terminal.ansiBrightMagenta": "#ae95b8",
+        //     "terminal.ansiBrightRed": "#626a90",
+        //     "terminal.ansiBrightWhite": "#d9ceda",
+        //     "terminal.ansiBrightYellow": "#7984aa",
+        //     "terminal.ansiCyan": "#dc9aae",
+        //     "terminal.ansiGreen": "#af708e",
+        //     "terminal.ansiMagenta": "#ae95b8",
+        //     "terminal.ansiRed": "#626a90",
+        //     "terminal.ansiWhite": "#d9ceda",
+        //     "terminal.ansiYellow": "#7984aa",
+        //     "terminal.background": "#0c0d15",
+        //     "terminal.foreground": "#d9ceda",
+        //     "textBlockQuote.background": "#0e1019",
+        //     "textLink.activeForeground": "#626a90",
+        //     "textLink.foreground": "#626a90",
+        //     "textPreformat.foreground": "#d9ceda",
+        //     "titleBar.activeBackground": "#0c0d15",
+        //     "titleBar.activeForeground": "#d9ceda",
+        //     "titleBar.border": "#0c0d15",
+        //     "titleBar.inactiveBackground": "#0c0d15",
+        //     "titleBar.inactiveForeground": "#d9ceda",
+        //     "walkThrough.embeddedEditorBackground": "#0e1019",
+        //     "widget.shadow": "#090a10",
+            
+        // }
+    },
+    "editor.tokenColorCustomizations": {
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.flake8Args": [
+        "--max-line-length=90"
+    ],
+    "cSpell.userWords": [
+        "Factory",
+        "Rule",
+        "evaluate",
+        "filled",
+        "text",
+        "vals",
+        "Антисимметризация",
+        "Кохась",
+        "Лопиталя",
+        "СЛАУ",
+        "дистрибутивны",
+        "линейнозависимым",
+        "линейнонезависимым",
+        "обинтегралекакпределеинтегральныхсумм"
+    ],
+    "clojureVSCode.formatOnSave": false,
+    "bracket-pair-colorizer-2.colors": [
+        "#6793db",
+        "#d17786",
+        "#b467db"
+    ],
+    "bracket-pair-colorizer-2.excludedLanguages": [
+        "latex",
+        "java",
+        "cpp",
+        "c"
+    ],
+    "latex-workshop.hover.citation.enabled": false,
+    "latex-workshop.hover.command.enabled": false,
+    "latex-workshop.hover.preview.cursor.enabled": false,
+    "latex-workshop.hover.preview.enabled": false,
+    "latex-workshop.hover.ref.enabled": false,
+    "latex-workshop.hover.ref.number.enabled": false,
+    "latex-workshop.intellisense.file.base": "file relative",
+    "latex-workshop.intellisense.includegraphics.preview.enabled": false,
+    "latex-workshop.intellisense.label.keyval": false,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.message.badbox.show": false,
+    "markdown.extension.print.onFileSave": true,
+    "explorer.confirmDelete": false,
+    "markdown.preview.fontFamily": "apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Droid Sans', sans-serif",
+    // "c-cpp-flylint.clang.pedantic": true,
+    // "c-cpp-flylint.clang.pedanticErrors": true,
+    "c-cpp-flylint.flexelint.enable": false,
+    "c-cpp-flylint.clang.includePaths": ["include/", "googletest/googletest/include"],
+    "c-cpp-flylint.clang.standard": ["c++17"],
+    "c-cpp-flylint.clang.warnings": [
+        "all",
+        "extra",
+        "pedantic",
+        "c++17-compat-pedantic",
+        "c++14-compat-pedantic",
+    ],
+    "c-cpp-flylint.cppcheck.inconclusive": true,
+    "editor.matchBrackets": false,
+    "c-cpp-flylint.clang.pedantic": true,
+    "c-cpp-flylint.clang.pedanticErrors": true,
+    "icie.template.list": {
+        "C++": "/home/jovvik/cftemplate.cpp"
+    },
+    "graalvm.home": "/usr/lib/jvm/java-11-graalvm",
+    "icie.test.timeLimit": 3000,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+    "prettier.singleQuote": true,
+    "[latex]": {
+        "editor.wordWrap": "on"
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.wordWrap": "on"
+    },
+    "spellright.language": [
+        "english",
+        "russian"
+    ],
+    "icie.template.solution": "/home/jovvik/cftemplate.cpp",
+    "icie.test.view.render.timeDisplayThreshold": 1,
+    "c-cpp-flylint.cppcheck.enable": false,
+    "[clojure]": {
+        "editor.defaultFormatter": "betterthantomorrow.calva"
+    },
+    "calva.paredit.defaultKeyMap": "strict",
+    "workbench.editor.enablePreview": false,
+    "vscode_custom_css.imports": ["file:///home/jovvik/.vscode-oss/custom.css"],
+    "vscode_custom_css.policy": true,
+    "java.semanticHighlighting.enabled": true,
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Linux, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, BinPackArguments: false, ColumnLimit: 104}",
+    "cmake.configureOnOpen": true,
+    "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
+    "testMate.cpp.log.logSentry": "disable_3",
+    "testMate.cpp.test.executables": "",
+    "testMate.cpp.test.workingDirectory": "",
+    "testMate.cpp.test.advancedExecutables": [
+     {
+        "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
+        "cwd": "${absDirpath}/.."
+     }
+    ],
+    "C_Cpp.default.cppStandard": "c++20",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "testMate.cpp.test.runtimeLimit": 60,
+    "hediet.vscode-drawio.local-storage": {
+        ".drawio-config": {
+            "language": "",
+            "customFonts": [],
+            "libraries": "general;uml;er;bpmn;flowchart;basic;arrows2",
+            "customLibraries": [
+                "L.scratchpad"
+            ],
+            "plugins": [],
+            "recentColors": [
+                "FFFFFF"
+            ],
+            "formatWidth": 240,
+            "createTarget": false,
+            "pageFormat": {
+                "x": 0,
+                "y": 0,
+                "width": 413,
+                "height": 583
+            },
+            "search": true,
+            "showStartScreen": true,
+            "gridColor": "#d0d0d0",
+            "darkGridColor": "#6e6e6e",
+            "autosave": true,
+            "resizeImages": null,
+            "openCounter": 0,
+            "version": 18,
+            "unit": 1,
+            "isRulerOn": false,
+            "ui": ""
+        }
+    },
+    "editor.minimap.enabled": false,
+    "prolog.linter.run": "never",
+    "prolog.linter.delay": -1,
+    "C_Cpp.default.cStandard": "c99"
+    // "java.home": "/usr/lib/jvm/java-11-graalvm",
+    // "java.home": "/usr/lib/jvm/java-8-graalvm"
+    // "c-cpp-flylint.clang.extraArgs": ["-Wc++17-compat"]
+}
