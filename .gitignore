@@ -1,4 +1,11 @@
 *
 
 !.gitignore
-!.config/*
+
+!.config
+.config/*
+!.config/polybar
+!.config/compton
+!.config/Code - OSS/User
+!.config/kitty
+!.config/neofetch
