@@ -1,0 +1,13 @@
+#!/bin/bash
+notify-send "Saving power"
+killall compton
+killall i3status
+killall i3bar
+sudo rfkill block bluetooth
+sudo systemctl stop logmein-hamachi.service
+sudo ifconfig enp60s0 down
+sudo ifconfig ham0 down
+sudo ifconfig wlo1 down
+echo "Check ifconfig:"
+ifconfig
+nmcli networking off
