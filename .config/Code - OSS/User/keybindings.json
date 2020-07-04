@@ -59,7 +59,7 @@
         "command": "-java.workspace.compile"
     },
     {
-        "key": "ctrl+t",
+        "key": "ctrl+l ctrl+t",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus",
         "args": {
@@ -97,5 +97,14 @@
         "key": "ctrl+shift+i",
         "command": "-calva-fmt.tabDedent",
         "when": "editorTextFocus && !editorReadOnly && !hasOtherSuggestions && !suggestWidgetVisible && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+l ctrl+c",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+l ctrl+c",
+        "command": "-latex-workshop.shortcut.textsc",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
     }
 ]
