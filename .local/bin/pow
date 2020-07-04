@@ -1,5 +1,5 @@
-#!/bin/bash
-notify-send "Saving power"
+#!/usr/bin/env bash
+
 killall compton
 killall i3status
 killall i3bar
