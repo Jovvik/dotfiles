@@ -105,7 +105,6 @@
         "**/*.log": true,
         "**/*.synctex.gz": true
     },
-    "graalvm.home": "/usr/lib/jvm/java-11-graalvm",
     "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDBDQ1wiLFwiMDAwMEZGXCIsXCIwMDAwMDBcIixcIjJBMkEyQVwiLFwiRkZGRkZGXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
     "icie.template.list": {
         "C++": "/home/jovvik/cftemplate.cpp"
@@ -228,10 +227,6 @@
         "--max-line-length=90"
     ],
     "python.linting.pylintUseMinimalCheckers": false,
-    "spellright.language": [
-        "english",
-        "russian"
-    ],
     "testMate.cpp.log.logSentry": "disable_3",
     "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
     "testMate.cpp.test.advancedExecutables": [
@@ -240,17 +235,10 @@
             "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*"
         }
     ],
-    "testMate.cpp.test.executables": "",
     "testMate.cpp.test.runtimeLimit": 60,
-    "testMate.cpp.test.workingDirectory": "",
-    "vscode_custom_css.imports": [
-        "file:///home/jovvik/.vscode-oss/custom.css"
-    ],
-    "vscode_custom_css.policy": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.customMenuBarAltFocus": false,
     "window.menuBarVisibility": "hidden",
-    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "[Wal]": {
             "editorError.foreground": "#ff6969"
