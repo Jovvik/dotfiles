@@ -104,7 +104,7 @@
     },
     "python.jediEnabled": false,
     "editor.fontFamily": "'JetBrains Mono'",
-    "cSpell.language": ",ru",
+    "cSpell.language": "en,ru",
     "window.zoomLevel": 0,
     "C_Cpp.updateChannel": "Insiders",
     "java.codeGeneration.generateComments": true,
@@ -302,18 +302,39 @@
     "cSpell.userWords": [
         "Factory",
         "Rule",
+        "backgr",
         "evaluate",
         "filled",
+        "jovvik",
         "text",
+        "textcolor",
         "vals",
+        "xrandr",
         "Антисимметризация",
+        "Буняковского",
+        "Грама",
+        "Жорданова",
         "Кохась",
+        "Кэли",
         "Лопиталя",
+        "Минковского",
         "СЛАУ",
+        "Эрмитовски",
         "дистрибутивны",
+        "дифф",
+        "йенсена",
         "линейнозависимым",
         "линейнонезависимым",
-        "обинтегралекакпределеинтегральныхсумм"
+        "незнакостабильных",
+        "непр",
+        "нильпотентности",
+        "обинтегралекакпределеинтегральныхсумм",
+        "псевдоевклидово",
+        "секвенциально",
+        "секвенциальный",
+        "сюръекция",
+        "штольца",
+        "ядроиобраз"
     ],
     "clojureVSCode.formatOnSave": false,
     "bracket-pair-colorizer-2.colors": [
@@ -408,43 +429,12 @@
     "C_Cpp.default.cppStandard": "c++20",
     "diffEditor.ignoreTrimWhitespace": false,
     "testMate.cpp.test.runtimeLimit": 60,
-    "hediet.vscode-drawio.local-storage": {
-        ".drawio-config": {
-            "language": "",
-            "customFonts": [],
-            "libraries": "general;uml;er;bpmn;flowchart;basic;arrows2",
-            "customLibraries": [
-                "L.scratchpad"
-            ],
-            "plugins": [],
-            "recentColors": [
-                "FFFFFF"
-            ],
-            "formatWidth": 240,
-            "createTarget": false,
-            "pageFormat": {
-                "x": 0,
-                "y": 0,
-                "width": 413,
-                "height": 583
-            },
-            "search": true,
-            "showStartScreen": true,
-            "gridColor": "#d0d0d0",
-            "darkGridColor": "#6e6e6e",
-            "autosave": true,
-            "resizeImages": null,
-            "openCounter": 0,
-            "version": 18,
-            "unit": 1,
-            "isRulerOn": false,
-            "ui": ""
-        }
-    },
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDBDQ1wiLFwiMDAwMEZGXCIsXCIwMDAwMDBcIixcIjJBMkEyQVwiLFwiRkZGRkZGXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
     "editor.minimap.enabled": false,
     "prolog.linter.run": "never",
     "prolog.linter.delay": -1,
-    "C_Cpp.default.cStandard": "c99"
+    "C_Cpp.default.cStandard": "c99",
+    "cSpell.allowCompoundWords": true
     // "java.home": "/usr/lib/jvm/java-11-graalvm",
     // "java.home": "/usr/lib/jvm/java-8-graalvm"
     // "c-cpp-flylint.clang.extraArgs": ["-Wc++17-compat"]
