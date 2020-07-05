@@ -88,7 +88,7 @@ module-margin = 1.78
 
 modules-left = i3 volume battery temperature xkeyboard
 modules-center = points
-modules-right = updates-arch-combined memory filesystem wlan cpu date
+modules-right = updates-arch-combined memory filesystem cpu date
 
 # tray-position = right
 # tray-detached = true
