@@ -27,10 +27,6 @@ primary = #ba8baf
 secondary = #e60053
 alert = #bd2c40
 
-[bar/dummy]
-width = 100%
-background = #00000000
-
 [bar/white]
 
 ;------------;
@@ -92,6 +88,10 @@ modules-right = updates-arch-combined memory filesystem cpu date
 
 # tray-position = right
 # tray-detached = true
+
+;---------;
+; MODULES ;
+;---------;
 
 [module/volume]
 type = internal/volume
