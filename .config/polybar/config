@@ -202,8 +202,8 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
-label = %percentage:2%%
+format-prefix = " "
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
