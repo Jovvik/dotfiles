@@ -12,3 +12,4 @@
 - Status bar: [polybar](https://github.com/polybar/polybar)
 - Shell: [fish](https://github.com/fish-shell/fish-shell) with [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
   - Theme: [spacefish](https://github.com/matchai/spacefish)
+- Font: [Jetbrains Mono _(with nerd fonts patch)_](https://github.com/JetBrains/JetBrainsMono)
