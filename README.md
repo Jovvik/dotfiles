@@ -1,5 +1,8 @@
 # My dotfiles for manjaro (i3 edition)
 
+![](Pictures/screenshots/flex.png)
+![](Pictures/screenshots/flex2.png)
+
 ## Main packages used
 
 - Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
