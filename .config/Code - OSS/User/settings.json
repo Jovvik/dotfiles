@@ -92,9 +92,9 @@
     "clojureVSCode.formatOnSave": false,
     "cmake.configureOnOpen": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "'Jetbrains Mono'",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
-    "editor.matchBrackets": "never",
+    "editor.matchBrackets": false,
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "editor.tokenColorCustomizations": {},
@@ -249,6 +249,7 @@
             "button.background": "#00000040",
             "button.hoverBackground": "#00000080",
             "dropdown.background": "#00000000",
+            "input.background": "#0c0d1520",
         
             "editor.background": "#00000000",
             "editor.lineHighlightBackground": "#FFFFFF15",
@@ -261,7 +262,7 @@
             "titleBar.border": "#0c0d1510",
             "terminal.border": "#0c0d1510",
             "debugExceptionWidget.background": "#0c0d15A0",
-            "tab.activeBackground": "#00000020",
+            "tab.activeBackground": "#00000000",
             "tab.inactiveBackground": "#00000000",
             "tab.border": "#00000000",
 
