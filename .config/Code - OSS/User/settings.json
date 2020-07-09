@@ -92,7 +92,7 @@
     "clojureVSCode.formatOnSave": false,
     "cmake.configureOnOpen": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontLigatures": true,
     "editor.matchBrackets": false,
     "editor.minimap.enabled": false,
@@ -241,10 +241,49 @@
     "window.menuBarVisibility": "hidden",
     "workbench.colorCustomizations": {
         "[Wal]": {
-            "editorError.foreground": "#ff6969"
+            "editorError.foreground": "#ff6969",
+            "workbench.background": "#0c0d15A0",
+            "activityBar.background": "#00000000",
+            "activityBar.border": "#00000010",
+            "badge.foreground": "#0c0d1520",
+            "button.background": "#00000040",
+            "button.hoverBackground": "#00000080",
+            "dropdown.background": "#00000000",
+        
+            "editor.background": "#00000000",
+            "editor.lineHighlightBackground": "#FFFFFF15",
+            "editorHoverWidget.background": "#0c0d15A0",
+            "editorWidget.background": "#0c0d15A0",
+            "editorGroupHeader.tabsBackground": "#00000000",
+            "editorGroupHeader.tabsBorder": "#0c0d1510",
+            "sideBar.border": "#0c0d1510",
+            "statusBar.border": "#0c0d1510",
+            "titleBar.border": "#0c0d1510",
+            "terminal.border": "#0c0d1510",
+            "debugExceptionWidget.background": "#0c0d15A0",
+            "tab.activeBackground": "#00000020",
+            "tab.inactiveBackground": "#00000000",
+            "tab.border": "#00000000",
+
+            "peekViewTitle.background": "#0e1019",
+        
+            "list.activeSelectionBackground": "#00000040",
+            "list.hoverBackground": "#00000040",
+            "list.inactiveSelectionBackground": "#00000020",
+        
+            "panel.background": "#00000000",
+            "panel.border": "#00000000",
+        
+            "sideBar.background": "#00000000",
+            "sideBarSectionHeader.background": "#00000000",
+        
+            "statusBar.background": "#00000000",
+            "statusBar.noFolderBackground": "#00000000",
+            "terminal.background": "#0000",
         }
     },
     "workbench.colorTheme": "Wal",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0
 }
