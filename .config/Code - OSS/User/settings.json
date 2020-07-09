@@ -94,7 +94,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontLigatures": true,
-    "editor.matchBrackets": false,
+    "editor.matchBrackets": "never",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "editor.tokenColorCustomizations": {},
