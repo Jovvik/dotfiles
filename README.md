@@ -17,8 +17,8 @@
 
 ## TODO
 
-- [ ] Clean up i3 config
+- [x] Clean up i3 config
 - Play around with:
   - [ ] ranger
-  - [ ] kitty
-- [ ] Fix links in kitty
+  - [x] kitty
+- [x] Fix links in kitty
