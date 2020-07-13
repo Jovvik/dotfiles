@@ -22,3 +22,8 @@
   - [ ] ranger
   - [x] kitty
 - [x] Fix links in kitty
+- [ ] Add a list of vscode extensions
+- [ ] Create bootstrapping scripts for necessary packages and vscode extensions
+- [ ] Fix icon size in rofi
+- [ ] Add rofi scrots
+- [ ] Rename compton configs to picom
