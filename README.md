@@ -20,8 +20,10 @@
 - [x] Clean up i3 config
 - Play around with:
   - [ ] ranger
+  - [ ] ranger preview script _(pdf support)_
   - [x] kitty
 - [x] Fix links in kitty
+- [ ] Fix large images breaking ranger
 - [ ] Add a list of vscode extensions
 - [ ] Create bootstrapping scripts for necessary packages and vscode extensions
 - [ ] Fix icon size in rofi
