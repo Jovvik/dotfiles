@@ -26,7 +26,7 @@
 - [x] Fix large images breaking ranger
 - [ ] Rename compton configs to picom
 - [ ] Fix icon size in rofi
-- [ ] Fix fish forgetting pywal's colors sometimes
+- [x] Fix fish forgetting pywal's colors sometimes
 
 ### Additions
 
