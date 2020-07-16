@@ -27,6 +27,7 @@
 - [ ] Rename compton configs to picom
 - [ ] Fix icon size in rofi
 - [x] Fix fish forgetting pywal's colors sometimes
+- [ ] Fix compton's shadow not covering bottom right corner
 
 ### Additions
 
