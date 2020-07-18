@@ -83,7 +83,7 @@ padding-right = 2
 module-margin = 1.78
 
 modules-left = i3 volume battery temperature xkeyboard
-modules-center = points
+# modules-center = points
 modules-right = updates-arch-combined memory filesystem cpu date
 
 # tray-position = right
@@ -359,7 +359,7 @@ label-discharging = "%consumption%W %percentage%%"
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 3
+thermal-zone = 2
 warn-temperature = 80
 
 format = <ramp> <label>
