@@ -28,11 +28,12 @@
 - [ ] Fix icon size in rofi
 - [x] Fix fish forgetting pywal's colors sometimes
 - [ ] Fix compton's shadow not covering bottom right corner
+- [ ] Switch to a consistent set of fontawesome icons in polybar (either solid or regular)
 
 ### Additions
 
 - Play around with:
-  - [ ] ranger
+  - [x] ranger
   - [ ] ranger preview script _(pdf support)_
   - [x] kitty
 - [ ] Add a list of vscode extensions
