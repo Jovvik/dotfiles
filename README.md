@@ -36,6 +36,6 @@
   - [x] ranger
   - [ ] ranger preview script _(pdf support)_
   - [x] kitty
-- [ ] Add a list of vscode extensions
-- [ ] Create bootstrapping scripts for necessary packages and vscode extensions
+- [x] Add a list of vscode extensions
+- [x] Create bootstrapping scripts for necessary packages and vscode extensions
 - [ ] Add rofi scrots
