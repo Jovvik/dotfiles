@@ -29,6 +29,8 @@
 - [x] Fix fish forgetting pywal's colors sometimes
 - [ ] Fix compton's shadow not covering bottom right corner
 - [ ] Switch to a consistent set of fontawesome icons in polybar (either solid or regular)
+- [ ] Fix transparency in dunst
+- [ ] Remove borders from dunst
 
 ### Additions
 
