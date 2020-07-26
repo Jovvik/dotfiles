@@ -34,7 +34,7 @@
 
 - Play around with:
   - [x] ranger
-  - [ ] ranger preview script _(pdf support)_
+  - [x] ranger preview script _(pdf support)_
   - [x] kitty
 - [x] Add a list of vscode extensions
 - [x] Create bootstrapping scripts for necessary packages and vscode extensions
