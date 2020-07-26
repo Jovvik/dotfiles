@@ -82,9 +82,9 @@ padding-left = 2
 padding-right = 2
 module-margin = 1.78
 
-modules-left = i3 volume battery temperature xkeyboard
+modules-left = i3 volume battery temperature backlight-acpi xkeyboard
 # modules-center = points
-modules-right = updates-arch-combined backlight-acpi memory filesystem cpu date
+modules-right = updates-arch-combined memory filesystem cpu date
 
 # tray-position = right
 # tray-detached = true
