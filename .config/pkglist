@@ -45,6 +45,7 @@ gotop
 htop
 inxi
 powertop
+shellcheck
 speedcrunch
 texlive-localmanager-git
 thefuck
