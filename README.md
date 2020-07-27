@@ -29,8 +29,6 @@
 - [x] Fix fish forgetting pywal's colors sometimes
 - [ ] Fix compton's shadow not covering bottom right corner
 - [ ] Switch to a consistent set of fontawesome icons in polybar (either solid or regular)
-- [ ] Fix transparency in dunst
-- [ ] Remove borders from dunst
 
 ### Additions
 
@@ -38,6 +36,7 @@
   - [x] ranger
   - [x] ranger preview script _(pdf support)_
   - [x] kitty
+  - [ ] deadd notification center buttons
 - [x] Add a list of vscode extensions
 - [x] Create bootstrapping scripts for necessary packages and vscode extensions
 - [ ] Add rofi scrots
