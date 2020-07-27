@@ -243,7 +243,6 @@ exec --no-startup-id optimus-manager-qt
 exec --no-startup-id wal -i Pictures/wallpapers/wall.jpg -n -a 75
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id dunst
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
