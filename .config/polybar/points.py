@@ -34,8 +34,7 @@ def main():
     if not values:
         print('!')
     else:
-        for (value, icon) in zip(values, icons):
-            print(icon, value, end='  ', sep='  ')
+        print('  '.join(f'{icon} {value}' for value, icon in zip(values, icons)))
 
 if __name__ == '__main__':
     try:
