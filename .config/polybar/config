@@ -1,14 +1,5 @@
 ;==========================================================
 ;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
 ;   To learn more about how to configure Polybar
 ;   go to https://github.com/polybar/polybar
 ;
@@ -18,7 +9,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#000}
-background = #60000000
+background = #800c0d15
 background-alt = #444
 foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
@@ -34,7 +25,7 @@ alert = #bd2c40
 ;------------;
 
 width = 100%
-height = 20
+height = 21
 offset-y = 0
 offset-x = 0
 
@@ -57,18 +48,18 @@ override-redirect = false
 ; FONTS ;
 ;-------;
 
-font-0 = JetBrainsMono:size=10;3
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=11;3"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=11;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=11;3"
-font-4 = "Weather Icons:style=Regular:pixelsize=10;3"
-font-5 = Linux Libertine:style=Bold:size=13;3
+font-0 = JetBrainsMono Nerd Font:size=10;2
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;3
+font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;3
+font-3 = Font Awesome 5 Brands:pixelsize=11;3
+font-4 = Weather Icons:style=Regular:pixelsize=10;3
+font-5 = JetBrainsMono Nerd Font:size=13;4
 
 ;--------;
 ; COLORS ;
 ;--------;
 
-background = #800c0d15
+background = #00000000
 foreground = #ffffff
 border-color = 0
 third = ${xrdb:color2:#222}
@@ -78,13 +69,12 @@ third = ${xrdb:color2:#222}
 ;---------------;
 
 fixed-center = true
-padding-left = 2 
-padding-right = 2
-module-margin = 1.78
+padding-left = 0
+padding-right = 0
 
-modules-left = i3 volume battery temperature backlight-acpi xkeyboard
-# modules-center = points
-modules-right = updates-arch-combined memory filesystem cpu date
+modules-left = round-left i3 volume battery temperature backlight-acpi xkeyboard round-right
+modules-center = round-left points round-right
+modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
 # tray-position = right
 # tray-detached = true
@@ -93,11 +83,19 @@ modules-right = updates-arch-combined memory filesystem cpu date
 ; MODULES ;
 ;---------;
 
+[module/base]
+format-background = ${colors.background}
+format-padding = 1
+
 [module/volume]
 type = internal/volume
 
 format-volume = <ramp-volume> <label-volume>
 format-muted =  muted
+format-muted-background = ${colors.background}
+format-muted-padding = 1
+format-volume-background = ${colors.background}
+format-volume-padding = 1
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -109,56 +107,38 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =  %free%
+label-mounted =   %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+format-mounted-background = ${colors.background}
+format-mounted-padding = 1
+format-unmounted-background = ${colors.background}
+format-unmounted-padding = 1
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+wrapping-scroll = true
 
 ; Only show workspaces on the same output as the bar
-pin-workspaces = true
+pin-workspaces = false
 
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = 0
 label-focused-foreground = ${colors.primary}
-;label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
+label-focused-background = ${colors.background}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = 1
+label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -169,7 +149,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -192,7 +172,9 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label>
-label =  %percentage%%
+label =   %percentage%%
+format-background = ${colors.background}
+format-padding = 1
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -200,15 +182,17 @@ type = internal/backlight
 card = intel_backlight
 
 [module/cpu]
+inherit = module/base
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "  "
 label = %percentage%%
 
 [module/memory]
+inherit = module/base
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "  "
 label = %gb_used%
 
 [module/wlan]
@@ -253,6 +237,7 @@ format-disconnected =
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
+inherit = module/base
 type = internal/date
 interval = 5
 
@@ -328,42 +313,51 @@ adapter = ADP1
 full-at = 90
 
 format-charging = <animation-charging> <label-charging>
+format-charging-background = ${colors.background}
+format-charging-padding = 1
 
 format-discharging = <animation-discharging> <label-discharging>
+format-discharging-background = ${colors.background}
+format-discharging-padding = 1
 
-format-full-prefix = ""
+format-full-prefix = "  "
+format-full-background = ${colors.background}
+format-full-padding = 1
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
+animation-discharging-0 = " "
+animation-discharging-1 = " "
+animation-discharging-2 = " "
+animation-discharging-3 = " "
+animation-discharging-4 = " "
 animation-discharging-framerate = 750
 
-label-full = " %percentage%%"
+label-full = "%percentage%%"
 label-charging = "%consumption%W %percentage%%"
 label-discharging = "%consumption%W %percentage%%"
 
 [module/temperature]
+inherit = module/base
 type = internal/temperature
 thermal-zone = 2
 warn-temperature = 80
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
+format-warn-background = ${colors.background}
+format-warn-padding = 1
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -376,8 +370,9 @@ ramp-3 = 
 ramp-4 = 
 
 [module/xkeyboard]
+inherit = module/base
 type = internal/xkeyboard
-label-layout =  %layout%
+label-layout =    %layout%
 
 [module/powermenu]
 type = custom/menu
@@ -419,11 +414,27 @@ margin-top = 5
 margin-bottom = 5
 
 [module/updates-arch-combined]
+inherit = module/base
 type = custom/script
 exec = ~/.config/polybar/updates-arch-combined.sh
 interval = 600
+format-prefix = %{T3} %{T-}
 
 [module/points]
+inherit = module/base
 type = custom/script
 exec = ~/.config/polybar/points.py
 interval = 600
+
+[module/round-left]
+type = custom/text
+
+content = %{T6}%{T-}
+content-foreground = ${colors.background}
+content-margin = 0
+
+[module/round-right]
+type = custom/text
+
+content = %{T6}%{T-}
+content-foreground = ${colors.background}
