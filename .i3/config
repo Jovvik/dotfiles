@@ -15,9 +15,9 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 1
+# bindsym $mod+n border normal
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -115,6 +115,9 @@ bindsym $mod+minus scratchpad show
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
+
+# open notification center
+bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
