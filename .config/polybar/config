@@ -419,6 +419,8 @@ type = custom/script
 exec = ~/.config/polybar/updates-arch-combined.sh
 interval = 600
 format-prefix = %{T3} %{T-}
+click-left = notify-send -a "📦 Package update" "Updating through yay" && yay -Syu --sudo pkexec --answerclean All --answerdiff None --answeredit None --answerupgrade None > yay.log && notify-send -a "📦 Package update" "Succesfully updated!" && ~/.config/polybar/updates-arch-combined.sh || notify-send -a "📦 Package update" "Update failed" "$(tail yay.log)"
+click-right = notify-send -a "📦 Package update" "Yay log" "$(tail yay.log)"
 
 [module/points]
 inherit = module/base
