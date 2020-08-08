@@ -1,10 +1,11 @@
 # Normie shit
 brave
 telegram-desktop
-code
+code-transparent
 discord
 kitty
 multimc-git
+zoom
 
 # C++ toolchain
 cmake
@@ -16,12 +17,15 @@ valgrind
 massif-visualizer
 kcachegrind
 cppcheck
+boost-libs
 
 # Other languages
 clojure
 jdk-openjdk
 jre-openjdk
 ipython
+ghc
+ghc-static
 
 # Ricing
 deadd-notification-center
@@ -35,14 +39,17 @@ picom-ibhagwan-git
 # Utils
 arandr
 bashtop
+bleachbit
 cpupower
 docker
+dust
 exa
 ffmpeg
 fish-git
 git
 gitkraken
 gotop
+gparted
 htop
 inxi
 powertop
@@ -53,3 +60,4 @@ thefuck
 yay
 zathura
 zathura-pdf-mudpdf
+zip
