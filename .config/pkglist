@@ -36,6 +36,11 @@ python-pywal
 rofi
 picom-ibhagwan-git
 
+# Latex
+texlive-most
+texlive-langcyrillic
+texlive-latexindent-meta
+
 # Utils
 arandr
 bashtop
@@ -55,7 +60,6 @@ inxi
 powertop
 shellcheck
 speedcrunch
-texlive-localmanager-git
 thefuck
 yay
 zathura
