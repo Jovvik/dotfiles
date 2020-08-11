@@ -92,7 +92,7 @@
     "clojureVSCode.formatOnSave": false,
     "cmake.configureOnOpen": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
     "editor.fontLigatures": true,
     "editor.matchBrackets": false,
     "editor.minimap.enabled": false,
