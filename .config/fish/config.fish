@@ -1,3 +1,5 @@
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dotcode='GIT_WORK_TREE=~ GIT_DIR=$HOME/.dotfiles code ~'
+function dotcode
+	GIT_WORK_TREE=$HOME GIT_DIR=$HOME/.dotfiles code $HOME
+end
 cat ~/.cache/wal/sequences &
