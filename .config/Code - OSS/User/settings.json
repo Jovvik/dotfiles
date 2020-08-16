@@ -1,290 +1,268 @@
 {
-    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Linux, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, BinPackArguments: false, ColumnLimit: 104}",
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.updateChannel": "Insiders",
-    "[clojure]": {
-        "editor.defaultFormatter": "betterthantomorrow.calva"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace",
-        "editor.wordWrap": "on"
-    },
-    "[latex]": {
-        "editor.wordWrap": "on"
-    },
-    "bracket-pair-colorizer-2.colors": [
-        "#6793db",
-        "#d17786",
-        "#b467db"
-    ],
-    "bracket-pair-colorizer-2.excludedLanguages": [
-        "latex",
-        "java",
-        "cpp",
-        "c"
-    ],
-    "c-cpp-flylint.clang.includePaths": [
-        "include/",
-        "googletest/googletest/include"
-    ],
-    "c-cpp-flylint.clang.pedantic": true,
-    "c-cpp-flylint.clang.pedanticErrors": true,
-    "c-cpp-flylint.clang.standard": [
-        "c++17"
-    ],
-    "c-cpp-flylint.clang.warnings": [
-        "all",
-        "extra",
-        "pedantic",
-        "c++17-compat-pedantic",
-        "c++14-compat-pedantic"
-    ],
-    "c-cpp-flylint.cppcheck.enable": false,
-    "c-cpp-flylint.cppcheck.inconclusive": true,
-    "c-cpp-flylint.flexelint.enable": false,
-    "cSpell.allowCompoundWords": true,
-    "cSpell.language": "en,ru",
-    "cSpell.userWords": [
-        "Factory",
-        "Rule",
-        "backgr",
-        "evaluate",
-        "filled",
-        "jovvik",
-        "text",
-        "textcolor",
-        "vals",
-        "xrandr",
-        "Антисимметризация",
-        "Буняковского",
-        "Грама",
-        "Жорданова",
-        "Кохась",
-        "Кэли",
-        "Лопиталя",
-        "Минковского",
-        "СЛАУ",
-        "Эрмитовски",
-        "дистрибутивны",
-        "дифф",
-        "йенсена",
-        "линейнозависимым",
-        "линейнонезависимым",
-        "незнакостабильных",
-        "непр",
-        "нильпотентности",
-        "обинтегралекакпределеинтегральныхсумм",
-        "псевдоевклидово",
-        "секвенциально",
-        "секвенциальный",
-        "сюръекция",
-        "штольца",
-        "ядроиобраз"
-    ],
-    "calva.paredit.defaultKeyMap": "strict",
-    "clojureVSCode.formatOnSave": false,
-    "cmake.configureOnOpen": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
-    "editor.fontLigatures": true,
-    "editor.matchBrackets": false,
-    "editor.minimap.enabled": false,
-    "editor.suggestSelection": "first",
-    "editor.tokenColorCustomizations": {},
-    "explorer.confirmDelete": false,
-    "files.exclude": {
-        "**/*.aux": true,
-        "**/*.class": true,
-        "**/*.log": true,
-        "**/*.synctex.gz": true
-    },
-    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDBDQ1wiLFwiMDAwMEZGXCIsXCIwMDAwMDBcIixcIjJBMkEyQVwiLFwiRkZGRkZGXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
-    "icie.template.list": {
-        "C++": "/home/jovvik/cftemplate.cpp"
-    },
-    "icie.template.solution": "/home/jovvik/cftemplate.cpp",
-    "icie.test.timeLimit": 3000,
-    "icie.test.view.render.timeDisplayThreshold": 1,
-    "java.codeGeneration.generateComments": true,
-    "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
-    "java.configuration.checkProjectSettingsExclusions": false,
-    "java.semanticHighlighting.enabled": true,
-    "latex-workshop.hover.citation.enabled": false,
-    "latex-workshop.hover.command.enabled": false,
-    "latex-workshop.hover.preview.cursor.enabled": false,
-    "latex-workshop.hover.preview.enabled": false,
-    "latex-workshop.hover.ref.enabled": false,
-    "latex-workshop.hover.ref.number.enabled": false,
-    "latex-workshop.intellisense.file.base": "file relative",
-    "latex-workshop.intellisense.includegraphics.preview.enabled": false,
-    "latex-workshop.intellisense.label.keyval": false,
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
-            "name": "latexmk 🔃",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "xelatex x2",
-            "tools": [
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "latexmk (latexmkrc)",
-            "tools": [
-                "latexmk_rconly"
-            ]
-        },
-        {
-            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
-            "tools": [
-                "pdflatex",
-                "bibtex",
-                "pdflatex",
-                "pdflatex"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "command": "/usr/bin/xelatex",
-            "env": {},
-            "name": "xelatex"
-        },
-        {
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "command": "latexmk",
-            "env": {},
-            "name": "latexmk"
-        },
-        {
-            "args": [
-                "%DOC%"
-            ],
-            "command": "latexmk",
-            "env": {},
-            "name": "latexmk_rconly"
-        },
-        {
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "command": "pdflatex",
-            "env": {},
-            "name": "pdflatex"
-        },
-        {
-            "args": [
-                "%DOCFILE%"
-            ],
-            "command": "bibtex",
-            "env": {},
-            "name": "bibtex"
-        }
-    ],
-    "latex-workshop.message.badbox.show": false,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "markdown.extension.print.onFileSave": true,
-    "markdown.preview.fontFamily": "apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Droid Sans', sans-serif",
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 4,
-    "prettier.useTabs": true,
-    "python.jediEnabled": false,
-    "python.linting.flake8Args": [
-        "--max-line-length=90"
-    ],
-    "python.linting.pylintUseMinimalCheckers": false,
-    "testMate.cpp.log.logSentry": "disable_3",
-    "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
-    "testMate.cpp.test.advancedExecutables": [
-        {
-            "cwd": "${absDirpath}/..",
-            "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*"
-        }
-    ],
-    "testMate.cpp.test.runtimeLimit": 60,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.customMenuBarAltFocus": false,
-    "window.menuBarVisibility": "hidden",
-    "workbench.colorCustomizations": {
-        "[Wal]": {
-            "editorError.foreground": "#ff6969",
-            "workbench.background": "#0c0d15A0",
-            "activityBar.background": "#00000000",
-            "activityBar.border": "#00000010",
-            "badge.foreground": "#0c0d1520",
-            "button.background": "#00000040",
-            "button.hoverBackground": "#00000080",
-            "dropdown.background": "#00000000",
-            "input.background": "#0c0d1520",
-        
-            "editor.background": "#00000000",
-            "editor.lineHighlightBackground": "#FFFFFF15",
-            "editorHoverWidget.background": "#0c0d15A0",
-            "editorWidget.background": "#0c0d15A0",
-            "editorGroupHeader.tabsBackground": "#00000000",
-            "editorGroupHeader.tabsBorder": "#0c0d1510",
-            "sideBar.border": "#0c0d1510",
-            "statusBar.border": "#0c0d1510",
-            "titleBar.border": "#0c0d1510",
-            "terminal.border": "#0c0d1510",
-            "debugExceptionWidget.background": "#0c0d15A0",
-            "tab.activeBackground": "#00000000",
-            "tab.inactiveBackground": "#00000000",
-            "tab.border": "#00000000",
+	"C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Linux, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, BinPackArguments: false, ColumnLimit: 104}",
+	"C_Cpp.default.cStandard": "c99",
+	"C_Cpp.default.cppStandard": "c++20",
+	"C_Cpp.updateChannel": "Insiders",
+	"[clojure]": {
+		"editor.defaultFormatter": "betterthantomorrow.calva"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"editor.wordWrap": "on"
+	},
+	"[latex]": {
+		"editor.wordWrap": "on"
+	},
+	"bracket-pair-colorizer-2.colors": ["#6793db", "#d17786", "#b467db"],
+	"bracket-pair-colorizer-2.excludedLanguages": ["latex", "java", "cpp", "c"],
+	"c-cpp-flylint.clang.includePaths": [
+		"include/",
+		"googletest/googletest/include"
+	],
+	"c-cpp-flylint.clang.pedantic": true,
+	"c-cpp-flylint.clang.pedanticErrors": true,
+	"c-cpp-flylint.clang.standard": ["c++17"],
+	"c-cpp-flylint.clang.warnings": [
+		"all",
+		"extra",
+		"pedantic",
+		"c++17-compat-pedantic",
+		"c++14-compat-pedantic"
+	],
+	"c-cpp-flylint.cppcheck.enable": false,
+	"c-cpp-flylint.cppcheck.inconclusive": true,
+	"c-cpp-flylint.flexelint.enable": false,
+	"cSpell.allowCompoundWords": true,
+	"cSpell.language": "en,ru",
+	"cSpell.userWords": [
+		"Factory",
+		"Rule",
+		"backgr",
+		"evaluate",
+		"filled",
+		"jovvik",
+		"text",
+		"textcolor",
+		"vals",
+		"xrandr",
+		"Антисимметризация",
+		"Буняковского",
+		"Грама",
+		"Жорданова",
+		"Кохась",
+		"Кэли",
+		"Лопиталя",
+		"Минковского",
+		"СЛАУ",
+		"Эрмитовски",
+		"дистрибутивны",
+		"дифф",
+		"йенсена",
+		"линейнозависимым",
+		"линейнонезависимым",
+		"незнакостабильных",
+		"непр",
+		"нильпотентности",
+		"обинтегралекакпределеинтегральныхсумм",
+		"псевдоевклидово",
+		"секвенциально",
+		"секвенциальный",
+		"сюръекция",
+		"штольца",
+		"ядроиобраз"
+	],
+	"calva.paredit.defaultKeyMap": "strict",
+	"clojureVSCode.formatOnSave": false,
+	"cmake.configureOnOpen": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
+	"editor.fontLigatures": true,
+	"editor.matchBrackets": false,
+	"editor.minimap.enabled": false,
+	"editor.suggestSelection": "first",
+	"editor.tokenColorCustomizations": {},
+	"explorer.confirmDelete": false,
+	"files.exclude": {
+		"**/*.aux": true,
+		"**/*.class": true,
+		"**/*.log": true,
+		"**/*.synctex.gz": true
+	},
+	"hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDBDQ1wiLFwiMDAwMEZGXCIsXCIwMDAwMDBcIixcIjJBMkEyQVwiLFwiRkZGRkZGXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+	"icie.template.list": {
+		"C++": "/home/jovvik/cftemplate.cpp"
+	},
+	"icie.template.solution": "/home/jovvik/cftemplate.cpp",
+	"icie.test.timeLimit": 3000,
+	"icie.test.view.render.timeDisplayThreshold": 1,
+	"java.codeGeneration.generateComments": true,
+	"java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.semanticHighlighting.enabled": true,
+	"latex-workshop.hover.citation.enabled": false,
+	"latex-workshop.hover.command.enabled": false,
+	"latex-workshop.hover.preview.cursor.enabled": false,
+	"latex-workshop.hover.preview.enabled": false,
+	"latex-workshop.hover.ref.enabled": false,
+	"latex-workshop.hover.ref.number.enabled": false,
+	"latex-workshop.intellisense.file.base": "file relative",
+	"latex-workshop.intellisense.includegraphics.preview.enabled": false,
+	"latex-workshop.intellisense.label.keyval": false,
+	"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "xelatex",
+			"tools": ["xelatex"]
+		},
+		{
+			"name": "latexmk 🔃",
+			"tools": ["latexmk"]
+		},
+		{
+			"name": "xelatex x2",
+			"tools": ["xelatex", "xelatex"]
+		},
+		{
+			"name": "latexmk (latexmkrc)",
+			"tools": ["latexmk_rconly"]
+		},
+		{
+			"name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+			"tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"command": "/usr/bin/xelatex",
+			"env": {},
+			"name": "xelatex"
+		},
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			],
+			"command": "latexmk",
+			"env": {},
+			"name": "latexmk"
+		},
+		{
+			"args": ["%DOC%"],
+			"command": "latexmk",
+			"env": {},
+			"name": "latexmk_rconly"
+		},
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"command": "pdflatex",
+			"env": {},
+			"name": "pdflatex"
+		},
+		{
+			"args": ["%DOCFILE%"],
+			"command": "bibtex",
+			"env": {},
+			"name": "bibtex"
+		}
+	],
+	"latex-workshop.message.badbox.show": false,
+	"latex-workshop.view.pdf.viewer": "tab",
+	"markdown.extension.print.onFileSave": true,
+	"markdown.preview.fontFamily": "apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Droid Sans', sans-serif",
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"python.jediEnabled": false,
+	"python.linting.flake8Args": ["--max-line-length=90"],
+	"python.linting.pylintUseMinimalCheckers": false,
+	"testMate.cpp.log.logSentry": "disable_3",
+	"testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
+	"testMate.cpp.test.advancedExecutables": [
+		{
+			"cwd": "${absDirpath}/..",
+			"pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*"
+		}
+	],
+	"testMate.cpp.test.runtimeLimit": 60,
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"window.customMenuBarAltFocus": false,
+	"window.menuBarVisibility": "hidden",
+	"workbench.colorCustomizations": {
+		"[Wal]": {
+			"editorError.foreground": "#ff6969",
+			"workbench.background": "#0c0d15A0",
+			"activityBar.background": "#00000000",
+			"activityBar.border": "#00000010",
+			"badge.foreground": "#0c0d1520",
+			"button.background": "#00000040",
+			"button.hoverBackground": "#00000080",
+			"dropdown.background": "#00000000",
+			"input.background": "#0c0d1520",
 
-            "peekViewTitle.background": "#0e1019",
-        
-            "list.activeSelectionBackground": "#00000040",
-            "list.hoverBackground": "#00000040",
-            "list.inactiveSelectionBackground": "#00000020",
-        
-            "panel.background": "#00000000",
-            "panel.border": "#00000000",
-        
-            "sideBar.background": "#00000000",
-            "sideBarSectionHeader.background": "#00000000",
-        
-            "statusBar.background": "#00000000",
-            "statusBar.noFolderBackground": "#00000000",
-            "terminal.background": "#0000",
-        }
-    },
-    "workbench.colorTheme": "Wal",
-    "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 0
+			"editor.background": "#00000000",
+			"editor.lineHighlightBackground": "#FFFFFF15",
+			"editorHoverWidget.background": "#0c0d15A0",
+			"editorWidget.background": "#0c0d15A0",
+			"editorGroupHeader.tabsBackground": "#00000000",
+			"editorGroupHeader.tabsBorder": "#0c0d1510",
+			"sideBar.border": "#0c0d1510",
+			"statusBar.border": "#0c0d1510",
+			"titleBar.border": "#0c0d1510",
+			"terminal.border": "#0c0d1510",
+			"debugExceptionWidget.background": "#0c0d15A0",
+			"tab.activeBackground": "#00000000",
+			"tab.inactiveBackground": "#00000000",
+			"tab.border": "#00000000",
+
+			"peekViewTitle.background": "#0e1019",
+
+			"list.activeSelectionBackground": "#00000040",
+			"list.hoverBackground": "#00000040",
+			"list.inactiveSelectionBackground": "#00000020",
+
+			"panel.background": "#00000000",
+			"panel.border": "#00000000",
+
+			"sideBar.background": "#00000000",
+			"sideBarSectionHeader.background": "#00000000",
+
+			"statusBar.background": "#00000000",
+			"statusBar.noFolderBackground": "#00000000",
+			"terminal.background": "#0000"
+		}
+	},
+	"workbench.colorTheme": "Wal",
+	"workbench.editor.enablePreview": false,
+	"workbench.iconTheme": "minimalistic-icons",
+	"window.zoomLevel": 0,
+	"gitlens.codeLens.scopes": ["document", "containers"],
+	"terminal.integrated.shell.linux": "/usr/bin/fish",
+	"python.languageServer": "Microsoft",
+	"editor.cursorBlinking": "expand",
+	"editor.cursorSmoothCaretAnimation": true,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorWidth": 2,
+	"editor.formatOnSave": true
 }
