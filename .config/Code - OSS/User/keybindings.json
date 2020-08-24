@@ -106,5 +106,20 @@
         "key": "ctrl+l ctrl+c",
         "command": "-latex-workshop.shortcut.textsc",
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "-extension.dash.emptySyntax",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.dash.specific",
+        "when": "editorTextFocus"
     }
 ]
