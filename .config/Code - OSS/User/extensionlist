@@ -6,6 +6,7 @@ borkdude.clj-kondo
 chunsen.bracket-select
 CoenraadS.bracket-pair-colorizer-2
 cssho.vscode-svgviewer
+deerawan.vscode-dash
 dlasagno.wal-theme
 eamodio.gitlens
 EFanZh.graphviz-preview
@@ -13,6 +14,7 @@ Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
+fb-pyre-check.pyre-vscode
 geeklearningio.graphviz-markdown-preview
 giladgd.red-one-dark-pro
 HamzaAnis.vscode-to-hastebin
@@ -21,10 +23,12 @@ hediet.vscode-drawio
 James-Yu.latex-workshop
 jbenden.c-cpp-flylint
 juanmnl.vscode-theme-1984
+LaurentTreguier.vscode-simple-icons
 matepek.vscode-catch2-test-adapter
 ms-python.python
 ms-vscode.cmake-tools
 ms-vscode.cpptools
+ms-vscode.hexeditor
 pustaczek.icie
 rafamel.subtle-brackets
 redhat.java
@@ -35,7 +39,6 @@ streetsidesoftware.code-spell-checker-russian
 teabyii.ayu
 timonwong.shellcheck
 uloco.theme-bluloco-light
-VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscode-icons-team.vscode-icons
 yzhang.markdown-all-in-one
