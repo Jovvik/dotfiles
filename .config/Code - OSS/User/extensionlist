@@ -25,10 +25,12 @@ jbenden.c-cpp-flylint
 juanmnl.vscode-theme-1984
 LaurentTreguier.vscode-simple-icons
 matepek.vscode-catch2-test-adapter
+mhutchie.git-graph
 ms-python.python
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.hexeditor
+ow.vscode-subword-navigation
 pustaczek.icie
 rafamel.subtle-brackets
 redhat.java
@@ -41,6 +43,8 @@ timonwong.shellcheck
 uloco.theme-bluloco-light
 vscjava.vscode-java-debug
 vscode-icons-team.vscode-icons
+wart.ariake-dark
+whizkydee.material-palenight-theme
 yzhang.markdown-all-in-one
 zenghongtu.vscode-asciiflow2
 zhuangtongfa.material-theme
