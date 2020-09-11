@@ -235,7 +235,7 @@ element {
 }
 
 element-icon {
-    size:                           200px;
+    size:                           72px;
     border:                         0px;
 }
 
