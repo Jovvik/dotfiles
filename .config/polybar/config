@@ -73,7 +73,7 @@ padding-left = 0
 padding-right = 0
 
 modules-left = round-left i3 volume battery temperature backlight-acpi xkeyboard round-right
-modules-center =
+modules-center = round-left points round-right
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
 tray-position = right
