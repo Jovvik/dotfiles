@@ -342,6 +342,6 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-exec xrandr --output HDMI-0 --primary --mode 2560x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off
+exec xrandr --output HDMI-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --rate 100 --output DP-0 --off --output DP-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off
 
 exec_always --no-startup-id /home/jovvik/.local/bin/launch_polybar.sh
