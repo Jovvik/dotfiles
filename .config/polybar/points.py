@@ -62,7 +62,8 @@ def get_value(sheet, attrs):
     return result[0]
 
 
-def main():
+# Magical code that initializes google spreadsheets
+def sheets_prepare():
     creds = None
     if path.exists('/home/jovvik/.config/polybar/token.pickle'):
         with open('/home/jovvik/.config/polybar/token.pickle', 'rb') as token:
@@ -80,7 +81,11 @@ def main():
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
-    sheet = build('sheets', 'v4', credentials=creds).spreadsheets()
+    return build('sheets', 'v4', credentials=creds).spreadsheets()
+
+
+def main():
+    sheet = sheets_prepare()
     results = [(subj["ICON"], get_value(sheet, subj)) for subj in SUBJS]
     print('  '.join(' '.join((icon, str(value).rstrip('0').rstrip('.')))
                     for icon, value in results))
