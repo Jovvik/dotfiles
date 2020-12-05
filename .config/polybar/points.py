@@ -85,10 +85,14 @@ def sheets_prepare():
 
 
 def main():
-    sheet = sheets_prepare()
-    results = [(subj["ICON"], get_value(sheet, subj)) for subj in SUBJS]
-    print('  '.join(' '.join((icon, str(value).rstrip('0').rstrip('.')))
-                    for icon, value in results))
+    try:
+        sheet = sheets_prepare()
+        results = [(subj["ICON"], get_value(sheet, subj)) for subj in SUBJS]
+        print('  '.join(' '.join((icon, str(value).rstrip('0').rstrip('.')))
+                        for icon, value in results))
+    except Exception as e:
+        with open("points.log", "a") as log:
+            log.write(str(e))
 
 
 if __name__ == '__main__':
