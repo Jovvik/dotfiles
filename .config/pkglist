@@ -1,7 +1,7 @@
 # Normie shit
 brave
 telegram-desktop
-code-transparent
+visual-studio-code-bin
 discord
 kitty
 multimc-git
@@ -59,6 +59,7 @@ htop
 inxi
 lightdm-mini-greeter
 powertop
+starship
 shellcheck
 speedcrunch
 thefuck
