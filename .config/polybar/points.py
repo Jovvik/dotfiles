@@ -30,7 +30,7 @@ SUBJS = [
     },
     {
         "SPREADSHEET_ID": "1B52D85mRRVqPN5yymM0RyaxXLvgiy1xNeFfW-5OVdIM",
-        "RANGE": "B117",
+        "RANGE": "B118",
         "ICON": "dx"
     },
     {
