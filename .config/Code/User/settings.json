@@ -160,7 +160,7 @@
 	"editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
 	"editor.fontLigatures": true,
 	"editor.formatOnSave": true,
-	"editor.matchBrackets": "never",
+	"editor.matchBrackets": false,
 	"editor.minimap.enabled": false,
 	"editor.smoothScrolling": true,
 	"editor.suggestSelection": "first",
@@ -174,15 +174,14 @@
 	"errorLens.fontStyleItalic": true,
 	"errorLens.gutterIconSize": "auto",
 	"explorer.confirmDelete": false,
-	"fenix.repos": [
-		"https://raw.githubusercontent.com/FenixTemplates/Default/master/fenix.json",
-		"https://raw.githubusercontent.com/FenixTemplates/EasyCppProjects/master/fenix.json"
-	],
-	"fenix.runCommands": "ask",
+	"files.associations": {
+		"*.sty": "latex"
+	},
 	"files.exclude": {
 		"**/*.aux": true,
 		"**/*.class": true,
-		"**/*.synctex.gz": true
+		"**/*.synctex.gz": true,
+		"**/*.xdv": true
 	},
 	"git.autoStash": true,
 	"git.autofetch": true,
@@ -195,9 +194,9 @@
 	"hediet.vscode-drawio.codeLinkActivated": false,
 	"hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiLFwiMzNGRjMzXCIsXCI5OTAwMDBcIixcIkVBNkI2NlwiLFwiMUExQTFBXCIsXCI3RUE2RTBcIixcIkZGMDAwMFwiLFwiMDBGRjA4XCIsXCIwMDAwQ0NcIixcIjAwMDBGRlwiLFwiMDAwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
 	"icie.template.list": {
-		"C++": "/home/jovvik/cftemplate.cpp"
+		"C++": "/home/jovvik/.config/cftemplate.cpp"
 	},
-	"icie.template.solution": "/home/jovvik/cftemplate.cpp",
+	"icie.template.solution": "/home/jovvik/.config/cftemplate.cpp",
 	"icie.test.timeLimit": 3000,
 	"icie.test.view.render.timeDisplayThreshold": 1,
 	"java.codeGeneration.generateComments": true,
