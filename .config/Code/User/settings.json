@@ -1,0 +1,386 @@
+{
+	"C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Linux, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, BinPackArguments: false, ColumnLimit: 80}",
+	"C_Cpp.default.cStandard": "c99",
+	"C_Cpp.default.cppStandard": "c++20",
+	"C_Cpp.updateChannel": "Insiders",
+	"[clojure]": {
+		"editor.defaultFormatter": "betterthantomorrow.calva"
+	},
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"editor.wordWrap": "on"
+	},
+	"[latex]": {
+		"editor.wordWrap": "on"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
+	"bracket-pair-colorizer-2.colors": [
+		"#6793db",
+		"#d17786",
+		"#b467db"
+	],
+	"bracket-pair-colorizer-2.excludedLanguages": [
+		"latex",
+		"java",
+		"cpp",
+		"c"
+	],
+	"c-cpp-flylint.clang.includePaths": [
+		"include/",
+		"googletest/googletest/include"
+	],
+	"c-cpp-flylint.clang.pedantic": true,
+	"c-cpp-flylint.clang.pedanticErrors": true,
+	"c-cpp-flylint.clang.standard": [
+		"c++17",
+		"c++20"
+	],
+	"c-cpp-flylint.clang.warnings": [
+		"all",
+		"extra",
+		"pedantic",
+		"c++17-compat-pedantic",
+		"c++14-compat-pedantic"
+	],
+	"c-cpp-flylint.cppcheck.enable": false,
+	"c-cpp-flylint.cppcheck.inconclusive": true,
+	"c-cpp-flylint.cppcheck.standard": [
+		"c++20"
+	],
+	"c-cpp-flylint.flexelint.enable": false,
+	"cSpell.allowCompoundWords": true,
+	"cSpell.enableFiletypes": [
+		"!cpp"
+	],
+	"cSpell.language": "en,ru",
+	"cSpell.userWords": [
+		"Factory",
+		"ICIE",
+		"ISEF",
+		"Robo",
+		"Rule",
+		"Yulya",
+		"backgr",
+		"bigg",
+		"bmatrix",
+		"bruh",
+		"curr",
+		"drawio",
+		"evaluate",
+		"figi",
+		"filled",
+		"imgs",
+		"imshow",
+		"jovvik",
+		"nobreaktrue",
+		"onvalue",
+		"text",
+		"textcolor",
+		"tqdm",
+		"vals",
+		"vmatrix",
+		"xrandr",
+		"Антисимметризация",
+		"Бонди",
+		"Буняковского",
+		"Грама",
+		"Жорданова",
+		"Изоморфность",
+		"Кохась",
+		"Кэли",
+		"Лопиталя",
+		"Минковского",
+		"Мультииндекс",
+		"Незнакоопределенная",
+		"Пеано",
+		"Прюфера",
+		"Рикатти",
+		"СЛАУ",
+		"Хваталово",
+		"Чебышевское",
+		"Эрмитовски",
+		"афинным",
+		"биекцию",
+		"биекция",
+		"гомеоморфно",
+		"гомотопные",
+		"двусвязен",
+		"двусвязно",
+		"двусвязности",
+		"двусвязность",
+		"двусвязны",
+		"дереево",
+		"дизъюнктно",
+		"дистрибутивны",
+		"дифф",
+		"домножением",
+		"известнен",
+		"инцидентно",
+		"инцидентны",
+		"иньективно",
+		"йенсена",
+		"линейнозависимым",
+		"линейнонезависимым",
+		"мультииндекса",
+		"мультииндексы",
+		"незнакоопределена",
+		"незнакостабильных",
+		"неподвешенных",
+		"непр",
+		"непусто",
+		"нестягиваема",
+		"нильпотентности",
+		"обинтегралекакпределеинтегральныхсумм",
+		"остовного",
+		"остовные",
+		"остовным",
+		"остовных",
+		"откр",
+		"очев",
+		"псевдоевклидово",
+		"равн",
+		"секвенциально",
+		"секвенциальный",
+		"сюръекция",
+		"упоротое",
+		"штольца",
+		"ядроиобраз"
+	],
+	"calva.paredit.defaultKeyMap": "strict",
+	"cmake.configureOnOpen": true,
+	"codespaces.accountProvider": "Microsoft",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.cursorBlinking": "expand",
+	"editor.cursorSmoothCaretAnimation": true,
+	"editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
+	"editor.fontLigatures": true,
+	"editor.formatOnSave": true,
+	"editor.matchBrackets": "never",
+	"editor.minimap.enabled": false,
+	"editor.smoothScrolling": true,
+	"editor.suggestSelection": "first",
+	"editor.tokenColorCustomizations": {},
+	"errorLens.borderRadius": "5px",
+	"errorLens.enabledDiagnosticLevels": [
+		"error",
+		"warning",
+		"hint"
+	],
+	"errorLens.fontStyleItalic": true,
+	"errorLens.gutterIconSize": "auto",
+	"explorer.confirmDelete": false,
+	"fenix.repos": [
+		"https://raw.githubusercontent.com/FenixTemplates/Default/master/fenix.json",
+		"https://raw.githubusercontent.com/FenixTemplates/EasyCppProjects/master/fenix.json"
+	],
+	"fenix.runCommands": "ask",
+	"files.exclude": {
+		"**/*.aux": true,
+		"**/*.class": true,
+		"**/*.synctex.gz": true
+	},
+	"git.autoStash": true,
+	"git.autofetch": true,
+	"git.enableCommitSigning": true,
+	"gitlens.codeLens.scopes": [
+		"document",
+		"containers"
+	],
+	"gradle.debug": true,
+	"hediet.vscode-drawio.codeLinkActivated": false,
+	"hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiLFwiMzNGRjMzXCIsXCI5OTAwMDBcIixcIkVBNkI2NlwiLFwiMUExQTFBXCIsXCI3RUE2RTBcIixcIkZGMDAwMFwiLFwiMDBGRjA4XCIsXCIwMDAwQ0NcIixcIjAwMDBGRlwiLFwiMDAwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+	"icie.template.list": {
+		"C++": "/home/jovvik/cftemplate.cpp"
+	},
+	"icie.template.solution": "/home/jovvik/cftemplate.cpp",
+	"icie.test.timeLimit": 3000,
+	"icie.test.view.render.timeDisplayThreshold": 1,
+	"java.codeGeneration.generateComments": true,
+	"java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.semanticHighlighting.enabled": true,
+	"kite.showWelcomeNotificationOnStartup": false,
+	"latex-utilities.liveReformat.enabled": true,
+	"latex-workshop.chktex.args.active": [
+		"-wall",
+		"-n22",
+		"-n30",
+		"-e16",
+		"-q",
+		"-n46",
+		"-n45",
+		"-n1"
+	],
+	"latex-workshop.chktex.run": "onType",
+	"latex-workshop.hover.citation.enabled": false,
+	"latex-workshop.hover.command.enabled": false,
+	"latex-workshop.hover.preview.cursor.enabled": false,
+	"latex-workshop.hover.preview.enabled": false,
+	"latex-workshop.hover.ref.enabled": false,
+	"latex-workshop.hover.ref.number.enabled": false,
+	"latex-workshop.intellisense.file.base": "file relative",
+	"latex-workshop.intellisense.includegraphics.preview.enabled": false,
+	"latex-workshop.intellisense.label.keyval": false,
+	"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk (xelatex)",
+			"tools": [
+				"latexmk_xelatex"
+			]
+		},
+		{
+			"name": "xelatex",
+			"tools": [
+				"xelatex"
+			]
+		},
+		{
+			"name": "latexmk 🔃",
+			"tools": [
+				"latexmk"
+			]
+		},
+		{
+			"name": "xelatex x2",
+			"tools": [
+				"xelatex",
+				"xelatex"
+			]
+		},
+		{
+			"name": "latexmk (latexmkrc)",
+			"tools": [
+				"latexmk_rconly"
+			]
+		},
+		{
+			"name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+			"tools": [
+				"pdflatex",
+				"bibtex",
+				"pdflatex",
+				"pdflatex"
+			]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"--shell-escape",
+				"%DOC%"
+			],
+			"command": "/usr/bin/xelatex",
+			"env": {},
+			"name": "xelatex"
+		},
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			],
+			"command": "latexmk",
+			"env": {},
+			"name": "latexmk"
+		},
+		{
+			"args": [
+				"-shell-escape",
+				"-xelatex",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			],
+			"command": "latexmk",
+			"env": {},
+			"name": "latexmk_xelatex"
+		},
+		{
+			"args": [
+				"%DOC%"
+			],
+			"command": "latexmk",
+			"env": {},
+			"name": "latexmk_rconly"
+		},
+		{
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			],
+			"command": "pdflatex",
+			"env": {},
+			"name": "pdflatex"
+		},
+		{
+			"args": [
+				"%DOCFILE%"
+			],
+			"command": "bibtex",
+			"env": {},
+			"name": "bibtex"
+		}
+	],
+	"latex-workshop.message.badbox.show": false,
+	"latex-workshop.view.pdf.external.viewer.command": "zathura",
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex.build.executable": "xelatex",
+	"latex.build.onSave": true,
+	"latex.forwardSearch.executable": "zathura",
+	"latex.lint.onSave": false,
+	"latex.server.autoDownload": true,
+	"leetcode.defaultLanguage": "cpp",
+	"leetcode.hint.commandShortcut": false,
+	"leetcode.hint.commentDescription": false,
+	"leetcode.hint.configWebviewMarkdown": false,
+	"leetcode.workspaceFolder": "/home/jovvik/.leetcode",
+	"markdown.preview.fontFamily": "apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Droid Sans', sans-serif",
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"python.jediEnabled": false,
+	"python.languageServer": "Microsoft",
+	"python.linting.flake8Args": [
+		"--max-line-length=90"
+	],
+	"python.linting.pylintUseMinimalCheckers": false,
+	"rewrap.wrappingColumn": 80,
+	"telemetry.enableTelemetry": false,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorWidth": 2,
+	"terminal.integrated.shell.linux": "/usr/bin/fish",
+	"testMate.cpp.log.logSentry": "disable_3",
+	"testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
+	"testMate.cpp.test.advancedExecutables": [
+		{
+			"cwd": "${absDirpath}/..",
+			"pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*"
+		}
+	],
+	"testMate.cpp.test.runtimeLimit": 60,
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"window.customMenuBarAltFocus": false,
+	"window.menuBarVisibility": "hidden",
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "Wal",
+	"workbench.editor.enablePreview": false,
+	"workbench.iconTheme": "minimalistic-icons",
+	"workbench.list.smoothScrolling": true
+}
