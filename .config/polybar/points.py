@@ -35,12 +35,6 @@ SUBJS = [
         "ICON": "dx"
     },
     {
-        "SPREADSHEET_ID": "1tlYlcoCE_yxRskQHu91t27V3S-vnsLkRUi9WAf1bAvs",
-        "RANGE": "BARS!D11:S11",
-        "ACTION": lambda x: sum(x),
-        "ICON": "en"
-    },
-    {
         "SPREADSHEET_ID": "1xqnBXsoVrEV4NHiOo4JGlCZfgoy8yVPF8CIuzWM-w68",
         "RANGE": "D120",
         "ICON": "os"
@@ -57,7 +51,9 @@ SUBJS = [
 def get_value(sheet, attrs):
     result = sheet.values().get(spreadsheetId=attrs["SPREADSHEET_ID"],
                                 range=attrs["RANGE"]).execute().get('values', [])
-    result = [float(x.replace(',', '.').strip('%')) for x in result[0]]
+    # print(result)
+    result = [float(x.replace(',', '.').replace('%', ''))
+              for x in result[0]]
     if "ACTION" in attrs:
         return attrs["ACTION"](result)
     return result[0]
