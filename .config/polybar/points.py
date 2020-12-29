@@ -14,8 +14,9 @@ RANGE = 'Лист1!B2:I3'
 SUBJS = [
     {
         "SPREADSHEET_ID": "1WyW_48ZFJFKsRIyG4ngizGZT-5XRcBS9RBkc048OZC4",
-        "RANGE": "Осень20!D48",
-        "ICON": "∫"
+        "RANGE": "Осень20!E48",
+        "ICON": "∫",
+        "ACTION": lambda x: 0.6 * x[0]
     },
     {
         "SPREADSHEET_ID": "1XTorcnLrDwSc_Uq6WmjEvR6ncS8b-sG52rtAiKUcSRc",
@@ -56,7 +57,7 @@ SUBJS = [
 def get_value(sheet, attrs):
     result = sheet.values().get(spreadsheetId=attrs["SPREADSHEET_ID"],
                                 range=attrs["RANGE"]).execute().get('values', [])
-    result = [float(x.replace(',', '.')) for x in result[0]]
+    result = [float(x.replace(',', '.').strip('%')) for x in result[0]]
     if "ACTION" in attrs:
         return attrs["ACTION"](result)
     return result[0]
