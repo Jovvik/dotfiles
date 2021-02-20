@@ -8,58 +8,62 @@ from google.auth.transport.requests import Request
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
-SPREADSHEET_ID = '1GdlMd27JDscttvn7y8CNsYK5hSpU7GwebbD6khpE4os'
-RANGE = 'Лист1!B2:I3'
-
 SUBJS = [
     {
-        "SPREADSHEET_ID": "1WyW_48ZFJFKsRIyG4ngizGZT-5XRcBS9RBkc048OZC4",
-        "RANGE": "Осень20!E48",
-        "ICON": "∫",
-        "ACTION": lambda x: 0.6 * x[0]
+        "spreadsheet_id": "1WyW_48ZFJFKsRIyG4ngizGZT-5XRcBS9RBkc048OZC4",
+        "range": "Осень20!E48",
+        "icon": "∫",
+        "action": lambda x: 0.6 * x[0],
+        "ignore": True
     },
     {
-        "SPREADSHEET_ID": "1XTorcnLrDwSc_Uq6WmjEvR6ncS8b-sG52rtAiKUcSRc",
-        "RANGE": "36-37!F37",
-        "ICON": ""
+        "spreadsheet_id": "1xcLfzpmsu5YKEwZce67SGalgQHqPDFoDUntV5vECPME",
+        "range": "36-37!F37",
+        "icon": "",
     },
     {
-        "SPREADSHEET_ID": "1AwMIB9hiiAB-0m6JSPdeTwYUga_nfynFcWWiD8lfAg8",
-        "RANGE": "F69:G69",
-        "ACTION": lambda x: sum(x),
-        "ICON": "↔"
+        "spreadsheet_id": "1LqrnjZB_QiUzyaCrl78Vn8S7-ouE0IKasBgY2tEfxL8",
+        "range": "F66:G66",
+        "action": lambda x: sum(x),
+        "icon": "↔"
     },
     {
-        "SPREADSHEET_ID": "1B52D85mRRVqPN5yymM0RyaxXLvgiy1xNeFfW-5OVdIM",
-        "RANGE": "B118",
-        "ICON": "dx"
+        "spreadsheet_id": "1TBhrGf9RYvsH3D6r773hrFvx457bBLnxpH9hQ12PJrw",
+        "range": "Список!Y94",
+        "icon": ""
     },
     {
-        "SPREADSHEET_ID": "1xqnBXsoVrEV4NHiOo4JGlCZfgoy8yVPF8CIuzWM-w68",
-        "RANGE": "D120",
-        "ICON": "os"
+        "spreadsheet_id": "1HIlXBjbNrMh7ug3gLUuFjHbL82fXJ0iq9Uv0Idhr0Ns",
+        "range": "E95",
+        "icon": ""
     },
     {
-        "SPREADSHEET_ID": "1sBKYN5MJ5NyPRYsGaSUNRsxcAwsUJyZ-UxD4nbSnqGY",
-        "RANGE": "Баллы!F58",
-        "ACTION": lambda x: x[0] * 5,
-        "ICON": "pe"
+        "spreadsheet_id": "1sBKYN5MJ5NyPRYsGaSUNRsxcAwsUJyZ-UxD4nbSnqGY",
+        "range": "Баллы!F58",
+        "action": lambda x: x[0] * 5,
+        "icon": "pe",
+        "ignore": True
+    },
+    {
+        "icon": "en",
+        "ignore": True
     }
 ]
 
 
 def get_value(sheet, attrs):
-    result = sheet.values().get(spreadsheetId=attrs["SPREADSHEET_ID"],
-                                range=attrs["RANGE"]).execute().get('values', [])
-    # print(result)
+    if "ignore" in attrs:
+        return "?"
+    result = sheet.values().get(spreadsheetId=attrs["spreadsheet_id"],
+                                range=attrs["range"]).execute().get('values', [])
     result = [float(x.replace(',', '.').replace('%', ''))
               for x in result[0]]
-    if "ACTION" in attrs:
-        return attrs["ACTION"](result)
-    return result[0]
+    if "action" in attrs:
+        return str(attrs["action"](result))
+    return str(result[0])
 
 
-# Magical code that initializes google spreadsheets
+# Magical pasted code that initializes google spreadsheets
 def sheets_prepare():
     creds = None
     if path.exists('/home/jovvik/.config/polybar/token.pickle'):
@@ -84,8 +88,8 @@ def sheets_prepare():
 def main():
     try:
         sheet = sheets_prepare()
-        results = [(subj["ICON"], get_value(sheet, subj)) for subj in SUBJS]
-        print('  '.join(' '.join((icon, str(value).rstrip('0').rstrip('.')))
+        results = [(subj["icon"], get_value(sheet, subj)) for subj in SUBJS]
+        print('  '.join(' '.join((icon, value.rstrip('0').rstrip('.')))
                         for icon, value in results))
     except Exception as e:
         with open("points.log", "a") as log:
