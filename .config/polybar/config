@@ -72,7 +72,7 @@ fixed-center = true
 padding-left = 0
 padding-right = 0
 
-modules-left = round-left i3 volume battery temperature backlight-acpi xkeyboard round-right
+modules-left = round-left i3 volume battery temperature backlight-acpi hashrate xkeyboard round-right
 modules-center = round-left points round-right
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
@@ -372,7 +372,7 @@ ramp-4 = 
 [module/xkeyboard]
 inherit = module/base
 type = internal/xkeyboard
-label-layout =    %layout%
+label-layout =   %layout%
 
 [module/powermenu]
 type = custom/menu
@@ -440,3 +440,9 @@ type = custom/text
 
 content = %{T6}%{T-}
 content-foreground = ${colors.background}
+
+[module/hashrate]
+inherit = module/base
+type = custom/script
+exec = ~/.config/polybar/hashrate.py
+interval = 60
