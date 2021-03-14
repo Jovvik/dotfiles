@@ -34,7 +34,7 @@ SUBJS = [
     },
     {
         "spreadsheet_id": "1HIlXBjbNrMh7ug3gLUuFjHbL82fXJ0iq9Uv0Idhr0Ns",
-        "range": "E95",
+        "range": "E98",
         "icon": ""
     },
     {
