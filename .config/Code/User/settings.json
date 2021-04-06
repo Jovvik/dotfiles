@@ -1,10 +1,13 @@
 {
-	"C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, BreakBeforeBraces: Linux, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: true, BinPackArguments: false, ColumnLimit: 80}",
+	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: WebKit, AlignConsecutiveAssignments: true, ColumnLimit: 100 }",
 	"C_Cpp.default.cStandard": "c99",
 	"C_Cpp.default.cppStandard": "c++20",
 	"C_Cpp.updateChannel": "Insiders",
 	"[clojure]": {
 		"editor.defaultFormatter": "betterthantomorrow.calva"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
 	},
 	"[json]": {
 		"editor.quickSuggestions": {
@@ -60,8 +63,10 @@
 	"cSpell.language": "en,ru",
 	"cSpell.userWords": [
 		"Factory",
+		"Gork",
 		"ICIE",
 		"ISEF",
+		"Mork",
 		"Robo",
 		"Rule",
 		"Yulya",
@@ -79,6 +84,7 @@
 		"jovvik",
 		"nobreaktrue",
 		"onvalue",
+		"prec",
 		"text",
 		"textcolor",
 		"tqdm",
@@ -86,13 +92,17 @@
 		"vmatrix",
 		"xrandr",
 		"Антисимметризация",
+		"Арцела",
 		"Бонди",
 		"Буняковского",
 		"Грама",
+		"Гронуолла",
+		"Диффуры",
 		"Жорданова",
 		"Изоморфность",
 		"Кохась",
 		"Кэли",
+		"Липшица",
 		"Лопиталя",
 		"Минковского",
 		"Мультииндекс",
@@ -117,15 +127,20 @@
 		"дереево",
 		"дизъюнктно",
 		"дистрибутивны",
+		"дифур",
+		"дифура",
 		"дифф",
+		"домножаем",
 		"домножением",
 		"известнен",
+		"изобретание",
 		"инцидентно",
 		"инцидентны",
 		"иньективно",
 		"йенсена",
 		"линейнозависимым",
 		"линейнонезависимым",
+		"матлабе",
 		"мультииндекса",
 		"мультииндексы",
 		"незнакоопределена",
@@ -142,10 +157,13 @@
 		"остовных",
 		"откр",
 		"очев",
+		"продолжимо",
 		"псевдоевклидово",
 		"равн",
 		"секвенциально",
 		"секвенциальный",
+		"сонаправлена",
+		"сонаправлены",
 		"сюръекция",
 		"упоротое",
 		"штольца",
@@ -155,19 +173,110 @@
 	"cmake.configureOnOpen": true,
 	"codespaces.accountProvider": "Microsoft",
 	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.codeLensFontFamily": "'JetBrainsMonoMedium Nerd Font'",
 	"editor.cursorBlinking": "expand",
 	"editor.cursorSmoothCaretAnimation": true,
-	"editor.fontFamily": "'JetBrainsMonoMedium Nerd Font'",
+	"editor.fontFamily": "'JetBrainsMono Nerd Font'",
 	"editor.fontLigatures": true,
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
 	"editor.matchBrackets": false,
 	"editor.minimap.enabled": false,
 	"editor.smoothScrolling": true,
 	"editor.suggestSelection": "first",
-	"editor.tokenColorCustomizations": {},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "text.html.markdown.journal.task.open.bullet",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.open.marker",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.open.keyword",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.open.text",
+				"settings": {}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.completed.keyword",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.completed.marker",
+				"settings": {
+					"foreground": "#AAAAAA"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.completed.text",
+				"settings": {
+					"foreground": "#AAAAAA"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.task.completed.bullet",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.memo.keyword",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.memo.bullet",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.scope",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.link.keyword",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": "text.html.markdown.journal.link.bullet",
+				"settings": {
+					"foreground": "#FFFF00"
+				}
+			},
+			{
+				"scope": [
+					"comment",
+					"punctuation.definition",
+					"meta.brace",
+					"punctuation.math.begin",
+					"punctuation.math.end"
+				],
+				"settings": {
+					"foreground": "#5F6672"
+				}
+			}
+		]
+	},
 	"errorLens.borderRadius": "5px",
 	"errorLens.enabledDiagnosticLevels": [
-		"error",
 		"warning",
 		"hint"
 	],
@@ -179,9 +288,14 @@
 	},
 	"files.exclude": {
 		"**/*.aux": true,
-		"**/*.class": true,
+		"**/*.olean": true,
 		"**/*.synctex.gz": true,
-		"**/*.xdv": true
+		"**/*.xdv": true,
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.svn": true,
+		"**/CVS": true
 	},
 	"git.autoStash": true,
 	"git.autofetch": true,
@@ -191,6 +305,7 @@
 		"containers"
 	],
 	"gradle.debug": true,
+	"haskell.liquidOn": true,
 	"hediet.vscode-drawio.codeLinkActivated": false,
 	"hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiLFwiMzNGRjMzXCIsXCI5OTAwMDBcIixcIkVBNkI2NlwiLFwiMUExQTFBXCIsXCI3RUE2RTBcIixcIkZGMDAwMFwiLFwiMDBGRjA4XCIsXCIwMDAwQ0NcIixcIjAwMDBGRlwiLFwiMDAwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo0MTMsXCJoZWlnaHRcIjoyOTF9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
 	"icie.template.list": {
@@ -203,19 +318,28 @@
 	"java.codeGeneration.hashCodeEquals.useJava7Objects": true,
 	"java.configuration.checkProjectSettingsExclusions": false,
 	"java.semanticHighlighting.enabled": true,
+	"javascript.referencesCodeLens.enabled": true,
+	"javascript.referencesCodeLens.showOnAllFunctions": true,
+	"jshint.options": {
+		"-W104": false,
+		"esversion": 5
+	},
 	"kite.showWelcomeNotificationOnStartup": false,
 	"latex-utilities.liveReformat.enabled": true,
 	"latex-workshop.chktex.args.active": [
 		"-wall",
-		"-n22",
-		"-n30",
 		"-e16",
 		"-q",
-		"-n46",
-		"-n45",
-		"-n1"
+		"-n21",
+		"-n19",
+		"-n3",
+		"-n24",
+		"-n30",
+		"-n1",
+		"-n22"
 	],
-	"latex-workshop.chktex.run": "onType",
+	"latex-workshop.chktex.enabled": true,
+	"latex-workshop.chktex.run": "onSave",
 	"latex-workshop.hover.citation.enabled": false,
 	"latex-workshop.hover.command.enabled": false,
 	"latex-workshop.hover.preview.cursor.enabled": false,
@@ -338,12 +462,7 @@
 	],
 	"latex-workshop.message.badbox.show": false,
 	"latex-workshop.view.pdf.external.viewer.command": "zathura",
-	"latex-workshop.view.pdf.viewer": "tab",
-	"latex.build.executable": "xelatex",
-	"latex.build.onSave": true,
-	"latex.forwardSearch.executable": "zathura",
-	"latex.lint.onSave": false,
-	"latex.server.autoDownload": true,
+	"latex-workshop.view.pdf.viewer": "external",
 	"leetcode.defaultLanguage": "cpp",
 	"leetcode.hint.commandShortcut": false,
 	"leetcode.hint.commentDescription": false,
@@ -360,6 +479,7 @@
 	],
 	"python.linting.pylintUseMinimalCheckers": false,
 	"rewrap.wrappingColumn": 80,
+	"tabnine.experimentalAutoImports": true,
 	"telemetry.enableTelemetry": false,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.cursorStyle": "line",
@@ -374,12 +494,29 @@
 		}
 	],
 	"testMate.cpp.test.runtimeLimit": 60,
+	"typescript.implementationsCodeLens.enabled": true,
+	"typescript.referencesCodeLens.enabled": true,
+	"typescript.referencesCodeLens.showOnAllFunctions": true,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.customMenuBarAltFocus": false,
 	"window.menuBarVisibility": "hidden",
-	"window.zoomLevel": 0,
-	"workbench.colorTheme": "Wal",
+	"workbench.colorCustomizations": {
+		"[Horizon Italic]": {
+			"sideBar.foreground": "#d5d8da95"
+		}
+	},
+	"workbench.colorTheme": "Horizon Italic",
 	"workbench.editor.enablePreview": false,
 	"workbench.iconTheme": "minimalistic-icons",
-	"workbench.list.smoothScrolling": true
+	"workbench.list.smoothScrolling": true,
+	"scm.defaultViewMode": "tree",
+	"workbench.editorAssociations": [
+		{
+			"viewType": "jupyter.notebook.ipynb",
+			"filenamePattern": "*.ipynb"
+		}
+	],
+	"cmake.sourceDirectory": "${workspaceFolder}/all",
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": false
 }

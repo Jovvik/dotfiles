@@ -344,13 +344,6 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "\\bpart$",
-        "body": "\\frac{\\partial $${1:V}}{\\partial $${2:x}} ",
-        "mode": "maths",
-        "description": "partial derivative",
-        "triggerWhenComplete": true
-    },
-    {
         "prefix": "sq$",
         "body": "\\sqrt{$$1}",
         "mode": "maths",
@@ -460,15 +453,15 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "im$",
-        "body": "\\($$1\\)",
+        "prefix": " im$",
+        "body": " \\($$1\\)",
         "mode": "text",
         "description": "Inline math",
         "triggerWhenComplete": true
     },
     {
-        "prefix": "mm$",
-        "body": "\\[$$1\\]",
+        "prefix": " mm$",
+        "body": " \\[$$1\\]",
         "mode": "text",
         "description": "Proper math",
         "triggerWhenComplete": true
@@ -485,6 +478,13 @@
         "body": "\\left|$$1\\right|$$2",
         "mode": "maths",
         "description": "||",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "ll$",
+        "body": "\\llbracket $$1 \\rrbracket",
+        "mode": "maths",
+        "description": "brackets",
         "triggerWhenComplete": true
     }
 ]

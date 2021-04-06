@@ -6,7 +6,7 @@
 ## Main packages used
 
 - Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
-- Editor: [vscode insiders _(official build)_](https://github.com/microsoft/vscode), `visual-studio-code-insiders-bin` in AUR
+- Editor: [vscode _(official build)_](https://github.com/microsoft/vscode), `visual-studio-code-bin` in AUR
 - Window manager: [i3-gaps](https://github.com/Airblader/i3)
 - Compositor: [picom _(with rounded corners and fancy blur)_](https://github.com/ibhagwan/picom)
 - Status bar: [polybar](https://github.com/polybar/polybar)

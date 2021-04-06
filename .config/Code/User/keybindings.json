@@ -195,5 +195,9 @@
 	{
 		"key": "ctrl+enter",
 		"command": "python.execInTerminal"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
 	}
 ]
