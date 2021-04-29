@@ -72,7 +72,7 @@ fixed-center = true
 padding-left = 0
 padding-right = 0
 
-modules-left = round-left i3 volume battery temperature backlight-acpi hashrate xkeyboard round-right
+modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
 modules-center = round-left points round-right
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
@@ -446,3 +446,13 @@ inherit = module/base
 type = custom/script
 exec = ~/.config/polybar/hashrate.py
 interval = 60
+
+[module/crypto]
+inherit = module/base
+type = custom/script
+interval = 300
+exec = ~/.config/polybar/crypto.py
+
+[module/empty]
+type = custom/text
+content = " "
