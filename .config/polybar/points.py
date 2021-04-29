@@ -38,11 +38,10 @@ SUBJS = [
         "icon": ""
     },
     {
-        "spreadsheet_id": "1sBKYN5MJ5NyPRYsGaSUNRsxcAwsUJyZ-UxD4nbSnqGY",
-        "range": "Баллы!F58",
+        "spreadsheet_id": "1E9a0zqeG_ASxVfc6vfkGdZNWVskKak41Sb-UqlH90Og",
+        "range": "Баллы!F141",
         "action": lambda x: x[0] * 5,
-        "icon": "pe",
-        "ignore": True
+        "icon": "pe"
     },
     {
         "icon": "en",
