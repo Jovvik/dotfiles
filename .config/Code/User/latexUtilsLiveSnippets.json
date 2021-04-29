@@ -344,6 +344,27 @@
         "triggerWhenComplete": true
     },
     {
+        "prefix": "\\bpart$",
+        "body": "\\frac{\\partial $${1:V}}{\\partial $${2:x}} ",
+        "mode": "maths",
+        "description": "partial derivative",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "\\bppart$",
+        "body": "\\frac{\\partial^2 $${1:f(x)}}{\\partial $${2:x_1}^2} ",
+        "mode": "maths",
+        "description": "partial derivative",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "\\bPart$",
+        "body": "\\frac{\\partial^2 $${1:f(x)}}{\\partial $${2:x} \\partial $${3:x}} ",
+        "mode": "maths",
+        "description": "partial derivative",
+        "triggerWhenComplete": true
+    },
+    {
         "prefix": "sq$",
         "body": "\\sqrt{$$1}",
         "mode": "maths",
@@ -481,7 +502,7 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "ll$",
+        "prefix": "\\bll$",
         "body": "\\llbracket $$1 \\rrbracket",
         "mode": "maths",
         "description": "brackets",
