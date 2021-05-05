@@ -199,5 +199,9 @@
 	{
 		"key": "ctrl+q",
 		"command": "-workbench.action.quit"
+	},
+	{
+		"key": "ctrl+i ctrl+c",
+		"command": "editor.emmet.action.incrementNumberByOne"
 	}
 ]
