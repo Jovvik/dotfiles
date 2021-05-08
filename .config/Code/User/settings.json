@@ -36,10 +36,6 @@
         "cpp",
         "c"
     ],
-    "c-cpp-flylint.clang.includePaths": [
-        "include/",
-        "googletest/googletest/include"
-    ],
     "c-cpp-flylint.clang.pedantic": true,
     "c-cpp-flylint.clang.pedanticErrors": true,
     "c-cpp-flylint.clang.standard": [
@@ -53,12 +49,10 @@
         "c++17-compat-pedantic",
         "c++14-compat-pedantic"
     ],
-    "c-cpp-flylint.cppcheck.enable": false,
     "c-cpp-flylint.cppcheck.inconclusive": true,
     "c-cpp-flylint.cppcheck.standard": [
         "c++20"
     ],
-    "c-cpp-flylint.flexelint.enable": false,
     "cSpell.allowCompoundWords": true,
     "cSpell.enableFiletypes": [
         "!cpp"
@@ -175,7 +169,7 @@
     ],
     "calva.paredit.defaultKeyMap": "strict",
     "cmake.configureOnOpen": true,
-    "cmake.sourceDirectory": "${workspaceFolder}/all",
+    "cmake.sourceDirectory": "${workspaceFolder}/standalone",
     "conceal.substitutions": [
         {
             "language": [
@@ -1756,6 +1750,18 @@
                 {
                     "pretty": "∇",
                     "ugly": "\\\\nabla"
+                },
+                {
+                    "pretty": "○",
+                    "ugly": "\\\\circ"
+                },
+                {
+                    "pretty": "∨",
+                    "ugly": "\\\\lor"
+                },
+                {
+                    "pretty": "＆",
+                    "ugly": "\\\\with"
                 }
             ]
         }
@@ -1768,7 +1774,6 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
     "editor.matchBrackets": false,
     "editor.minimap.enabled": false,
     "editor.smoothScrolling": true,
@@ -1862,18 +1867,19 @@
     "errorLens.gutterIconSize": "auto",
     "explorer.confirmDelete": false,
     "files.associations": {
-        "*.sty": "latex"
+        "*.sty": "latex",
+        "*.i": "plaintext"
     },
     "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
         "**/*.aux": true,
         "**/*.olean": true,
         "**/*.synctex.gz": true,
-        "**/*.xdv": true,
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true
+        "**/*.xdv": true
     },
     "git.autoStash": true,
     "git.autofetch": true,
@@ -2057,7 +2063,7 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
+    "terminal.integrated.defaultProfile.linux": "/usr/bin/fish",
     "testMate.cpp.log.logSentry": "disable_3",
     "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
     "testMate.cpp.test.advancedExecutables": [
@@ -2088,5 +2094,35 @@
         }
     ],
     "workbench.iconTheme": "Monokai Pro Icons",
-    "workbench.list.smoothScrolling": true
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.tabs.enabled": true,
+    "window.dialogStyle": "custom",
+    "c-cpp-flylint.debug": true,
+    "c-cpp-flylint.cppcheck.verbose": true,
+    "c-cpp-flylint.clang.extraArgs": [
+        "-p", "build"
+    ],
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.flexelint.enable": false,
+    "clang-tidy.buildPath": "build",
+    "githubPullRequests.queries": [
+        {
+            "label": "All",
+            "query": ""
+        },
+        {
+            "label": "Waiting For My Review",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Assigned To Me",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Created By Me",
+            "query": "is:open author:${user}"
+        }
+    ],
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
 }
