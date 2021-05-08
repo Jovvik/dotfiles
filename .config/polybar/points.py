@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import pickle
 from os import path
@@ -11,10 +11,8 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SUBJS = [
     {
         "spreadsheet_id": "1WyW_48ZFJFKsRIyG4ngizGZT-5XRcBS9RBkc048OZC4",
-        "range": "Осень20!E48",
-        "icon": "∫",
-        "action": lambda x: 0.6 * x[0],
-        "ignore": True
+        "range": "Весна21!F40",
+        "icon": "∫"
     },
     {
         "spreadsheet_id": "1xcLfzpmsu5YKEwZce67SGalgQHqPDFoDUntV5vECPME",
@@ -29,7 +27,7 @@ SUBJS = [
     },
     {
         "spreadsheet_id": "1TBhrGf9RYvsH3D6r773hrFvx457bBLnxpH9hQ12PJrw",
-        "range": "Список!Y94",
+        "range": "Список!BD94",
         "icon": ""
     },
     {
@@ -72,9 +70,9 @@ def sheets_prepare():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            if not path.exists('credentials.json'):
-                print("Credentials missing, get them from google.")
-                return
+            # if not path.exists('credentials.json'):
+            #     print("Credentials missing, get them from google.")
+            #     return
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
