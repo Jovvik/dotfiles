@@ -2063,7 +2063,7 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
-    "terminal.integrated.defaultProfile.linux": "/usr/bin/fish",
+    "terminal.integrated.defaultProfile.linux": "fish",
     "testMate.cpp.log.logSentry": "disable_3",
     "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
     "testMate.cpp.test.advancedExecutables": [
