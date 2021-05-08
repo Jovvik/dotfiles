@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import configparser
 import sys
@@ -22,14 +22,14 @@ for currency in currencies:
     icon = config[currency]['icon']
     json = requests.get(f'https://api.coingecko.com/api/v3/coins/{currency}',
                         ).json()["market_data"]
-    local_price = round(
-        Decimal(json["current_price"][f'{base_currency.lower()}']))
+    local_price = Decimal(json["current_price"]
+                          [f'{base_currency.lower()}']) / 1000
     change_24 = round(float(json['price_change_percentage_24h']), 1)
 
     display_opt = config['general']['display']
     if display_opt == 'both' or display_opt == None:
-        sys.stdout.write(f'{icon} {local_price}$/{change_24:+}%')
+        sys.stdout.write(f'{icon} {local_price:.1f}k$/{change_24:+}%')
     elif display_opt == 'percentage':
         sys.stdout.write(f'{icon} {change_24:+}%')
     elif display_opt == 'price':
-        sys.stdout.write(f'{icon} {local_price}')
+        sys.stdout.write(f'{icon} {local_price:.1f}k$')
