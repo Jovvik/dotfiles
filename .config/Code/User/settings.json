@@ -36,6 +36,11 @@
         "cpp",
         "c"
     ],
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.clang.extraArgs": [
+        "-p",
+        "build"
+    ],
     "c-cpp-flylint.clang.pedantic": true,
     "c-cpp-flylint.clang.pedanticErrors": true,
     "c-cpp-flylint.clang.standard": [
@@ -53,6 +58,9 @@
     "c-cpp-flylint.cppcheck.standard": [
         "c++20"
     ],
+    "c-cpp-flylint.cppcheck.verbose": true,
+    "c-cpp-flylint.debug": true,
+    "c-cpp-flylint.flexelint.enable": false,
     "cSpell.allowCompoundWords": true,
     "cSpell.enableFiletypes": [
         "!cpp"
@@ -92,8 +100,10 @@
         "Арцела",
         "Бонди",
         "Буняковского",
+        "Гессе",
         "Грама",
         "Гронуолла",
+        "Гёделева",
         "Диффуры",
         "Жорданова",
         "Изоморфность",
@@ -103,19 +113,29 @@
         "Лопиталя",
         "Минковского",
         "Мультииндекс",
+        "Направлениея",
         "Незнакоопределенная",
         "Пеано",
+        "Померяем",
         "Прюфера",
         "Рикатти",
         "СЛАУ",
+        "Соуфивается",
         "Хваталово",
         "Чебышевское",
         "Эрмитовски",
+        "аппроксимационные",
         "афинным",
+        "биекции",
         "биекцию",
         "биекция",
+        "борелевских",
+        "борелевского",
+        "борелевское",
+        "борелевской",
         "гомеоморфно",
         "гомотопные",
+        "гёделев",
         "двусвязен",
         "двусвязно",
         "двусвязности",
@@ -123,6 +143,7 @@
         "двусвязны",
         "дереево",
         "дизъюнктно",
+        "дизъюнктны",
         "дистрибутивны",
         "дифур",
         "дифура",
@@ -135,6 +156,8 @@
         "инцидентны",
         "иньективно",
         "йенсена",
+        "лебегово",
+        "лебеговском",
         "линейнозависимым",
         "линейнонезависимым",
         "матлабе",
@@ -142,6 +165,7 @@
         "мультииндексы",
         "незнакоопределена",
         "незнакостабильных",
+        "неотрицательности",
         "неподвешенных",
         "непр",
         "непусто",
@@ -157,17 +181,20 @@
         "продолжимо",
         "псевдоевклидово",
         "равн",
+        "римановским",
         "секвенциально",
         "секвенциальный",
         "сонаправлена",
         "сонаправлены",
         "столбцовым",
         "сюръекция",
+        "сюрьективной",
         "упоротое",
         "штольца",
         "ядроиобраз"
     ],
     "calva.paredit.defaultKeyMap": "strict",
+    "clang-tidy.buildPath": "build",
     "cmake.configureOnOpen": true,
     "cmake.sourceDirectory": "${workspaceFolder}/standalone",
     "conceal.substitutions": [
@@ -1117,6 +1144,10 @@
                     "ugly": "\\\\iff"
                 },
                 {
+                    "pretty": "⇏",
+                    "ugly": "\\\\nRightarrow"
+                },
+                {
                     "post": "\\b|_",
                     "pretty": "∈",
                     "ugly": "\\\\in"
@@ -1573,54 +1604,156 @@
                     "ugly": "\\\\rrbracket"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₁",
                     "ugly": "_1"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₂",
                     "ugly": "_2"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₃",
                     "ugly": "_3"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₄",
                     "ugly": "_4"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₅",
                     "ugly": "_5"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₆",
                     "ugly": "_6"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₇",
                     "ugly": "_7"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₈",
                     "ugly": "_8"
                 },
                 {
-                    "post": "\\b",
                     "pretty": "₉",
                     "ugly": "_9"
                 },
                 {
-                    "post": "\\b",
-                    "pretty": "₀",
-                    "ugly": "_0"
+                    "pretty": "⁰",
+                    "ugly": "\\^0"
+                },
+                {
+                    "pretty": "ⁱ",
+                    "ugly": "\\^i"
+                },
+                {
+                    "pretty": "⁴",
+                    "ugly": "\\^4"
+                },
+                {
+                    "pretty": "⁵",
+                    "ugly": "\\^5"
+                },
+                {
+                    "pretty": "⁶",
+                    "ugly": "\\^6"
+                },
+                {
+                    "pretty": "⁷",
+                    "ugly": "\\^7"
+                },
+                {
+                    "pretty": "⁸",
+                    "ugly": "\\^8"
+                },
+                {
+                    "pretty": "⁹",
+                    "ugly": "\\^9"
+                },
+                {
+                    "pretty": "⁺",
+                    "ugly": "\\^\\+"
+                },
+                {
+                    "pretty": "⁻",
+                    "ugly": "^-"
+                },
+                {
+                    "pretty": "⁼",
+                    "ugly": "^="
+                },
+                {
+                    "pretty": "⁽",
+                    "ugly": "^("
+                },
+                {
+                    "pretty": "⁾",
+                    "ugly": "^)"
+                },
+                {
+                    "pretty": "ⁿ",
+                    "ugly": "^n"
+                },
+                {
+                    "pretty": "₋",
+                    "ugly": "_-"
+                },
+                {
+                    "pretty": "₌",
+                    "ugly": "_="
+                },
+                {
+                    "pretty": "₍",
+                    "ugly": "_("
+                },
+                {
+                    "pretty": "₎",
+                    "ugly": "_)"
+                },
+                {
+                    "pretty": "ₐ",
+                    "ugly": "_a"
+                },
+                {
+                    "pretty": "ₑ",
+                    "ugly": "_e"
+                },
+                {
+                    "pretty": "ₒ",
+                    "ugly": "_o"
+                },
+                {
+                    "pretty": "ₓ",
+                    "ugly": "_x"
+                },
+                {
+                    "pretty": "ₕ",
+                    "ugly": "_h"
+                },
+                {
+                    "pretty": "ₖ",
+                    "ugly": "_k"
+                },
+                {
+                    "pretty": "ₗ",
+                    "ugly": "_l"
+                },
+                {
+                    "pretty": "ₘ",
+                    "ugly": "_m"
+                },
+                {
+                    "pretty": "ₙ",
+                    "ugly": "_n"
+                },
+                {
+                    "pretty": "ₚ",
+                    "ugly": "_p"
+                },
+                {
+                    "pretty": "ₛ",
+                    "ugly": "_s"
                 },
                 {
                     "pretty": "φ",
@@ -1631,8 +1764,20 @@
                     "ugly": "\\\\R"
                 },
                 {
+                    "pretty": "⊆",
+                    "ugly": "\\\\subseteq"
+                },
+                {
+                    "pretty": "ℵ",
+                    "ugly": "\\\\aleph"
+                },
+                {
                     "pretty": "⊂",
                     "ugly": "\\\\subset"
+                },
+                {
+                    "pretty": "⊃",
+                    "ugly": "\\\\supset"
                 },
                 {
                     "pretty": "∅",
@@ -1643,12 +1788,380 @@
                     "ugly": "\\\\varepsilon"
                 },
                 {
+                    "pretty": "⋃",
+                    "ugly": "\\\\bigcup"
+                },
+                {
+                    "pretty": "⋂",
+                    "ugly": "\\\\bigcap"
+                },
+                {
+                    "pretty": "∢",
+                    "ugly": "\\\\sphericalangle"
+                },
+                {
+                    "pretty": "∥",
+                    "ugly": "\\\\parallel"
+                },
+                {
                     "pretty": "ᵐ",
                     "ugly": "\\^m"
                 },
                 {
                     "pretty": "ᵖ",
                     "ugly": "\\^p"
+                },
+                {
+                    "pretty": "𝒜",
+                    "ugly": "\\\\mathcal{A}"
+                },
+                {
+                    "pretty": "𝒞",
+                    "ugly": "\\\\mathcal{C}"
+                },
+                {
+                    "pretty": "𝒟",
+                    "ugly": "\\\\mathcal{D}"
+                },
+                {
+                    "pretty": "𝒢",
+                    "ugly": "\\\\mathcal{G}"
+                },
+                {
+                    "pretty": "𝒥",
+                    "ugly": "\\\\mathcal{J}"
+                },
+                {
+                    "pretty": "𝒦",
+                    "ugly": "\\\\mathcal{K}"
+                },
+                {
+                    "pretty": "𝒩",
+                    "ugly": "\\\\mathcal{N}"
+                },
+                {
+                    "pretty": "𝒪",
+                    "ugly": "\\\\mathcal{O}"
+                },
+                {
+                    "pretty": "𝒫",
+                    "ugly": "\\\\mathcal{P}"
+                },
+                {
+                    "pretty": "𝒬",
+                    "ugly": "\\\\mathcal{Q}"
+                },
+                {
+                    "pretty": "𝒮",
+                    "ugly": "\\\\mathcal{S}"
+                },
+                {
+                    "pretty": "𝒯",
+                    "ugly": "\\\\mathcal{T}"
+                },
+                {
+                    "pretty": "𝒰",
+                    "ugly": "\\\\mathcal{U}"
+                },
+                {
+                    "pretty": "𝒱",
+                    "ugly": "\\\\mathcal{V}"
+                },
+                {
+                    "pretty": "𝒲",
+                    "ugly": "\\\\mathcal{W}"
+                },
+                {
+                    "pretty": "𝒳",
+                    "ugly": "\\\\mathcal{X}"
+                },
+                {
+                    "pretty": "𝒴",
+                    "ugly": "\\\\mathcal{Y}"
+                },
+                {
+                    "pretty": "𝒵",
+                    "ugly": "\\\\mathcal{Z}"
+                },
+                {
+                    "pretty": "𝒶",
+                    "ugly": "\\\\mathcal{a}"
+                },
+                {
+                    "pretty": "𝒷",
+                    "ugly": "\\\\mathcal{b}"
+                },
+                {
+                    "pretty": "𝒸",
+                    "ugly": "\\\\mathcal{c}"
+                },
+                {
+                    "pretty": "𝒹",
+                    "ugly": "\\\\mathcal{d}"
+                },
+                {
+                    "pretty": "𝒻",
+                    "ugly": "\\\\mathcal{f}"
+                },
+                {
+                    "pretty": "𝒽",
+                    "ugly": "\\\\mathcal{h}"
+                },
+                {
+                    "pretty": "𝒾",
+                    "ugly": "\\\\mathcal{i}"
+                },
+                {
+                    "pretty": "𝒿",
+                    "ugly": "\\\\mathcal{j}"
+                },
+                {
+                    "pretty": "𝓀",
+                    "ugly": "\\\\mathcal{k}"
+                },
+                {
+                    "pretty": "𝓁",
+                    "ugly": "\\\\mathcal{l}"
+                },
+                {
+                    "pretty": "𝓂",
+                    "ugly": "\\\\mathcal{m}"
+                },
+                {
+                    "pretty": "𝓃",
+                    "ugly": "\\\\mathcal{n}"
+                },
+                {
+                    "pretty": "𝓅",
+                    "ugly": "\\\\mathcal{p}"
+                },
+                {
+                    "pretty": "𝓆",
+                    "ugly": "\\\\mathcal{q}"
+                },
+                {
+                    "pretty": "𝓇",
+                    "ugly": "\\\\mathcal{r}"
+                },
+                {
+                    "pretty": "𝓈",
+                    "ugly": "\\\\mathcal{s}"
+                },
+                {
+                    "pretty": "𝓉",
+                    "ugly": "\\\\mathcal{t}"
+                },
+                {
+                    "pretty": "𝓊",
+                    "ugly": "\\\\mathcal{u}"
+                },
+                {
+                    "pretty": "𝓋",
+                    "ugly": "\\\\mathcal{v}"
+                },
+                {
+                    "pretty": "𝓌",
+                    "ugly": "\\\\mathcal{w}"
+                },
+                {
+                    "pretty": "𝓍",
+                    "ugly": "\\\\mathcal{x}"
+                },
+                {
+                    "pretty": "𝓎",
+                    "ugly": "\\\\mathcal{y}"
+                },
+                {
+                    "pretty": "𝓏",
+                    "ugly": "\\\\mathcal{z}"
+                },
+                {
+                    "pretty": "𝔄",
+                    "ugly": "\\\\mathfrak{A}"
+                },
+                {
+                    "pretty": "𝔅",
+                    "ugly": "\\\\mathfrak{B}"
+                },
+                {
+                    "pretty": "𝔇",
+                    "ugly": "\\\\mathfrak{D}"
+                },
+                {
+                    "pretty": "𝔈",
+                    "ugly": "\\\\mathfrak{E}"
+                },
+                {
+                    "pretty": "𝔉",
+                    "ugly": "\\\\mathfrak{F}"
+                },
+                {
+                    "pretty": "𝔊",
+                    "ugly": "\\\\mathfrak{G}"
+                },
+                {
+                    "pretty": "𝔍",
+                    "ugly": "\\\\mathfrak{J}"
+                },
+                {
+                    "pretty": "𝔎",
+                    "ugly": "\\\\mathfrak{K}"
+                },
+                {
+                    "pretty": "𝔏",
+                    "ugly": "\\\\mathfrak{L}"
+                },
+                {
+                    "pretty": "𝔐",
+                    "ugly": "\\\\mathfrak{M}"
+                },
+                {
+                    "pretty": "𝔑",
+                    "ugly": "\\\\mathfrak{N}"
+                },
+                {
+                    "pretty": "𝔒",
+                    "ugly": "\\\\mathfrak{O}"
+                },
+                {
+                    "pretty": "𝔓",
+                    "ugly": "\\\\mathfrak{P}"
+                },
+                {
+                    "pretty": "𝔔",
+                    "ugly": "\\\\mathfrak{Q}"
+                },
+                {
+                    "pretty": "𝔖",
+                    "ugly": "\\\\mathfrak{S}"
+                },
+                {
+                    "pretty": "𝔗",
+                    "ugly": "\\\\mathfrak{T}"
+                },
+                {
+                    "pretty": "𝔘",
+                    "ugly": "\\\\mathfrak{U}"
+                },
+                {
+                    "pretty": "𝔙",
+                    "ugly": "\\\\mathfrak{V}"
+                },
+                {
+                    "pretty": "𝔚",
+                    "ugly": "\\\\mathfrak{W}"
+                },
+                {
+                    "pretty": "𝔛",
+                    "ugly": "\\\\mathfrak{X}"
+                },
+                {
+                    "pretty": "𝔜",
+                    "ugly": "\\\\mathfrak{Y}"
+                },
+                {
+                    "pretty": "𝔞",
+                    "ugly": "\\\\mathfrak{a}"
+                },
+                {
+                    "pretty": "𝔟",
+                    "ugly": "\\\\mathfrak{b}"
+                },
+                {
+                    "pretty": "𝔠",
+                    "ugly": "\\\\mathfrak{c}"
+                },
+                {
+                    "pretty": "𝔡",
+                    "ugly": "\\\\mathfrak{d}"
+                },
+                {
+                    "pretty": "𝔢",
+                    "ugly": "\\\\mathfrak{e}"
+                },
+                {
+                    "pretty": "𝔣",
+                    "ugly": "\\\\mathfrak{f}"
+                },
+                {
+                    "pretty": "𝔤",
+                    "ugly": "\\\\mathfrak{g}"
+                },
+                {
+                    "pretty": "𝔥",
+                    "ugly": "\\\\mathfrak{h}"
+                },
+                {
+                    "pretty": "𝔦",
+                    "ugly": "\\\\mathfrak{i}"
+                },
+                {
+                    "pretty": "𝔧",
+                    "ugly": "\\\\mathfrak{j}"
+                },
+                {
+                    "pretty": "𝔨",
+                    "ugly": "\\\\mathfrak{k}"
+                },
+                {
+                    "pretty": "𝔩",
+                    "ugly": "\\\\mathfrak{l}"
+                },
+                {
+                    "pretty": "𝔪",
+                    "ugly": "\\\\mathfrak{m}"
+                },
+                {
+                    "pretty": "𝔫",
+                    "ugly": "\\\\mathfrak{n}"
+                },
+                {
+                    "pretty": "𝔬",
+                    "ugly": "\\\\mathfrak{o}"
+                },
+                {
+                    "pretty": "𝔭",
+                    "ugly": "\\\\mathfrak{p}"
+                },
+                {
+                    "pretty": "𝔮",
+                    "ugly": "\\\\mathfrak{q}"
+                },
+                {
+                    "pretty": "𝔯",
+                    "ugly": "\\\\mathfrak{r}"
+                },
+                {
+                    "pretty": "𝔰",
+                    "ugly": "\\\\mathfrak{s}"
+                },
+                {
+                    "pretty": "𝔱",
+                    "ugly": "\\\\mathfrak{t}"
+                },
+                {
+                    "pretty": "𝔲",
+                    "ugly": "\\\\mathfrak{u}"
+                },
+                {
+                    "pretty": "𝔳",
+                    "ugly": "\\\\mathfrak{v}"
+                },
+                {
+                    "pretty": "𝔴",
+                    "ugly": "\\\\mathfrak{w}"
+                },
+                {
+                    "pretty": "𝔵",
+                    "ugly": "\\\\mathfrak{x}"
+                },
+                {
+                    "pretty": "𝔶",
+                    "ugly": "\\\\mathfrak{y}"
+                },
+                {
+                    "pretty": "𝔷",
+                    "ugly": "\\\\mathfrak{z}"
                 },
                 {
                     "pretty": "𝔄",
@@ -1672,7 +2185,7 @@
                 },
                 {
                     "pretty": "⯅",
-                    "ugly": "\\\\end{.*}"
+                    "ugly": "\\\\end"
                 },
                 {
                     "post": "\\b",
@@ -1680,7 +2193,7 @@
                     "ugly": "\\\\item"
                 },
                 {
-                    "post": "{.+?}",
+                    "post": "{.*?}",
                     "pretty": "※",
                     "style": {
                         "color": "cyan"
@@ -1688,7 +2201,7 @@
                     "ugly": "\\\\ref|\\\\eqref|\\\\cref|\\\\autoref|\\\\cite"
                 },
                 {
-                    "post": "{.+?}",
+                    "post": "{.*?}",
                     "pretty": "§",
                     "style": {
                         "color": "red"
@@ -1700,7 +2213,7 @@
                     "ugly": "\\\\partial"
                 },
                 {
-                    "post": "{.+?}",
+                    "post": "{.*?}",
                     "pretty": "§§",
                     "style": {
                         "color": "red"
@@ -1708,7 +2221,7 @@
                     "ugly": "\\\\section"
                 },
                 {
-                    "post": "{.+?}",
+                    "post": "{.*?}",
                     "pretty": "§§§",
                     "style": {
                         "color": "red"
@@ -1716,7 +2229,7 @@
                     "ugly": "\\\\subsection"
                 },
                 {
-                    "post": "{.+?}",
+                    "post": "{.*?}",
                     "pretty": "§§§§",
                     "style": {
                         "color": "red"
@@ -1762,6 +2275,10 @@
                 {
                     "pretty": "＆",
                     "ugly": "\\\\with"
+                },
+                {
+                    "pretty": "√",
+                    "ugly": "\\\\sqrt"
                 }
             ]
         }
@@ -1770,10 +2287,12 @@
     "editor.codeLensFontFamily": "'JetBrainsMonoMedium Nerd Font'",
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.fontFamily": "'VictorMono Nerd Font', 'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
+    "editor.formatOnType": true,
     "editor.matchBrackets": false,
     "editor.minimap.enabled": false,
     "editor.smoothScrolling": true,
@@ -1867,8 +2386,8 @@
     "errorLens.gutterIconSize": "auto",
     "explorer.confirmDelete": false,
     "files.associations": {
-        "*.sty": "latex",
-        "*.i": "plaintext"
+        "*.i": "plaintext",
+        "*.sty": "latex"
     },
     "files.exclude": {
         "**/.git": true,
@@ -1877,18 +2396,42 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/*.aux": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
         "**/*.olean": true,
         "**/*.synctex.gz": true,
-        "**/*.xdv": true
+        "**/*.xdv": true,
+        "**/_minted-*": true
     },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "git.autoStash": true,
     "git.autofetch": true,
     "git.enableCommitSigning": true,
+    "githubPullRequests.queries": [
+        {
+            "label": "All",
+            "query": ""
+        },
+        {
+            "label": "Waiting For My Review",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Assigned To Me",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Created By Me",
+            "query": "is:open author:${user}"
+        }
+    ],
     "gitlens.codeLens.scopes": [
         "document",
         "containers"
     ],
     "gradle.debug": true,
+    "icie.logger.enabled": true,
     "icie.template.list": {
         "C++": "/home/jovvik/.config/cftemplate.cpp"
     },
@@ -1899,12 +2442,14 @@
     "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.semanticHighlighting.enabled": true,
+    "java.test.editor.enableShortcuts": false,
     "javascript.referencesCodeLens.enabled": true,
     "javascript.referencesCodeLens.showOnAllFunctions": true,
     "jshint.options": {
         "-W104": false,
         "esversion": 5
     },
+    "kite.codefinder.enableLineDecoration": false,
     "kite.showWelcomeNotificationOnStartup": false,
     "latex-utilities.liveReformat.enabled": true,
     "latex-workshop.chktex.args.active": [
@@ -1938,15 +2483,15 @@
             ]
         },
         {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
             "name": "latexmk 🔃",
             "tools": [
                 "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
             ]
         },
         {
@@ -1987,11 +2532,13 @@
         },
         {
             "args": [
+                "--shell-escape",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-pdf",
                 "-outdir=%OUTDIR%",
+                "--shell-escape",
                 "%DOC%"
             ],
             "command": "latexmk",
@@ -2000,12 +2547,13 @@
         },
         {
             "args": [
-                "-shell-escape",
+                "--shell-escape",
                 "-xelatex",
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-outdir=%OUTDIR%",
+                "--shell-escape",
                 "%DOC%"
             ],
             "command": "latexmk",
@@ -2058,12 +2606,24 @@
     ],
     "python.linting.pylintUseMinimalCheckers": false,
     "scm.defaultViewMode": "tree",
+    "sonarlint.rules": {
+        "java:S106": {
+            "level": "off"
+        },
+        "java:S6212": {
+            "level": "off"
+        },
+        "java:S2479": {
+            "level": "off"
+        }
+    },
     "tabnine.experimentalAutoImports": true,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.tabs.enabled": true,
     "testMate.cpp.log.logSentry": "disable_3",
     "testMate.cpp.log.userId": "127b0af93cf94dec4c7340beb9ff7d3c082cab62",
     "testMate.cpp.test.advancedExecutables": [
@@ -2076,53 +2636,45 @@
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.referencesCodeLens.enabled": true,
     "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "vim.useSystemClipboard": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vva.trustedDomain": true,
     "window.customMenuBarAltFocus": false,
+    "window.dialogStyle": "custom",
     "window.menuBarVisibility": "hidden",
-    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "[Horizon Italic]": {
-            "sideBar.foreground": "#d5d8da95"
+            "sideBar.foreground": "#d5d8da95",
+            "editor.background": "#181a20",
+            "sideBar.background": "#181a20",
+            "activityBar.background": "#181a20",
+            "sideBarSectionHeader.background": "#181a20",
+            "statusBar.background": "#181a20",
+            "tab.inactiveBackground": "#181a20",
+            "titleBar.inactiveBackground": "#181a20",
+            "tab.border": "#181a20",
         }
     },
     "workbench.colorTheme": "Horizon Italic",
     "workbench.editor.enablePreview": false,
-    "workbench.editorAssociations": [
-        {
-            "filenamePattern": "*.ipynb",
-            "viewType": "jupyter.notebook.ipynb"
-        }
-    ],
-    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
     "workbench.list.smoothScrolling": true,
-    "terminal.integrated.tabs.enabled": true,
-    "window.dialogStyle": "custom",
-    "c-cpp-flylint.debug": true,
-    "c-cpp-flylint.cppcheck.verbose": true,
-    "c-cpp-flylint.clang.extraArgs": [
-        "-p", "build"
+    "editor.semanticHighlighting.enabled": true,
+    "Lua.telemetry.enable": false,
+    "clang-tidy.compilerArgs": [
+        "-std=c++20"
     ],
-    "c-cpp-flylint.clang.enable": false,
-    "c-cpp-flylint.flexelint.enable": false,
-    "clang-tidy.buildPath": "build",
-    "githubPullRequests.queries": [
-        {
-            "label": "All",
-            "query": ""
-        },
-        {
-            "label": "Waiting For My Review",
-            "query": "is:open review-requested:${user}"
-        },
-        {
-            "label": "Assigned To Me",
-            "query": "is:open assignee:${user}"
-        },
-        {
-            "label": "Created By Me",
-            "query": "is:open author:${user}"
-        }
-    ],
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "tabnine.requestTimeout": 500,
+    "editor.fontWeight": 500,
 }

@@ -267,6 +267,13 @@
         "triggerWhenComplete": true
     },
     {
+        "prefix": "([A-Z])bf$",
+        "body": "\\mathbb{$1}",
+        "mode": "maths",
+        "description": "mathbb",
+        "triggerWhenComplete": true
+    },
+    {
         "prefix": "(\\\\?[\\w\\^]{1,7})\\. $",
         "body": "\\dot{$1}",
         "mode": "maths",
@@ -474,15 +481,15 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": " im$",
-        "body": " \\($$1\\)",
+        "prefix": "(\\s)im$",
+        "body": "$1\\($$1\\)",
         "mode": "text",
         "description": "Inline math",
         "triggerWhenComplete": true
     },
     {
-        "prefix": " mm$",
-        "body": " \\[$$1\\]",
+        "prefix": "(\\s)mm$",
+        "body": "$1\\[$$1\\]",
         "mode": "text",
         "description": "Proper math",
         "triggerWhenComplete": true
