@@ -52,7 +52,7 @@ font-0 = Inconsolata Nerd Font:size=12;3
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;3
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;3
 font-3 = Font Awesome 5 Brands:pixelsize=11;3
-font-4 = Weather Icons:style=Regular:pixelsize=10;3
+font-4 = Weather Icons:style=Regular:pixelsize=10;2
 font-5 = JetBrainsMono Nerd Font:size=14;4
 
 ;--------;
@@ -73,7 +73,7 @@ padding-left = 0
 padding-right = 0
 
 modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
-modules-center = round-left points round-right
+modules-center =
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
 tray-position = right
@@ -129,25 +129,25 @@ label-mode-foreground = #000
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = ◯
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 label-focused-background = ${colors.background}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = ◯
 label-unfocused-padding = 1
 label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = ◯
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = ◯
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
