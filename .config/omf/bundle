@@ -4,5 +4,4 @@ package config
 package wacom-screen
 package wttr
 theme default
-theme spacefish
 theme zephyr
