@@ -203,5 +203,15 @@
 	{
 		"key": "ctrl+i ctrl+c",
 		"command": "editor.emmet.action.incrementNumberByOne"
+	},
+	{
+		"key": "alt+enter",
+		"command": "editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+.",
+		"command": "-editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
 	}
 ]
