@@ -14,7 +14,6 @@ Rice screenshots are outdated a bit.
 - Compositor: [picom _(with rounded corners and fancy blur)_](https://github.com/ibhagwan/picom)
 - Status bar: [polybar](https://github.com/polybar/polybar)
 - Shell: [fish](https://github.com/fish-shell/fish-shell)
-  - Release: bleeding edge (`fish-git` in AUR)
   - Plugin manager: [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
   - Prompt: [starship](https://github.com/starship/starship)
 - Font: [Jetbrains Mono _(with nerd fonts patch)_](https://github.com/JetBrains/JetBrainsMono), `nerd-fonts-jetbrains-mono` in AUR

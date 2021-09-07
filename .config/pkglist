@@ -1,8 +1,8 @@
-# Normie shit
-brave
+# Normie stuff
+brave-bin
 telegram-desktop
 visual-studio-code-bin
-discord
+discord-canary
 kitty
 multimc-git
 zoom
@@ -26,6 +26,7 @@ jre-openjdk
 ipython
 ghc
 ghc-static
+sage
 
 # Ricing
 deadd-notification-center
@@ -52,7 +53,7 @@ docker
 dust
 exa
 ffmpeg
-fish-git
+fish
 git
 gitkraken
 gotop
@@ -68,6 +69,7 @@ thefuck
 yay
 xclip
 zathura
+zathura-djvu
 zathura-pdf-mupdf
 zeal
 zip
