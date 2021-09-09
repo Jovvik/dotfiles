@@ -23,9 +23,11 @@ boost-libs
 clojure
 jdk-openjdk
 jre-openjdk
+jupyterlab
 ipython
 ghc
 ghc-static
+kotlin
 sage
 
 # Ricing
