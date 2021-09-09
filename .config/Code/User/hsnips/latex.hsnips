@@ -1,0 +1,287 @@
+global
+function math(context) {
+    return context.scopes.some(s => s.startsWith("meta.math"));
+}
+endglobal
+
+# Credit for most snippets goes to https://github.com/gillescastel
+# TODO: table, fig, plot
+
+snippet mm "Display math" wA
+\[$1\]
+endsnippet
+
+snippet im "Inline math" wA
+\($1\)
+endsnippet
+
+snippet ... "⋯" iA
+\dots 
+endsnippet
+
+# ------------------- Math snippets -------------------
+# TODO: align, sympy?, overline, bar, hat, np1, nm1, nP1, nM1, greek letters, to
+
+context math(context)
+snippet `([A-Za-z])(\d)` "Single-digit subscript" iwA
+``rv = `${m[1]}_${m[2]}` ``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z])_(\d\d)` "Two-digit subscript" iwA
+``rv = `${m[1]}_{${m[2]}}` ``
+endsnippet
+
+# square and cube might be useful
+# might not use
+context math(context)
+snippet td "Superscript" iwA
+^{$1} 
+endsnippet
+
+context math(context)
+snippet __ "Subscript" iA
+_{$1} 
+endsnippet
+
+# jesus christ what is that regex
+context math(context)
+snippet `([A-Za-z}\)\]]) ?\^ ?(\d\d|[\+\-] ?(?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
+``rv = `${m[1]}^{${m[2]}}` ``
+endsnippet
+
+context math(context)
+snippet `(\S) ([\^_])` "(sub|super)script snapping" iA
+``rv = m[1] + m[2]``
+endsnippet
+
+context math(context)
+snippet `([^ &\\\+\-=<>\|!~@])([\+\-=<>])` "Whitespace before operators" iwA
+``rv = `${m[1]} ${m[2]}` ``
+endsnippet
+
+context math(context)
+snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~@])` "Whitespace after operators" iwA
+``rv = `${m[1]} ${m[2]}` ``
+endsnippet
+
+context math(context)
+snippet // "Simple fraction" iA
+\\frac{$1}{$2}
+endsnippet
+
+context math(context)
+snippet `((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/` "Half-done fraction" wA
+\\frac{``rv = m[1]``}{$1}
+endsnippet
+
+context math(context)
+snippet => "⇒" iA
+\Rightarrow
+endsnippet
+
+context math(context)
+snippet =< "⇐" iA
+\Leftarrow
+endsnippet
+
+context math(context)
+snippet iff "⇔" iA
+\Leftrightarrow
+endsnippet
+
+context math(context)
+snippet == "Equals with tabbing" iA
+& = $1 \\\\
+endsnippet
+
+context math(context)
+snippet != "≠" iA
+\neq
+endsnippet
+
+snippet bmat "bmat" wA
+\begin{bmatrix}
+    $1
+\end{bmatrix}
+endsnippet
+
+snippet pmat "pmat" wA
+\begin{pmatrix}
+    $1
+\end{pmatrix}
+endsnippet
+
+snippet vmat "vmat" wA
+\begin{vmatrix}
+    $1
+\end{vmatrix}
+endsnippet
+
+context math(context)
+snippet ||| "Left-right |" iA
+\left|$1\right|
+endsnippet
+
+# awkward
+context math(context)
+snippet lrb "Left-right (" iA
+\left($1\right)
+endsnippet
+
+# awkward
+context math(context)
+snippet lrs "Left-right [" iA
+\left[$1\right]
+endsnippet
+
+# awkward
+context math(context)
+snippet lrf "Left-right {" iA
+\left{$1\right}
+endsnippet
+
+context math(context)
+snippet <> "Left-right <" iA
+\langle$1\rangle
+endsnippet
+
+context math(context)
+snippet lim "limit" wA
+\lim_{${1:n} \to ${2:\infty}} 
+endsnippet
+
+context math(context)
+snippet sum "sum" wA
+\sum_{${1:i}=${2:1}}^{${3:\infty}} 
+endsnippet
+
+context math(context)
+snippet prod "product" wA
+\prod_{${1:i}=${2:1}}^{${3:\infty}} 
+endsnippet
+
+context math(context)
+snippet sq "Square root" iA
+\sqrt{$1} 
+endsnippet
+
+context math(context)
+snippet part "Partial derivative" wA
+\frac{\partial ${1:V}}{\partial ${2:x}} 
+endsnippet
+
+context math(context)
+snippet ooo "Infinity" iA
+\infty
+endsnippet
+
+context math(context)
+snippet ` ?<=` "leq" iA
+ \leq 
+endsnippet
+
+context math(context)
+snippet ` ?>=` "geq" iA
+ \geq 
+endsnippet
+
+context math(context)
+snippet EE "Exists" iA
+\exists 
+endsnippet
+
+context math(context)
+snippet AA "For all" iA
+\forall 
+endsnippet
+
+context math(context)
+snippet `([A-Za-z])(cal|frak|bb)` "Mathcal, frak or bb" iA
+``rv = `\\math${m[2]}{${m[1]}}` `` 
+endsnippet
+
+context math(context)
+snippet `(\w+)rm` "Mathrm" iA
+``rv = `\\mathrm{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet ` ?~=` "Approximately equal" iA
+ \approx 
+endsnippet
+
+context math(context)
+snippet oo "∞" iA
+\infty 
+endsnippet
+
+context math(context)
+snippet -> "→" iA
+\to 
+endsnippet
+
+context math(context)
+snippet `\\to ?>` "↠" iA
+\twoheadrightarrow 
+endsnippet
+
+context math(context)
+snippet ` ?>>` "≫" iA
+ \gg 
+endsnippet
+
+context math(context)
+snippet ` ?<<` "≪" iA
+ \ll 
+endsnippet
+
+# ---------- Greek letters start ----------
+context math(context)
+snippet @a "alpha" iA
+\alpha
+endsnippet
+context math(context)
+snippet @b "beta" iA
+\beta
+endsnippet
+context math(context)
+snippet @c "chi" iA
+\chi
+endsnippet
+context math(context)
+snippet @d "delta" iA
+\delta
+endsnippet
+context math(context)
+snippet @D "Delta" iA
+\Delta
+endsnippet
+context math(context)
+snippet @l "lambda" iA
+\lambda
+endsnippet
+context math(context)
+snippet @vf "varphi" iA
+\varphi
+endsnippet
+context math(context)
+snippet @vq "vartheta" iA
+\vartheta
+endsnippet
+# ----------  Greek letters end ----------
+
+context math(context)
+snippet ` ?\|-` "vdash" iA
+ \vdash 
+endsnippet
+
+context math(context)
+snippet `  ` "space" iA
+\ 
+endsnippet
+
+context math(context)
+snippet `([\w\^{}\\]+)bar` "Overline" iA
+``rv = `\\overline{${m[1]}}` ``
+endsnippet
