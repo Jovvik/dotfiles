@@ -77,17 +77,17 @@ endsnippet
 
 context math(context)
 snippet => "⇒" iA
-\Rightarrow
+\Rightarrow 
 endsnippet
 
 context math(context)
 snippet =< "⇐" iA
-\Leftarrow
+\Leftarrow 
 endsnippet
 
 context math(context)
 snippet iff "⇔" iA
-\Leftrightarrow
+\Leftrightarrow 
 endsnippet
 
 context math(context)
@@ -217,6 +217,11 @@ snippet oo "∞" iA
 endsnippet
 
 context math(context)
+snippet <-> "<->" iA
+\leftrightarrow 
+endsnippet
+
+context math(context)
 snippet -> "→" iA
 \to 
 endsnippet
@@ -234,6 +239,11 @@ endsnippet
 context math(context)
 snippet ` ?<<` "≪" iA
  \ll 
+endsnippet
+
+context math(context)
+snippet ` ?xx` "times" wA
+ \times 
 endsnippet
 
 # ---------- Greek letters start ----------
@@ -258,12 +268,24 @@ snippet @D "Delta" iA
 \Delta
 endsnippet
 context math(context)
+snippet @e "eta" iA
+\eta
+endsnippet
+context math(context)
 snippet @l "lambda" iA
 \lambda
 endsnippet
 context math(context)
+snippet @x "xi" iA
+\xi
+endsnippet
+context math(context)
 snippet @vf "varphi" iA
 \varphi
+endsnippet
+context math(context)
+snippet @ve "varepsilon" iA
+\varepsilon
 endsnippet
 context math(context)
 snippet @vq "vartheta" iA
@@ -284,4 +306,14 @@ endsnippet
 context math(context)
 snippet `([\w\^{}\\]+)bar` "Overline" iA
 ``rv = `\\overline{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet set "set" wA
+\{$1\\}
+endsnippet
+
+context math(context)
+snippet ` ?\\\\\\` "setminus" iA
+ \setminus 
 endsnippet
