@@ -19,16 +19,37 @@ snippet ... "⋯" iA
 \dots 
 endsnippet
 
-# ------------------- Math snippets -------------------
-# TODO: align, sympy?, overline, bar, hat, np1, nm1, nP1, nM1, greek letters, to
+# --------------------- Math snippets ----------------------
+# TODO: align, sympy?, hat, more greek letters
 
 context math(context)
-snippet `([A-Za-z])(\d)` "Single-digit subscript" iwA
+snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
+``rv = `\\math${m[2]}{${m[1]}}` ``
+endsnippet
+
+# ------------------- Sub/super scripts --------------------
+context math(context)
+snippet `\b([A-Za-z}\)\]])([A-Za-z])\2` "Letter subscript" iwA
 ``rv = `${m[1]}_${m[2]}` ``
 endsnippet
 
 context math(context)
-snippet `([A-Za-z])_(\d\d)` "Two-digit subscript" iwA
+snippet `\b([A-Za-z}\)\]])([A-Za-z])p1` "Letter + 1 subscript" iwA
+``rv = `${m[1]}_{${m[2]}+1}` ``
+endsnippet
+
+context math(context)
+snippet `\b([A-Za-z}\)\]])([A-Za-z])m1` "Letter - 1 subscript" iwA
+``rv = `${m[1]}_{${m[2]}-1}` ``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z}\)\]])(\d)` "Single digit subscript" iwA
+``rv = `${m[1]}_${m[2]}` ``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z}\)\]])_(\d\d)` "Two digit subscript" iwA
 ``rv = `${m[1]}_{${m[2]}}` ``
 endsnippet
 
@@ -44,16 +65,16 @@ snippet __ "Subscript" iA
 _{$1} 
 endsnippet
 
-# jesus christ what is that regex
 context math(context)
 snippet `([A-Za-z}\)\]]) ?\^ ?(\d\d|[\+\-] ?(?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
 ``rv = `${m[1]}^{${m[2]}}` ``
 endsnippet
 
 context math(context)
-snippet `(\S) ([\^_])` "(sub|super)script snapping" iA
+snippet `(.) ([\^_])` "(sub|super)script snapping" iA
 ``rv = m[1] + m[2]``
 endsnippet
+# ---------------- End sub/super scripts -------------------
 
 context math(context)
 snippet `([^ &\\\+\-=<>\|!~@])([\+\-=<>])` "Whitespace before operators" iwA
@@ -61,10 +82,11 @@ snippet `([^ &\\\+\-=<>\|!~@])([\+\-=<>])` "Whitespace before operators" iwA
 endsnippet
 
 context math(context)
-snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~@])` "Whitespace after operators" iwA
+snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~@\^_])` "Whitespace after operators" iwA
 ``rv = `${m[1]} ${m[2]}` ``
 endsnippet
 
+# ----------------------- Fractions -----------------------
 context math(context)
 snippet // "Simple fraction" iA
 \\frac{$1}{$2}
@@ -74,7 +96,9 @@ context math(context)
 snippet `((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/` "Half-done fraction" wA
 \\frac{``rv = m[1]``}{$1}
 endsnippet
+# --------------------- End fractions ---------------------
 
+# ------------------------ Arrows -------------------------
 context math(context)
 snippet => "⇒" iA
 \Rightarrow 
@@ -89,6 +113,22 @@ context math(context)
 snippet iff "⇔" iA
 \Leftrightarrow 
 endsnippet
+
+context math(context)
+snippet <-> "<->" iA
+\leftrightarrow 
+endsnippet
+
+context math(context)
+snippet -> "→" iA
+\to 
+endsnippet
+
+context math(context)
+snippet `\\to ?>` "↠" iA
+\twoheadrightarrow 
+endsnippet
+# ---------------------- End arrows -----------------------
 
 context math(context)
 snippet == "Equals with tabbing" iA
@@ -172,11 +212,6 @@ snippet part "Partial derivative" wA
 endsnippet
 
 context math(context)
-snippet ooo "Infinity" iA
-\infty
-endsnippet
-
-context math(context)
 snippet ` ?<=` "leq" iA
  \leq 
 endsnippet
@@ -197,11 +232,6 @@ snippet AA "For all" iA
 endsnippet
 
 context math(context)
-snippet `([A-Za-z])(cal|frak|bb)` "Mathcal, frak or bb" iA
-``rv = `\\math${m[2]}{${m[1]}}` `` 
-endsnippet
-
-context math(context)
 snippet `(\w+)rm` "Mathrm" iA
 ``rv = `\\mathrm{${m[1]}}` ``
 endsnippet
@@ -212,23 +242,8 @@ snippet ` ?~=` "Approximately equal" iA
 endsnippet
 
 context math(context)
-snippet oo "∞" iA
+snippet oo "∞" A
 \infty 
-endsnippet
-
-context math(context)
-snippet <-> "<->" iA
-\leftrightarrow 
-endsnippet
-
-context math(context)
-snippet -> "→" iA
-\to 
-endsnippet
-
-context math(context)
-snippet `\\to ?>` "↠" iA
-\twoheadrightarrow 
 endsnippet
 
 context math(context)
@@ -244,6 +259,31 @@ endsnippet
 context math(context)
 snippet ` ?xx` "times" wA
  \times 
+endsnippet
+
+context math(context)
+snippet ` ?\|-` "vdash" iA
+ \vdash 
+endsnippet
+
+context math(context)
+snippet `  ` "space" iA
+\ 
+endsnippet
+
+context math(context)
+snippet `([\w\^{}\\]+)bar` "Overline" iA
+``rv = `\\overline{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet set "set" wA
+\{$1\\}
+endsnippet
+
+context math(context)
+snippet ` ?\\\\\\` "setminus" iA
+ \setminus 
 endsnippet
 
 # ---------- Greek letters start ----------
@@ -292,28 +332,3 @@ snippet @vq "vartheta" iA
 \vartheta
 endsnippet
 # ----------  Greek letters end ----------
-
-context math(context)
-snippet ` ?\|-` "vdash" iA
- \vdash 
-endsnippet
-
-context math(context)
-snippet `  ` "space" iA
-\ 
-endsnippet
-
-context math(context)
-snippet `([\w\^{}\\]+)bar` "Overline" iA
-``rv = `\\overline{${m[1]}}` ``
-endsnippet
-
-context math(context)
-snippet set "set" wA
-\{$1\\}
-endsnippet
-
-context math(context)
-snippet ` ?\\\\\\` "setminus" iA
- \setminus 
-endsnippet
