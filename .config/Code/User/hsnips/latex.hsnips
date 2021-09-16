@@ -15,12 +15,16 @@ snippet im "Inline math" wA
 \($1\)
 endsnippet
 
+snippet `\\\)(\w)` "Space after inline math" iA
+``rv = `\\) ${m[1]}` ``
+endsnippet
+
 snippet ... "⋯" iA
 \dots 
 endsnippet
 
 # --------------------- Math snippets ----------------------
-# TODO: align, sympy?, hat, more greek letters
+# TODO: align, sympy?, hat, more greek letters, pm, mp, case, beginend, nexists
 
 context math(context)
 snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
@@ -117,6 +121,11 @@ endsnippet
 context math(context)
 snippet <-> "<->" iA
 \leftrightarrow 
+endsnippet
+
+context math(context)
+snippet |-> "↦" iA
+\mapsto 
 endsnippet
 
 context math(context)
@@ -262,6 +271,11 @@ snippet ` ?xx` "times" wA
 endsnippet
 
 context math(context)
+snippet ` ?\*\*` "cdot" wA
+ \cdot 
+endsnippet
+
+context math(context)
 snippet ` ?\|-` "vdash" iA
  \vdash 
 endsnippet
@@ -316,8 +330,36 @@ snippet @l "lambda" iA
 \lambda
 endsnippet
 context math(context)
+snippet @m "mu" iA
+\mu
+endsnippet
+context math(context)
+snippet @n "nu" iA
+\nu
+endsnippet
+context math(context)
+snippet @p "pi" iA
+\pi
+endsnippet
+context math(context)
+snippet @r "rho" iA
+\rho
+endsnippet
+context math(context)
+snippet @s "sigma" iA
+\sigma
+endsnippet
+context math(context)
 snippet @x "xi" iA
 \xi
+endsnippet
+context math(context)
+snippet @y "psi" iA
+\psi
+endsnippet
+context math(context)
+snippet @Y "Psi" iA
+\Psi
 endsnippet
 context math(context)
 snippet @vf "varphi" iA
