@@ -343,6 +343,14 @@ snippet @n "nu" iA
 \nu
 endsnippet
 context math(context)
+snippet @o "omega" iA
+\omega
+endsnippet
+context math(context)
+snippet @O "Omega" iA
+\Omega
+endsnippet
+context math(context)
 snippet @p "pi" iA
 \pi
 endsnippet
@@ -353,6 +361,10 @@ endsnippet
 context math(context)
 snippet @s "sigma" iA
 \sigma
+endsnippet
+context math(context)
+snippet @q "theta" iA
+\theta
 endsnippet
 context math(context)
 snippet @x "xi" iA
