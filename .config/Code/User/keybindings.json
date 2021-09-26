@@ -193,10 +193,6 @@
 		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
 	},
 	{
-		"key": "ctrl+enter",
-		"command": "python.execInTerminal"
-	},
-	{
 		"key": "ctrl+q",
 		"command": "-workbench.action.quit"
 	},
@@ -213,5 +209,9 @@
 		"key": "ctrl+.",
 		"command": "-editor.action.quickFix",
 		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+u ctrl+c",
+		"command": "editor.action.transformToUppercase"
 	}
 ]
