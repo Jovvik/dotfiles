@@ -27,6 +27,38 @@ snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
 ``rv = `\\math${m[2]}{${m[1]}}` ``
 endsnippet
 
+# ------------------------ Arrows -------------------------
+context math(context)
+snippet => "⇒" iA
+\Rightarrow 
+endsnippet
+
+context math(context)
+snippet =< "⇐" iA
+\Leftarrow 
+endsnippet
+
+context math(context)
+snippet iff "⇔" iA
+\Leftrightarrow 
+endsnippet
+
+context math(context)
+snippet <-> "<->" iA
+\leftrightarrow 
+endsnippet
+
+context math(context)
+snippet -> "→" iA
+\to 
+endsnippet
+
+context math(context)
+snippet `\\to ?>` "↠" iA
+\twoheadrightarrow 
+endsnippet
+# ---------------------- End arrows -----------------------
+
 # ------------------- Sub/super scripts --------------------
 context math(context)
 snippet `\b([A-Za-z}\)\]])([A-Za-z])\2` "Letter subscript" iwA
@@ -97,38 +129,6 @@ snippet `((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/` "Half-done fractio
 \\frac{``rv = m[1]``}{$1}
 endsnippet
 # --------------------- End fractions ---------------------
-
-# ------------------------ Arrows -------------------------
-context math(context)
-snippet => "⇒" iA
-\Rightarrow 
-endsnippet
-
-context math(context)
-snippet =< "⇐" iA
-\Leftarrow 
-endsnippet
-
-context math(context)
-snippet iff "⇔" iA
-\Leftrightarrow 
-endsnippet
-
-context math(context)
-snippet <-> "<->" iA
-\leftrightarrow 
-endsnippet
-
-context math(context)
-snippet -> "→" iA
-\to 
-endsnippet
-
-context math(context)
-snippet `\\to ?>` "↠" iA
-\twoheadrightarrow 
-endsnippet
-# ---------------------- End arrows -----------------------
 
 context math(context)
 snippet == "Equals with tabbing" iA
@@ -272,6 +272,11 @@ snippet `  ` "space" iA
 endsnippet
 
 context math(context)
+snippet ` ?\*\*` "cdot" iA
+ \cdot 
+endsnippet
+
+context math(context)
 snippet `([\w\^{}\\]+)bar` "Overline" iA
 ``rv = `\\overline{${m[1]}}` ``
 endsnippet
@@ -314,6 +319,10 @@ endsnippet
 context math(context)
 snippet @l "lambda" iA
 \lambda
+endsnippet
+context math(context)
+snippet @r "rho" iA
+\rho
 endsnippet
 context math(context)
 snippet @x "xi" iA
