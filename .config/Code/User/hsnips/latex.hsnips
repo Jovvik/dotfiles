@@ -2,15 +2,20 @@ global
 function math(context) {
     return context.scopes.some(s => s.startsWith("meta.math"));
 }
+function notmath(context) {
+    return !math(context);
+}
 endglobal
 
 # Credit for most snippets goes to https://github.com/gillescastel
 # TODO: table, fig, plot
 
+context notmath(context)
 snippet mm "Display math" wA
 \[$1\]
 endsnippet
 
+context notmath(context)
 snippet im "Inline math" wA
 \($1\)
 endsnippet
@@ -24,7 +29,7 @@ snippet ... "⋯" iA
 endsnippet
 
 # --------------------- Math snippets ----------------------
-# TODO: align, sympy?, hat, more greek letters, pm, mp, case, beginend, nexists
+# TODO: align, sympy?, more greek letters, pm, mp, case, beginend, nexists
 
 context math(context)
 snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
@@ -107,7 +112,7 @@ _{$1}
 endsnippet
 
 context math(context)
-snippet `([A-Za-z}\)\]]) ?\^ ?(\d\d|[\+\-] ?(?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
+snippet `([A-Za-z0-9}\)\]]) ?\^ ?(\d\d|[\+\-] ?(?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
 ``rv = `${m[1]}^{${m[2]}}` ``
 endsnippet
 
@@ -296,6 +301,16 @@ snippet `([\w\^{}\\]+)bar` "Overline" iA
 endsnippet
 
 context math(context)
+snippet `([\w\^{}\\]+)~` "Tilde" iA
+``rv = `\\tilde{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet `([\w\^{}\\]+)hat` "Hat" iA
+``rv = `\\hat{${m[1]}}` ``
+endsnippet
+
+context math(context)
 snippet set "set" wA
 \{$1\\}
 endsnippet
@@ -329,6 +344,18 @@ endsnippet
 context math(context)
 snippet @e "eta" iA
 \eta
+endsnippet
+context math(context)
+snippet @F "Phi" iA
+\Phi
+endsnippet
+context math(context)
+snippet @g "gamma" iA
+\gamma
+endsnippet
+context math(context)
+snippet @G "Gamma" iA
+\Gamma
 endsnippet
 context math(context)
 snippet @l "lambda" iA
@@ -366,6 +393,9 @@ context math(context)
 snippet @q "theta" iA
 \theta
 endsnippet
+snippet @t "tau" iA
+\tau
+endsnippet
 context math(context)
 snippet @x "xi" iA
 \xi
@@ -377,6 +407,10 @@ endsnippet
 context math(context)
 snippet @Y "Psi" iA
 \Psi
+endsnippet
+context math(context)
+snippet @z "zeta" iA
+\zeta
 endsnippet
 context math(context)
 snippet @vf "varphi" iA
