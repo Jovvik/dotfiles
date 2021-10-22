@@ -58,7 +58,7 @@ snippet <-> "<->" iA
 endsnippet
 
 context math(context)
-snippet |-> "↦" iA
+snippet `\\vdash ?>` "↦" iA
 \mapsto 
 endsnippet
 
@@ -75,17 +75,17 @@ endsnippet
 
 # ------------------- Sub/super scripts --------------------
 context math(context)
-snippet `\b([A-Za-z}\)\]])([A-Za-z])\2` "Letter subscript" iwA
+snippet `([A-Za-z}\)\]])([A-Za-z])\2` "Letter subscript" iwA
 ``rv = `${m[1]}_${m[2]}` ``
 endsnippet
 
 context math(context)
-snippet `\b([A-Za-z}\)\]])([A-Za-z])p1` "Letter + 1 subscript" iwA
+snippet `([A-Za-z}\)\]])([A-Za-z])p1` "Letter + 1 subscript" iwA
 ``rv = `${m[1]}_{${m[2]}+1}` ``
 endsnippet
 
 context math(context)
-snippet `\b([A-Za-z}\)\]])([A-Za-z])m1` "Letter - 1 subscript" iwA
+snippet `([A-Za-z}\)\]])([A-Za-z])m1` "Letter - 1 subscript" iwA
 ``rv = `${m[1]}_{${m[2]}-1}` ``
 endsnippet
 
@@ -121,16 +121,6 @@ snippet `(.) ([\^_])` "(sub|super)script snapping" iA
 ``rv = m[1] + m[2]``
 endsnippet
 # ---------------- End sub/super scripts -------------------
-
-context math(context)
-snippet `([^ &\\\+\-=<>\|!~@])([\+\-=<>])` "Whitespace before operators" iwA
-``rv = `${m[1]} ${m[2]}` ``
-endsnippet
-
-context math(context)
-snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~@\^_])` "Whitespace after operators" iwA
-``rv = `${m[1]} ${m[2]}` ``
-endsnippet
 
 # ----------------------- Fractions -----------------------
 context math(context)
@@ -276,8 +266,23 @@ snippet ` ?xx` "times" wA
 endsnippet
 
 context math(context)
+snippet ` ?::=` "Coloneqq" wA
+ \Coloneqq 
+endsnippet
+
+context math(context)
+snippet ` ?:=` "coloneqq" wA
+ \coloneqq 
+endsnippet
+
+context math(context)
 snippet ` ?\*\*` "cdot" wA
  \cdot 
+endsnippet
+
+context math(context)
+snippet ` ?\|\|-` "Vdash" iA
+ \Vdash 
 endsnippet
 
 context math(context)
@@ -318,6 +323,16 @@ endsnippet
 context math(context)
 snippet ` ?\\\\\\` "setminus" iA
  \setminus 
+endsnippet
+
+context math(context)
+snippet `([^ &\\\+\-=<>\|!~@\^])([\+\-=<>])` "Whitespace before operators" iwA
+``rv = `${m[1]} ${m[2]}` ``
+endsnippet
+
+context math(context)
+snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~\^_])` "Whitespace after operators" iwA
+``rv = `${m[1]} ${m[2]}` ``
 endsnippet
 
 # ---------- Greek letters start ----------
