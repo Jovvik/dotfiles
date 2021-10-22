@@ -344,4 +344,10 @@ client.background       $bg
 
 exec xrandr --output DP-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --rate 144 --output DP-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off
 
-exec_always --no-startup-id /home/jovvik/.local/bin/launch_polybar.sh
+# autostart apps
+exec --no-startup-id sh -c "i3-msg workspace $ws1; exec /usr/bin/brave"
+exec --no-startup-id sh -c "sleep 1; i3-msg workspace $ws2; exec /usr/bin/code"
+exec --no-startup-id sh -c "sleep 2; i3-msg workspace $ws3; exec /usr/bin/telegram-desktop"
+exec --no-startup-id sh -c "sleep 3; i3-msg workspace $ws3; exec /usr/bin/vk"
+
+exec_always --no-startup-id sh -c "sleep 0.5; exec /home/jovvik/.local/bin/launch_polybar.sh"
