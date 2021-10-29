@@ -67,77 +67,90 @@
     ],
     "cSpell.language": "en,ru",
     "cSpell.userWords": [
-        "Factory",
-        "Gork",
-        "ICIE",
-        "ISEF",
-        "Mork",
-        "Robo",
-        "Rule",
-        "Yulya",
+        "annot",
+        "astype",
         "backgr",
         "bigg",
+        "bijective",
         "bmatrix",
         "bruh",
         "curr",
+        "cиловская",
         "drawio",
+        "epart",
         "evaluate",
+        "Factory",
         "figi",
         "filled",
+        "fmap",
+        "foldl",
+        "Gork",
+        "ICIE",
+        "iloc",
         "imgs",
         "imshow",
         "injective",
+        "interp",
+        "ISEF",
         "jovvik",
+        "keras",
+        "mcat",
+        "mempty",
+        "Monoid",
+        "Mork",
+        "ncmp",
+        "ndarray",
+        "nesterov",
+        "nmod",
+        "nmult",
         "nobreaktrue",
+        "nplus",
+        "nsub",
         "onvalue",
+        "Peano",
         "prec",
+        "pyaml",
+        "pyplot",
+        "Robo",
+        "Rule",
+        "sklearn",
+        "successr",
         "surjective",
+        "tdepth",
         "text",
         "textcolor",
+        "tmember",
+        "tolist",
         "tqdm",
+        "tsize",
         "vals",
         "vmatrix",
+        "xaxis",
         "xrandr",
+        "yaxis",
+        "Yulya",
+        "Алонзо",
         "Антисимметризация",
-        "Арцела",
-        "Бонди",
-        "Буняковского",
-        "Гессе",
-        "Грама",
-        "Гронуолла",
-        "Гёделева",
-        "Диффуры",
-        "Жорданова",
-        "Изоморфность",
-        "Кохась",
-        "Кэли",
-        "Липшица",
-        "Лопиталя",
-        "Минковского",
-        "Мультииндекс",
-        "Направлениея",
-        "Незнакоопределенная",
-        "Пеано",
-        "Померяем",
-        "Прюфера",
-        "Рикатти",
-        "СЛАУ",
-        "Соуфивается",
-        "Хваталово",
-        "Чебышевское",
-        "Эрмитовски",
         "аппроксимационные",
+        "Арцела",
         "афинным",
+        "баесовским",
         "биекции",
         "биекцию",
         "биекция",
+        "Бонди",
         "борелевских",
         "борелевского",
         "борелевское",
         "борелевской",
+        "Буняковского",
+        "гёделев",
+        "Гёделева",
+        "Гессе",
         "гомеоморфно",
         "гомотопные",
-        "гёделев",
+        "Грама",
+        "Гронуолла",
         "двусвязен",
         "двусвязно",
         "двусвязности",
@@ -150,28 +163,43 @@
         "дифур",
         "дифура",
         "дифф",
+        "Диффуры",
         "домножаем",
         "домножением",
+        "Жорданова",
         "известнен",
         "изобретание",
+        "Изоморфность",
         "инцидентно",
         "инцидентны",
         "иньективно",
         "йенсена",
+        "Кохась",
+        "Крипке",
+        "Кэли",
         "лебегово",
         "лебеговском",
         "линейнозависимым",
         "линейнонезависимым",
+        "Липшица",
+        "Лопиталя",
         "матлабе",
+        "Минковского",
+        "Мультииндекс",
         "мультииндекса",
         "мультииндексы",
+        "Направлениея",
         "незнакоопределена",
+        "Незнакоопределенная",
         "незнакостабильных",
         "неотрицательности",
         "неподвешенных",
         "непр",
         "непусто",
         "нестягиваема",
+        "нетерминалов",
+        "нетерминалу",
+        "Нетерминалы",
         "нильпотентности",
         "обинтегралекакпределеинтегральныхсумм",
         "остовного",
@@ -180,19 +208,40 @@
         "остовных",
         "откр",
         "очев",
+        "Пеано",
+        "покомпонентно",
+        "Померяем",
         "продолжимо",
+        "Прюфера",
         "псевдоевклидово",
         "равн",
+        "редекс",
+        "Рикатти",
         "римановским",
         "секвенциально",
         "секвенциальный",
+        "Силова",
+        "силовская",
+        "Силовские",
+        "силовских",
+        "силовской",
+        "скомпилируется",
+        "СЛАУ",
         "сонаправлена",
         "сонаправлены",
+        "Соуфивается",
         "столбцовым",
+        "сюръективно",
         "сюръекция",
         "сюрьективной",
+        "токену",
         "упоротое",
+        "фукнцию",
+        "Хваталово",
+        "Чебышевское",
+        "Чёрчем",
         "штольца",
+        "Эрмитовски",
         "ядроиобраз"
     ],
     "calva.paredit.defaultKeyMap": "strict",
@@ -370,22 +419,22 @@
                     "pretty": "λ",
                     "ugly": "\\\\"
                 },
-                {
-                    "pretty": "←",
-                    "ugly": "<-"
-                },
-                {
-                    "pretty": "→",
-                    "ugly": "->"
-                },
-                {
-                    "pretty": "≡",
-                    "ugly": "=="
-                },
-                {
-                    "pretty": "≢",
-                    "ugly": "/="
-                },
+                // {
+                //     "pretty": "←",
+                //     "ugly": "<-"
+                // },
+                // {
+                //     "pretty": "→",
+                //     "ugly": "->"
+                // },
+                // {
+                //     "pretty": "≡",
+                //     "ugly": "=="
+                // },
+                // {
+                //     "pretty": "≢",
+                //     "ugly": "/="
+                // },
                 {
                     "pretty": "∅",
                     "ugly": "\\(\\)"
@@ -396,44 +445,44 @@
                     "pretty": "√",
                     "ugly": "sqrt\\s?"
                 },
-                {
-                    "pretty": "∧",
-                    "ugly": "&&"
-                },
-                {
-                    "pretty": "∨",
-                    "ugly": "\\|\\|"
-                },
+                // {
+                //     "pretty": "∧",
+                //     "ugly": "&&"
+                // },
+                // {
+                //     "pretty": "∨",
+                //     "ugly": "\\|\\|"
+                // },
                 {
                     "post": "\\b",
                     "pre": "\\b",
                     "pretty": "¬",
                     "ugly": "not\\s?"
                 },
-                {
-                    "post": "[^=\\-<>]|$",
-                    "pre": "[^=\\-<>]|^",
-                    "pretty": ">",
-                    "ugly": ">"
-                },
-                {
-                    "post": "[^=\\-<>]|$",
-                    "pre": "[^=\\-<>]|^",
-                    "pretty": "<",
-                    "ugly": "<"
-                },
-                {
-                    "post": "[^=\\-<>]|$",
-                    "pre": "[^=\\-<>]|^",
-                    "pretty": "≥",
-                    "ugly": ">="
-                },
-                {
-                    "post": "[^=\\-<>]|$",
-                    "pre": "[^=\\-<>]|^",
-                    "pretty": "≤",
-                    "ugly": "<="
-                },
+                // {
+                //     "post": "[^=\\-<>]|$",
+                //     "pre": "[^=\\-<>]|^",
+                //     "pretty": ">",
+                //     "ugly": ">"
+                // },
+                // {
+                //     "post": "[^=\\-<>]|$",
+                //     "pre": "[^=\\-<>]|^",
+                //     "pretty": "<",
+                //     "ugly": "<"
+                // },
+                // {
+                //     "post": "[^=\\-<>]|$",
+                //     "pre": "[^=\\-<>]|^",
+                //     "pretty": "≥",
+                //     "ugly": ">="
+                // },
+                // {
+                //     "post": "[^=\\-<>]|$",
+                //     "pre": "[^=\\-<>]|^",
+                //     "pretty": "≤",
+                //     "ugly": "<="
+                // },
                 {
                     "post": "\\b",
                     "pre": "\\b",
@@ -466,10 +515,10 @@
                     "pretty": "′",
                     "ugly": "'"
                 },
-                {
-                    "pretty": "‼",
-                    "ugly": "!!"
-                },
+                // {
+                //     "pretty": "‼",
+                //     "ugly": "!!"
+                // },
                 {
                     "pretty": "…",
                     "ugly": "\\.\\."
@@ -1381,7 +1430,7 @@
                 },
                 {
                     "post": "\\b|_",
-                    "pretty": "φ",
+                    "pretty": "ϕ",
                     "ugly": "\\\\phi"
                 },
                 {
@@ -1608,12 +1657,20 @@
                     "ugly": "\\\\mathbb{z}"
                 },
                 {
+                    "pretty": "ℤ",
+                    "ugly": "\\\\Z"
+                },
+                {
                     "pretty": "⟦",
                     "ugly": "\\\\llbracket"
                 },
                 {
                     "pretty": "⟧",
                     "ugly": "\\\\rrbracket"
+                },
+                {
+                    "pretty": "₀",
+                    "ugly": "_0"
                 },
                 {
                     "pretty": "₁",
@@ -1656,8 +1713,16 @@
                     "ugly": "\\^0"
                 },
                 {
-                    "pretty": "ⁱ",
-                    "ugly": "\\^i"
+                    "pretty": "¹",
+                    "ugly": "\\^1"
+                },
+                {
+                    "pretty": "²",
+                    "ugly": "\\^2"
+                },
+                {
+                    "pretty": "³",
+                    "ugly": "\\^3"
                 },
                 {
                     "pretty": "⁴",
@@ -1704,10 +1769,6 @@
                     "ugly": "^)"
                 },
                 {
-                    "pretty": "ⁿ",
-                    "ugly": "^n"
-                },
-                {
                     "pretty": "₋",
                     "ugly": "_-"
                 },
@@ -1730,6 +1791,10 @@
                 {
                     "pretty": "ₑ",
                     "ugly": "_e"
+                },
+                {
+                    "pretty": "ᵢ",
+                    "ugly": "_i"
                 },
                 {
                     "pretty": "ₒ",
@@ -1766,6 +1831,110 @@
                 {
                     "pretty": "ₛ",
                     "ugly": "_s"
+                },
+                {
+                    "pretty": "ᵃ",
+                    "ugly": "\\^a"
+                },
+                {
+                    "pretty": "ᵇ",
+                    "ugly": "\\^b"
+                },
+                {
+                    "pretty": "ᶜ",
+                    "ugly": "\\^c"
+                },
+                {
+                    "pretty": "ᵈ",
+                    "ugly": "\\^d"
+                },
+                {
+                    "pretty": "ᵉ",
+                    "ugly": "\\^e"
+                },
+                {
+                    "pretty": "ᶠ",
+                    "ugly": "\\^f"
+                },
+                {
+                    "pretty": "ᵍ",
+                    "ugly": "\\^g"
+                },
+                {
+                    "pretty": "ʰ",
+                    "ugly": "\\^h"
+                },
+                {
+                    "pretty": "ⁱ",
+                    "ugly": "\\^i"
+                },
+                {
+                    "pretty": "ʲ",
+                    "ugly": "\\^j"
+                },
+                {
+                    "pretty": "ᵏ",
+                    "ugly": "\\^k"
+                },
+                {
+                    "pretty": "ˡ",
+                    "ugly": "\\^l"
+                },
+                {
+                    "pretty": "ᵐ",
+                    "ugly": "\\^m"
+                },
+                {
+                    "pretty": "ⁿ",
+                    "ugly": "\\^n"
+                },
+                {
+                    "pretty": "ᵒ",
+                    "ugly": "\\^o"
+                },
+                {
+                    "pretty": "ᵖ",
+                    "ugly": "\\^p"
+                },
+                {
+                    "pretty": "𐞥",
+                    "ugly": "\\^q"
+                },
+                {
+                    "pretty": "ʳ",
+                    "ugly": "\\^r"
+                },
+                {
+                    "pretty": "ˢ",
+                    "ugly": "\\^s"
+                },
+                {
+                    "pretty": "ᵗ",
+                    "ugly": "\\^t"
+                },
+                {
+                    "pretty": "ᵘ",
+                    "ugly": "\\^u"
+                },
+                {
+                    "pretty": "ᵛ",
+                    "ugly": "\\^v"
+                },
+                {
+                    "pretty": "ʷ",
+                    "ugly": "\\^w"
+                },
+                {
+                    "pretty": "ˣ",
+                    "ugly": "\\^x"
+                },
+                {
+                    "pretty": "ʸ",
+                    "ugly": "\\^y"
+                },
+                {
+                    "pretty": "ᶻ",
+                    "ugly": "\\^z"
                 },
                 {
                     "pretty": "ℝ",
@@ -2217,16 +2386,16 @@
                     "ugly": "\\\\mathfrak A"
                 },
                 {
-                    "pretty": "⯆",
+                    "pretty": "▼",
                     "ugly": "\\\\begin"
                 },
                 {
-                    "pretty": "⯅",
+                    "pretty": "▲",
                     "ugly": "\\\\end"
                 },
                 {
                     "post": "\\b",
-                    "pretty": "⮚",
+                    "pretty": "▶",
                     "ugly": "\\\\item"
                 },
                 {
@@ -2794,12 +2963,12 @@
                 },
                 {
                     "ugly": "\\\\sqsupseteq",
-                    "pretty": "⊑",
+                    "pretty": "⊒",
                     "post": "\\b|_"
                 },
                 {
                     "ugly": "\\\\sqsubseteq",
-                    "pretty": "⊒",
+                    "pretty": "⊑",
                     "post": "\\b|_"
                 },
                 {
@@ -3328,6 +3497,10 @@
                     "post": "\\b|_"
                 },
                 {
+                    "ugly": "\\\\triangleleft",
+                    "pretty": "◁"
+                },
+                {
                     "ugly": "\\\\blacklozenge",
                     "pretty": "◆"
                 },
@@ -3365,12 +3538,20 @@
                     "ugly": "\\\\nabla"
                 },
                 {
-                    "pretty": "＆",
+                    "pretty": "&",
                     "ugly": "\\\\with"
                 },
                 {
                     "pretty": "√",
                     "ugly": "\\\\sqrt"
+                },
+                {
+                    "pretty": ":=",
+                    "ugly": "\\\\coloneqq"
+                },
+                {
+                    "pretty": "::=",
+                    "ugly": "\\\\Coloneqq"
                 }
             ]
         }
@@ -3378,8 +3559,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeLensFontFamily": "'JetBrainsMonoMedium Nerd Font'",
     "editor.cursorBlinking": "expand",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.fontFamily": "'VictorMono Nerd Font', 'JetBrainsMono Nerd Font'",
+    "editor.fontFamily": "'JetBrains Mono Light', 'JetBrainsMonoMedium Nerd Font'",
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "editor.formatOnPaste": true,
@@ -3479,7 +3659,8 @@
     "explorer.confirmDelete": false,
     "files.associations": {
         "*.i": "plaintext",
-        "*.sty": "latex"
+        "*.sty": "latex",
+        "*.perl": "perl"
     },
     "files.exclude": {
         "**/.git": true,
@@ -3495,11 +3676,8 @@
         "**/*.xdv": true,
         "**/_minted-*": true
     },
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
     "git.autoStash": true,
     "git.autofetch": true,
-    "git.enableCommitSigning": true,
     "githubPullRequests.queries": [
         {
             "label": "All",
@@ -3541,7 +3719,6 @@
         "-W104": false,
         "esversion": 5
     },
-    "kite.codefinder.enableLineDecoration": false,
     "kite.showWelcomeNotificationOnStartup": false,
     "latex-utilities.liveReformat.enabled": true,
     "latex-workshop.chktex.args.active": [
@@ -3692,7 +3869,6 @@
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "prettier.useTabs": true,
-    "python.languageServer": "Microsoft",
     "python.linting.flake8Args": [
         "--max-line-length=90"
     ],
@@ -3706,6 +3882,12 @@
             "level": "off"
         },
         "java:S2479": {
+            "level": "off"
+        },
+        "python:S117": {
+            "level": "off"
+        },
+        "python:S116": {
             "level": "off"
         }
     },
@@ -3734,7 +3916,7 @@
     "window.customMenuBarAltFocus": false,
     "window.dialogStyle": "custom",
     "workbench.colorCustomizations": {
-        "[Horizon Italic]": {
+        "[Horizon Dark]": {
             "sideBar.foreground": "#d5d8da95",
             "editor.background": "#181a20",
             "sideBar.background": "#181a20",
@@ -3746,12 +3928,10 @@
             "tab.border": "#181a20",
         }
     },
-    "workbench.colorTheme": "Horizon Italic",
     "workbench.editor.enablePreview": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "workbench.iconTheme": "Monokai Pro Icons",
     "workbench.list.smoothScrolling": true,
     "editor.semanticHighlighting.enabled": true,
     "Lua.telemetry.enable": false,
@@ -3767,7 +3947,94 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "tabnine.requestTimeout": 500,
-    "editor.fontWeight": 500,
+    "editor.fontWeight": 300,
     "vsicons.dontShowNewVersionMessage": true,
     "window.menuBarVisibility": "hidden",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "redhat.telemetry.enabled": false,
+    "window.titleBarStyle": "custom",
+    "conceal.revealOn": "selection",
+    "editor.trimAutoWhitespace": false,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "errorLens.enabled": false,
+    "pascal.format.indent": 0,
+    "java.home": "/usr/lib/jvm/java-17-openjdk",
+    "java.imports.gradle.wrapper.checksums": [
+        {
+            "sha256": "00f5032c5dc2123d40411d2b8ab0dbc9dc69a660b52ddd401c75faf7f043e4b8",
+            "allowed": true
+        }
+    ],
+    "pascal.formatter.engine": "jcf",
+    "editor.cursorSmoothCaretAnimation": true,
+    "telemetry.telemetryLevel": "off",
+    "git.showUnpublishedCommitsButton": "always",
+    "haskell.formattingProvider": "stylish-haskell",
+    "[haskell]": {
+        "editor.tabSize": 2
+    },
+    "editor.detectIndentation": false,
+    "python.languageServer": "Pylance",
+    "workbench.colorTheme": "Monokai Pro",
+    "notebook.lineNumbers": "on",
+    "breadcrumbs.enabled": false,
+    "python.formatting.provider": "yapf",
+    "gaac.forceLowerCase": true,
+    "gaac.disableOptionalMessages": false,
+    "gaac.replacePatternWith": [
+        {
+            "pattern": "/^.editorconfig/",
+            "with": "editorconfig"
+        },
+        {
+            "pattern": "/^.gitignore/",
+            "with": "git"
+        },
+        {
+            "pattern": "/^.travis/",
+            "with": "travis"
+        },
+        {
+            "pattern": "/^.vscodeignore/",
+            "with": "vscode"
+        },
+        {
+            "pattern": "/^CHANGELOG[^:]*/",
+            "with": "changelog"
+        },
+        {
+            "pattern": "/^Godeps[^:]*/",
+            "with": "godep"
+        },
+        {
+            "pattern": "/^LICENSE[^:]*/",
+            "with": "license"
+        },
+        {
+            "pattern": "/^Makefile[^:]*/i",
+            "with": "makefile"
+        },
+        {
+            "pattern": "/^(npm-shrinkwrap|.npmignore|package(-lock)?)[^:]*/",
+            "with": "npm"
+        },
+        {
+            "pattern": "/^webpack[^:]*/",
+            "with": "webpack"
+        },
+        {
+            "pattern": "/^README[^:]*/",
+            "with": "readme"
+        },
+        {
+            "pattern": "/^src//",
+            "with": ""
+        },
+        {
+            "pattern": "/^mathematical algorithms.*/",
+            "with": "matalg"
+        }
+    ]
 }
