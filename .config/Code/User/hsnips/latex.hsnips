@@ -90,13 +90,23 @@ snippet `([A-Za-z}\)\]])([A-Za-z])m1` "Letter - 1 subscript" iwA
 endsnippet
 
 context math(context)
-snippet `([A-Za-z}\)\]])(\d)` "Single digit subscript" iwA
+snippet `([A-Za-z}\)\]])([A-Za-z])P1` "Letter + 1 superscript" iwA
+``rv = `${m[1]}^{${m[2]}+1}` ``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z}\)\]])([A-Za-z])M1` "Letter - 1 superscript" iwA
+``rv = `${m[1]}^{${m[2]}-1}` ``
+endsnippet
+
+context math(context)
+snippet `([A-Za-ps-z}\)\]])(\d)` "Single digit subscript" iwA
 ``rv = `${m[1]}_${m[2]}` ``
 endsnippet
 
 context math(context)
 snippet `([A-Za-z}\)\]])_(\d\d)` "Two digit subscript" iwA
-``rv = `${m[1]}_{${m[2]}}` ``
+``rv = `${m[1]}_{${m[2]}$1}` ``
 endsnippet
 
 # square and cube might be useful
