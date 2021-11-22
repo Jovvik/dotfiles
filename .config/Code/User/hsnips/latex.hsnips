@@ -75,7 +75,7 @@ endsnippet
 
 # ------------------- Sub/super scripts --------------------
 context math(context)
-snippet `([A-Za-z}\)\]])([A-Za-sp-z])\2` "Letter subscript" iwA
+snippet `([A-Za-z}\)\]])([A-Za-ps-z])\2` "Letter subscript" iwA
 ``rv = `${m[1]}_${m[2]}` ``
 endsnippet
 
