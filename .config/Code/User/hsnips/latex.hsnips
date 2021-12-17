@@ -5,10 +5,33 @@ function math(context) {
 function notmath(context) {
     return !math(context);
 }
+function code(context) {
+    return context.scopes.some(s => s.startsWith("meta.function.texttt"));
+}
 endglobal
 
 # Credit for most snippets goes to https://github.com/gillescastel
 # TODO: table, fig, plot
+
+context notmath(context)
+snippet `(\w+)tt` "texttt" iA
+``rv = `\\texttt{${m[1]}}` ``
+endsnippet
+
+context notmath(context)
+snippet proof_iff "Proof of an iff statement" w
+\begin{proof}\itemfix
+    \begin{itemize}
+        \item [``rv = "\`\`"``\(\Rightarrow\)''] $1
+        \item [``rv = "\`\`"``\(\Leftarrow\)''] $2
+    \end{itemize}
+\end{proof}
+endsnippet
+
+context code(context)
+snippet tbs "textbackslash" wA
+\textbackslash{}
+endsnippet
 
 context notmath(context)
 snippet mm "Display math" wA
@@ -34,6 +57,16 @@ endsnippet
 context math(context)
 snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
 ``rv = `\\math${m[2]}{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet sph "Spherical angle" iA
+\sphericalangle 
+endsnippet
+
+context math(context)
+snippet `((?!\\).)(sin|cos|tan|pi|in|ni|subset|supset|notin)` "Operators" iA
+``rv=m[1]``\``rv=m[2]`` 
 endsnippet
 
 # ------------------------ Arrows -------------------------
@@ -122,7 +155,7 @@ _{$1}
 endsnippet
 
 context math(context)
-snippet `([A-Za-z0-9}\)\]]) ?\^ ?(\d\d|[\+\-] ?(?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
+snippet `([A-Za-z0-9}\)\]]) ?\^ ?(\d\d|[\+\-](?:\d|[A-Za-z]|\\\w+))` "Escape superscript" iwA
 ``rv = `${m[1]}^{${m[2]}}` ``
 endsnippet
 
@@ -311,18 +344,23 @@ snippet ` ?\*\*` "cdot" iA
 endsnippet
 
 context math(context)
-snippet `([\w\^{}\\]+)bar` "Overline" iA
+snippet `([\w\^\\]+)bar` "Overline" iA
 ``rv = `\\overline{${m[1]}}` ``
 endsnippet
 
 context math(context)
-snippet `([\w\^{}\\]+)~` "Tilde" iA
+snippet `([\w\^\\]+)~` "Tilde" iA
 ``rv = `\\tilde{${m[1]}}` ``
 endsnippet
 
 context math(context)
-snippet `([\w\^{}\\]+)hat` "Hat" iA
+snippet `([\w\^\\]+)hat` "Hat" iA
 ``rv = `\\hat{${m[1]}}` ``
+endsnippet
+
+context math(context)
+snippet `([\w\^\\]+)\. ` "vec" iA
+``rv = `\\vec{${m[1]}}```
 endsnippet
 
 context math(context)
@@ -341,7 +379,7 @@ snippet `([^ &\\\+\-=<>\|!~@\^])([\+\-=<>])` "Whitespace before operators" iwA
 endsnippet
 
 context math(context)
-snippet `([\+\-=<>])([^ &\\\+\-=<>\|!~\^_])` "Whitespace after operators" iwA
+snippet `([\+\-=<>])([^ &\+\-=<>\|!~\^_])` "Whitespace after operators" iwA
 ``rv = `${m[1]} ${m[2]}` ``
 endsnippet
 
