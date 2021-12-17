@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+links=(8ES3jxETZKQ
+    L_6Q28__BCI
+    MLw2vJPv5bc
+    c0UYMGAKrgY
+    Ms6YzGIQ7IM
+    y3utR7pge-A
+    rfsXvOFv6Ow
+    fv7UXEmL35E
+    V1j1HpwnXaE
+    420AAjYRWUA
+    BtNB7qpCkwQ
+    Eev8apF5cWI
+    R4fpzQ2scaM
+    4UH5Nmjq98s)
+for link in "${links[@]}"
+do
+    xdg-open https://youtu.be/"$link"
+done
