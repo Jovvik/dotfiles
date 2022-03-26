@@ -27,6 +27,8 @@ packer.startup(function(use)
         end,
     }
 
+    use "shaunsingh/nord.nvim"
+
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
     use "hrsh7th/cmp-buffer" -- buffer completions
@@ -45,6 +47,7 @@ packer.startup(function(use)
         end,
     } -- Crates info and version completions
     use "hrsh7th/cmp-nvim-lua"
+    use "hrsh7th/cmp-omni" -- For vimtex
 
     use "rrethy/vim-illuminate" -- Highlight the symbol under the cursor.
 
@@ -65,6 +68,7 @@ packer.startup(function(use)
 
             configs.setup {
                 ensure_installed = "maintained",
+                ignore_install = { "latex" },
                 autopairs = {
                     enable = true,
                 },
@@ -145,6 +149,22 @@ packer.startup(function(use)
                     width = "30%",
                 },
             }
+        end,
+    }
+
+    -- use {
+    --     "lervag/vimtex",
+    --     config = function()
+    --         vim.cmd "let g:vimtex_view_method = 'zathura'"
+    --     end,
+    -- }
+
+    use {
+        "KeitaNakamura/tex-conceal.vim",
+        ft = "tex",
+        config = function()
+            vim.cmd "set conceallevel=2"
+            vim.cmd 'let g:tex_conceal="abdgm"'
         end,
     }
 end)

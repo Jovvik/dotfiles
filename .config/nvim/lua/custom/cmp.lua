@@ -107,17 +107,19 @@ cmp.setup {
                 path = "[Path]",
                 crates = "[Crates]",
                 cmp_tabnine = "[Tabnine]",
+                omni = "[Omni]",
             })[entry.source.name]
             return vim_item
         end,
     },
     sources = {
+        { name = "omni" },
         { name = "nvim_lsp" },
         { name = "crates" },
         { name = "luasnip" },
-        { name = "cmp_tabnine" },
-        { name = "buffer" },
+        --   { name = "cmp_tabnine" },
         { name = "path" },
+        { name = "buffer" },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
