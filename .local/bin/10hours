@@ -10,9 +10,11 @@ links=(8ES3jxETZKQ
     V1j1HpwnXaE
     420AAjYRWUA
     BtNB7qpCkwQ
+    eFlyYRbVBY0
     Eev8apF5cWI
     R4fpzQ2scaM
-    4UH5Nmjq98s)
+    4UH5Nmjq98s
+    WYrrqVFhyhg)
 for link in "${links[@]}"
 do
     xdg-open https://youtu.be/"$link"

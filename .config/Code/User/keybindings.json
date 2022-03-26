@@ -1,217 +1,239 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-	{
-		"key": "ctrl+enter",
-		"command": "calva.replWindow.submitPrompt",
-		"when": "calva:replWindowActive && calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "alt+enter",
-		"command": "-calva.replWindow.submitPrompt",
-		"when": "calva:replWindowActive && calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "calva.replWindow.cursorDown",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
-	},
-	{
-		"key": "alt+down",
-		"command": "-calva.replWindow.cursorDown",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
-	},
-	{
-		"key": "ctrl+up",
-		"command": "calva.replWindow.cursorUp",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
-	},
-	{
-		"key": "alt+up",
-		"command": "-calva.replWindow.cursorUp",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
-	},
-	{
-		"key": "ctrl+down",
-		"command": "calva.replWindow.historyDown",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "alt+down",
-		"command": "-calva.replWindow.historyDown",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "ctrl+up",
-		"command": "calva.replWindow.historyUp",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "alt+up",
-		"command": "-calva.replWindow.historyUp",
-		"when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
-	},
-	{
-		"key": "ctrl+shift+alt+c",
-		"command": "java.workspace.compile"
-	},
-	{
-		"key": "shift+alt+b",
-		"command": "-java.workspace.compile"
-	},
-	{
-		"key": "ctrl+l ctrl+t",
-		"command": "editor.action.insertSnippet",
-		"when": "editorTextFocus",
-		"args": {
-			"langId": "latex",
-			"name": "Add a tag"
-		}
-	},
-	{
-		"key": "ctrl+b ctrl+s",
-		"command": "bracket-select.select",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+a",
-		"command": "-bracket-select.select",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+alt+0",
-		"command": "icie.test.view"
-	},
-	{
-		"key": "alt+0",
-		"command": "-icie.test.view"
-	},
-	{
-		"key": "alt+\\",
-		"command": "icie.test.input"
-	},
-	{
-		"key": "alt+-",
-		"command": "-icie.test.input"
-	},
-	{
-		"key": "ctrl+shift+i",
-		"command": "-calva-fmt.tabDedent",
-		"when": "editorTextFocus && !editorReadOnly && !hasOtherSuggestions && !suggestWidgetVisible && editorLangId == 'clojure'"
-	},
-	{
-		"key": "ctrl+l ctrl+c",
-		"command": "editor.action.transformToLowercase"
-	},
-	{
-		"key": "ctrl+l ctrl+c",
-		"command": "-latex-workshop.shortcut.textsc",
-		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
-	},
-	{
-		"key": "ctrl+shift+h",
-		"command": "-extension.dash.emptySyntax",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+shift+h",
-		"command": "extension.dash.specific",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+h",
-		"command": "-extension.dash.specific",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+left",
-		"command": "subwordNavigation.cursorSubwordLeft",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+left",
-		"command": "-subwordNavigation.cursorSubwordLeft",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+shift+left",
-		"command": "subwordNavigation.cursorSubwordLeftSelect",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+left",
-		"command": "-subwordNavigation.cursorSubwordLeftSelect",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+right",
-		"command": "subwordNavigation.cursorSubwordRight",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "alt+right",
-		"command": "-subwordNavigation.cursorSubwordRight",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+shift+right",
-		"command": "subwordNavigation.cursorSubwordRightSelect",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+right",
-		"command": "-subwordNavigation.cursorSubwordRightSelect",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+backspace",
-		"command": "subwordNavigation.deleteSubwordLeft",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "alt+backspace",
-		"command": "-subwordNavigation.deleteSubwordLeft",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+delete",
-		"command": "subwordNavigation.deleteSubwordRight",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "alt+delete",
-		"command": "-subwordNavigation.deleteSubwordRight",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+l ctrl+shift+t",
-		"command": "latex-workshop.shortcut.texttt",
-		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
-	},
-	{
-		"key": "ctrl+l ctrl+t",
-		"command": "-latex-workshop.shortcut.texttt",
-		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
-	},
-	{
-		"key": "ctrl+q",
-		"command": "-workbench.action.quit"
-	},
-	{
-		"key": "ctrl+i ctrl+c",
-		"command": "editor.emmet.action.incrementNumberByOne"
-	},
-	{
-		"key": "alt+enter",
-		"command": "editor.action.quickFix",
-		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+.",
-		"command": "-editor.action.quickFix",
-		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+u ctrl+c",
-		"command": "editor.action.transformToUppercase"
-	}
+    {
+        "key": "ctrl+enter",
+        "command": "calva.replWindow.submitPrompt",
+        "when": "calva:replWindowActive && calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-calva.replWindow.submitPrompt",
+        "when": "calva:replWindowActive && calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "calva.replWindow.cursorDown",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
+    },
+    {
+        "key": "alt+down",
+        "command": "-calva.replWindow.cursorDown",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "calva.replWindow.cursorUp",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
+    },
+    {
+        "key": "alt+up",
+        "command": "-calva.replWindow.cursorUp",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'single-line'"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "calva.replWindow.historyDown",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "alt+down",
+        "command": "-calva.replWindow.historyDown",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "calva.replWindow.historyUp",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "alt+up",
+        "command": "-calva.replWindow.historyUp",
+        "when": "calva:replWindowActive && config.calva.REPLWindowPromptKeyMap == 'multi-line'"
+    },
+    {
+        "key": "ctrl+shift+alt+c",
+        "command": "java.workspace.compile"
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "-java.workspace.compile"
+    },
+    {
+        "key": "ctrl+l ctrl+t",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "langId": "latex",
+            "name": "Add a tag"
+        }
+    },
+    {
+        "key": "ctrl+b ctrl+s",
+        "command": "bracket-select.select",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "-bracket-select.select",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+0",
+        "command": "icie.test.view"
+    },
+    {
+        "key": "alt+0",
+        "command": "-icie.test.view"
+    },
+    {
+        "key": "alt+\\",
+        "command": "icie.test.input"
+    },
+    {
+        "key": "alt+-",
+        "command": "-icie.test.input"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-calva-fmt.tabDedent",
+        "when": "editorTextFocus && !editorReadOnly && !hasOtherSuggestions && !suggestWidgetVisible && editorLangId == 'clojure'"
+    },
+    {
+        "key": "ctrl+l ctrl+c",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+l ctrl+c",
+        "command": "-latex-workshop.shortcut.textsc",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave/"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "-extension.dash.emptySyntax",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.dash.specific",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "subwordNavigation.cursorSubwordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "-subwordNavigation.cursorSubwordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "subwordNavigation.cursorSubwordLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "-subwordNavigation.cursorSubwordLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "subwordNavigation.cursorSubwordRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "-subwordNavigation.cursorSubwordRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "subwordNavigation.cursorSubwordRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "-subwordNavigation.cursorSubwordRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "subwordNavigation.deleteSubwordLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "-subwordNavigation.deleteSubwordLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "subwordNavigation.deleteSubwordRight",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+delete",
+        "command": "-subwordNavigation.deleteSubwordRight",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+l ctrl+shift+t",
+        "command": "latex-workshop.shortcut.texttt",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "ctrl+l ctrl+t",
+        "command": "-latex-workshop.shortcut.texttt",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+i ctrl+c",
+        "command": "editor.emmet.action.incrementNumberByOne"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+u ctrl+c",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+d ctrl+c",
+        "command": "editor.emmet.action.decrementNumberByOne"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "-incrementor.incrementByTen"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-incrementor.decrementByTen"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    }
 ]

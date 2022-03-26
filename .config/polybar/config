@@ -124,30 +124,31 @@ wrapping-scroll = true
 ; Only show workspaces on the same output as the bar
 pin-workspaces = false
 
+label-mode = %mode%
 label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %name%
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 label-focused-background = ${colors.background}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 1
 label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 

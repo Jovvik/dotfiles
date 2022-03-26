@@ -167,4 +167,6 @@ packer.startup(function(use)
             vim.cmd 'let g:tex_conceal="abdgm"'
         end,
     }
+
+    use "github/copilot.vim"
 end)

@@ -1,6 +1,8 @@
 global
 function math(context) {
-    return context.scopes.some(s => s.startsWith("meta.math"));
+    return context.scopes.some(s => s.startsWith("meta.math"))
+       && !context.scopes.some(s => s.startsWith("comment"))
+       && !context.scopes.some(s => s.startsWith("meta.text"));
 }
 function notmath(context) {
     return !math(context);
@@ -51,11 +53,20 @@ snippet ... "⋯" iA
 \dots 
 endsnippet
 
+context notmath(context)
+snippet ITM "itemize with fix" iA
+\itemfix
+\begin{itemize}
+    \item
+\end{itemize}
+endsnippet
+
+
 # --------------------- Math snippets ----------------------
 # TODO: align, sympy?, more greek letters, pm, mp, case, beginend, nexists
 
 context math(context)
-snippet `([A-Z])(cal|frak|bb)` "Mathcal, frak or bb" iA
+snippet `([A-z])(cal|frak|bb)` "Mathcal, frak or bb" iA
 ``rv = `\\math${m[2]}{${m[1]}}` ``
 endsnippet
 
@@ -65,7 +76,7 @@ snippet sph "Spherical angle" iA
 endsnippet
 
 context math(context)
-snippet `((?!\\).)(sin|cos|tan|pi|in|ni|subset|supset|notin)` "Operators" iA
+snippet `((?!\\).)(sin|cos|tan|in|ni|subset|supset|notin|ln|log)` "Operators" iA
 ``rv=m[1]``\``rv=m[2]`` 
 endsnippet
 
@@ -151,7 +162,7 @@ endsnippet
 
 context math(context)
 snippet __ "Subscript" iA
-_{$1} 
+_{$1}
 endsnippet
 
 context math(context)
@@ -225,7 +236,7 @@ endsnippet
 # awkward
 context math(context)
 snippet lrf "Left-right {" iA
-\left{$1\right}
+\left\{$1\right\}
 endsnippet
 
 context math(context)
@@ -250,7 +261,7 @@ endsnippet
 
 context math(context)
 snippet sq "Square root" iA
-\sqrt{$1} 
+\sqrt{$1}
 endsnippet
 
 context math(context)
@@ -290,7 +301,7 @@ endsnippet
 
 context math(context)
 snippet oo "∞" A
-\infty 
+\infty
 endsnippet
 
 context math(context)
@@ -411,6 +422,10 @@ endsnippet
 context math(context)
 snippet @F "Phi" iA
 \Phi
+endsnippet
+context math(context)
+snippet @f "phi" iA
+\phi
 endsnippet
 context math(context)
 snippet @g "gamma" iA

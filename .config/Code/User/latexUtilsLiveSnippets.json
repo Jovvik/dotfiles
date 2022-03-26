@@ -260,6 +260,13 @@
         "triggerWhenComplete": true
     },
     {
+        "prefix": "(\\\\?[\\w\\^]{1,7})rm$",
+        "body": "\\mathrm{$1}",
+        "mode": "maths",
+        "description": "mathrm",
+        "triggerWhenComplete": true
+    },
+    {
         "prefix": "([A-Z])frak$",
         "body": "\\mathfrak{$1}",
         "mode": "maths",

@@ -3,12 +3,12 @@ return {
         texlab = {
             build = {
                 args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-pvc", "%f" },
-                onSave = true 
+                onSave = true,
             },
             forwardSearch = {
                 executable = "zathura",
-                    args = { "--unique", "file:%p#src:%l%f" }
-            }
+                args = { "--synctex-forward", "%l:1:%f", "%p" },
+            },
         },
     },
 }

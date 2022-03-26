@@ -1,4 +1,4 @@
-local lsp_installer = require 'nvim-lsp-installer'
+local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.on_server_ready(function(server)
     local opts = {
         on_attach = require("custom.lsp.handlers").on_attach,
@@ -11,13 +11,12 @@ lsp_installer.on_server_ready(function(server)
     -- end
 
     if server.name == "sumneko_lua" then
-        local sumneko_opts = require("custom.lsp.settings.sumneko_lua")
+        local sumneko_opts = require "custom.lsp.settings.sumneko_lua"
         opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
     end
 
-
     if server.name == "texlab" then
-        local texlab_opts = require("custom.lsp.settings.texlab")
+        local texlab_opts = require "custom.lsp.settings.texlab"
         opts = vim.tbl_deep_extend("force", texlab_opts, opts)
     end
 
