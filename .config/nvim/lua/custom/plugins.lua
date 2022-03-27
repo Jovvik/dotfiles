@@ -27,13 +27,12 @@ packer.startup(function(use)
         end,
     }
 
-    use "shaunsingh/nord.nvim"
+    use "shaunsingh/nord.nvim" -- fallback theme
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
     use "hrsh7th/cmp-buffer" -- buffer completions
     use "hrsh7th/cmp-path" -- path completions
-    use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completions
     use "hrsh7th/cmp-nvim-lsp-signature-help" -- LSP function signature highlight
@@ -47,11 +46,12 @@ packer.startup(function(use)
         end,
     } -- Crates info and version completions
     use "hrsh7th/cmp-nvim-lua"
-    use "hrsh7th/cmp-omni" -- For vimtex
+    use "onsails/lspkind-nvim"
 
     use "rrethy/vim-illuminate" -- Highlight the symbol under the cursor.
 
     -- snippets
+    -- TODO: add latex autoexpanding snippets
     use "L3MON4D3/LuaSnip" -- snippet engine
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
@@ -68,7 +68,7 @@ packer.startup(function(use)
 
             configs.setup {
                 ensure_installed = "maintained",
-                ignore_install = { "latex" },
+                ignore_install = { "latex" }, -- Treesiter conflicts with latex conceal.
                 autopairs = {
                     enable = true,
                 },
@@ -108,8 +108,10 @@ packer.startup(function(use)
             local formatting = null_ls.builtins.formatting
             local diagnostics = null_ls.builtins.diagnostics
             local completion = null_ls.builtins.completion
+            local code_actions = null_ls.builtins.code_actions
             null_ls.setup {
                 sources = {
+                    code_actions.gitsigns,
                     formatting.black,
                     formatting.stylua.with {
                         extra_args = { "--indent-type", "Spaces", "--call-parentheses", "None" },
@@ -169,4 +171,15 @@ packer.startup(function(use)
     }
 
     use "github/copilot.vim"
+
+    use "wakatime/vim-wakatime"
+
+    use {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
+        end,
+    }
+
+    use "tpope/vim-fugitive"
 end)
