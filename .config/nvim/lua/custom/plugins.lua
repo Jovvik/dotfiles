@@ -52,8 +52,26 @@ packer.startup(function(use)
 
     -- snippets
     -- TODO: add latex autoexpanding snippets
-    use "L3MON4D3/LuaSnip" -- snippet engine
+    use {
+        "L3MON4D3/LuaSnip",
+        config = function()
+            require("luasnip").config.set_config {
+                history = true,
+                updateevents = "TextChanged,TextChangedI",
+                enable_autosnippets = true,
+            }
+        end,
+    } -- snippet engine
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+    use {
+        "SirVer/ultisnips",
+        config = function()
+            vim.cmd "let g:UltiSnipsExpandTrigger = '<tab>'"
+            vim.cmd "let g:UltiSnipsJumpForwardTrigger = '<tab>'"
+            vim.cmd "let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'"
+            vim.cmd "let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/ultisnips']"
+        end,
+    }
 
     -- LSP
     use "neovim/nvim-lspconfig" -- LSP itself
@@ -112,12 +130,14 @@ packer.startup(function(use)
             null_ls.setup {
                 sources = {
                     code_actions.gitsigns,
-                    formatting.black,
                     formatting.stylua.with {
                         extra_args = { "--indent-type", "Spaces", "--call-parentheses", "None" },
                     },
-                    completion.spell,
-                    diagnostics.pylint,
+                    -- completion.spell,
+                    formatting.black,
+                    diagnostics.flake8,
+                    diagnostics.mypy,
+                    formatting.reorder_python_imports,
                 },
                 on_attach = function(client)
                     if client.resolved_capabilities.document_formatting then
@@ -182,4 +202,23 @@ packer.startup(function(use)
     }
 
     use "tpope/vim-fugitive"
+
+    use {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
+        end,
+    }
+
+    use "lukas-reineke/indent-blankline.nvim"
+
+    use {
+        "nvim-lualine/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+        config = function()
+            require("lualine").setup {
+                theme = "catppuccin",
+            }
+        end,
+    }
 end)
