@@ -18,7 +18,7 @@ primary = #ba8baf
 secondary = #e60053
 alert = #bd2c40
 
-[bar/white]
+[bar/main]
 
 ;------------;
 ; DIMENSIONS ;
@@ -49,10 +49,12 @@ override-redirect = false
 ;-------;
 
 font-0 = Inconsolata Nerd Font:size=12;3
+;font-0 = SF Mono:size=11;3
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;3
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;3
 font-3 = Font Awesome 5 Brands:pixelsize=11;3
 font-4 = Weather Icons:style=Regular:pixelsize=10;2
+; this one is for rounding 
 font-5 = JetBrainsMono Nerd Font:size=14;4
 
 ;--------;
@@ -72,7 +74,7 @@ fixed-center = true
 padding-left = 0
 padding-right = 0
 
-modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
+modules-left = round-left ewmh round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
 modules-center =
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
@@ -86,6 +88,13 @@ tray-position = right
 [module/base]
 format-background = ${colors.background}
 format-padding = 1
+
+[module/ewmh]
+type = internal/xworkspaces
+label-active-foreground = ${colors.primary}
+label-active-background = ${colors.background}
+label-occupied-background = ${colors.background}
+label-urgent-background = ${colors.background}
 
 [module/volume]
 type = internal/volume
@@ -419,7 +428,8 @@ inherit = module/base
 type = custom/script
 exec = ~/.config/polybar/updates-arch-combined.sh
 interval = 600
-format-prefix = %{T3} %{T-}
+format-prefix = "  " 
+;TODO: rewrite, it's broken rn
 click-left = notify-send -a "📦 Package update" "Updating through yay" && yay -Syu --noconfirm --sudo pkexec --answerclean All --answerdiff None --answeredit None --answerupgrade None 2>&1 yay.log && notify-send -a "📦 Package update" "Succesfully updated!" && ~/.config/polybar/updates-arch-combined.sh || notify-send -a "📦 Package update" "Update failed" "$(tail yay.log)"
 click-right = notify-send -a "📦 Package update" "Yay log" "$(tail yay.log)"
 
