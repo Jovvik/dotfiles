@@ -8,11 +8,14 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border none
-default_floating_border none
+default_border pixel 2
+# default_floating_border none
 
 # Hide borders
-hide_edge_borders none
+hide_edge_borders smart
+
+# Force all windows to have borders, i.e. VSCode
+for_window [class=.*] border pixel 2
 
 # change borders
 # bindsym $mod+u border none
@@ -167,15 +170,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-# for_window [title="Foci detection"] floating enable
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
@@ -183,6 +182,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border none
+for_window [title="^Figure "] floating enable border none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -250,7 +250,8 @@ exec --no-startup-id optimus-manager-qt
 exec --no-startup-id wal -i Pictures/wallpapers/wall.jpg -n -a 75
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id deadd-notification-center
+# exec --no-startup-id deadd-notification-center
+exec --no-startup-id dunst
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -331,12 +332,13 @@ mode "$mode_gaps_outer" {
 # no idea how this works
 
 set_from_resource $fg i3wm.color5 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color5 #f0f0f0
+set_from_resource $gray i3wm.color0 #888888
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $gray   $bg     $fg  $bg       $gray
+client.unfocused        $gray   $bg     $fg  $bg       $gray
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
@@ -345,7 +347,7 @@ client.background       $bg
 exec xrandr --output DP-0 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --rate 144 --output DP-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off
 
 # autostart apps
-exec --no-startup-id sh -c "i3-msg workspace $ws1; exec /usr/bin/brave"
+exec --no-startup-id sh -c "i3-msg workspace $ws1; exec /usr/bin/firefox-nightly"
 exec --no-startup-id sh -c "sleep 1; i3-msg workspace $ws2; exec /usr/bin/code"
 exec --no-startup-id sh -c "sleep 2; i3-msg workspace $ws3; exec /usr/bin/telegram-desktop"
 exec --no-startup-id sh -c "sleep 3; i3-msg workspace $ws3; exec /usr/bin/vk"
