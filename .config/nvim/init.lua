@@ -10,6 +10,7 @@ vim.opt.updatetime = 200
 vim.opt.swapfile = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.scrolloff = 5
 
 require "custom.plugins"
 

@@ -65,9 +65,10 @@ cmp.setup {
         }),
     },
     formatting = {
-        format = require("lspkind").cmp_format { mode = "symbol" },
+        format = require("lspkind").cmp_format { mode = "symbol_text" },
     },
     sources = {
+        { name = "nvim_lsp_signature_help" },
         { name = "nvim_lsp" },
         { name = "crates" },
         { name = "luasnip" },
@@ -79,9 +80,9 @@ cmp.setup {
         behavior = cmp.ConfirmBehavior.Replace,
         select = false,
     },
-    documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
+    -- documentation = {
+    --     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    -- },
     experimental = {
         ghost_text = false, -- This looks great, but gets confused with copilot.
         native_menu = false,

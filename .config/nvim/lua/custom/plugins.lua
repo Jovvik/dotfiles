@@ -51,7 +51,6 @@ packer.startup(function(use)
     use "rrethy/vim-illuminate" -- Highlight the symbol under the cursor.
 
     -- snippets
-    -- TODO: add latex autoexpanding snippets
     use {
         "L3MON4D3/LuaSnip",
         config = function()
@@ -85,7 +84,7 @@ packer.startup(function(use)
             local configs = require "nvim-treesitter.configs"
 
             configs.setup {
-                ensure_installed = "maintained",
+                ensure_installed = "all",
                 ignore_install = { "latex" }, -- Treesiter conflicts with latex conceal.
                 autopairs = {
                     enable = true,
@@ -135,7 +134,6 @@ packer.startup(function(use)
                     },
                     -- completion.spell,
                     formatting.black,
-                    diagnostics.flake8,
                     diagnostics.mypy,
                     formatting.reorder_python_imports,
                 },
@@ -219,6 +217,13 @@ packer.startup(function(use)
             require("lualine").setup {
                 theme = "catppuccin",
             }
+        end,
+    }
+
+    use {
+        "kdheepak/tabline.nvim",
+        config = function()
+            require("tabline").setup()
         end,
     }
 end)
