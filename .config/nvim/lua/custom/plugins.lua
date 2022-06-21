@@ -36,6 +36,7 @@ packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completions
     use "hrsh7th/cmp-nvim-lsp-signature-help" -- LSP function signature highlight
+    use { "zbirenbaum/copilot-cmp", after = { "copilot.vim", "nvim-cmp" } }
     use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" } -- Tabnine
     use {
         "saecki/crates.nvim",
@@ -70,7 +71,7 @@ packer.startup(function(use)
             vim.cmd "let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'"
             vim.cmd "let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/ultisnips']"
         end,
-    }
+    } -- for latex (autoexpanding)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- LSP itself
@@ -85,7 +86,7 @@ packer.startup(function(use)
 
             configs.setup {
                 ensure_installed = "all",
-                ignore_install = { "latex" }, -- Treesiter conflicts with latex conceal.
+                ignore_install = { "latex" }, -- Conceal with treesitter should be defined in some obscure way that I'm not entirely aware of.
                 autopairs = {
                     enable = true,
                 },
@@ -180,7 +181,7 @@ packer.startup(function(use)
     -- }
 
     use {
-        "KeitaNakamura/tex-conceal.vim",
+        "Jovvik/tex-conceal.vim",
         ft = "tex",
         config = function()
             vim.cmd "set conceallevel=2"

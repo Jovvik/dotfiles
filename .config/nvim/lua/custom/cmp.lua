@@ -68,6 +68,7 @@ cmp.setup {
         format = require("lspkind").cmp_format { mode = "symbol_text" },
     },
     sources = {
+        { name = "copilot" },
         { name = "nvim_lsp_signature_help" },
         { name = "nvim_lsp" },
         { name = "crates" },
