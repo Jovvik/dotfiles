@@ -189,7 +189,12 @@ packer.startup(function(use)
         end,
     }
 
-    use "github/copilot.vim"
+    use { "github/copilot.vim", config = function()
+        vim.g.copilot_no_tab_map = true
+        vim.g.copilot_assume_mapped = true
+        vim.g.copilot_tab_fallback = ""
+    end
+    }
 
     use "wakatime/vim-wakatime"
 
@@ -226,5 +231,13 @@ packer.startup(function(use)
         config = function()
             require("tabline").setup()
         end,
+    }
+
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
+        end
     }
 end)
