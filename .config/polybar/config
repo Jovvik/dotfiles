@@ -74,7 +74,7 @@ fixed-center = true
 padding-left = 0
 padding-right = 0
 
-modules-left = round-left ewmh round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
+modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
 modules-center =
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
@@ -133,31 +133,31 @@ wrapping-scroll = true
 ; Only show workspaces on the same output as the bar
 pin-workspaces = false
 
-label-mode = %mode%
+label-mode = %name% 
 label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
-label-focused = %name%
+label-focused = %name% 
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 label-focused-background = ${colors.background}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
+label-unfocused = %name% 
 label-unfocused-padding = 1
 label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %name%
+label-visible = %name% 
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %name%
+label-urgent = %name% 
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
