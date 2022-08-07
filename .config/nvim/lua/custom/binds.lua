@@ -41,3 +41,8 @@ keymap("n", "<leader>fh", [[<cmd>Telescope help_tags<CR>]], opts)
 
 -- Formatting
 keymap("n", "<leader>fm", [[<cmd>lua vim.lsp.buf.formatting()<cr>]], opts)
+keymap("v", "<leader>fm", [[<cmd>lua vim.lsp.buf.range_formatting()<cr>]], opts)
+
+-- Lspsaga code action
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+vim.keymap.set("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true })

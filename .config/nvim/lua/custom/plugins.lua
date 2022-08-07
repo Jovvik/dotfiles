@@ -10,6 +10,7 @@ vim.cmd "packadd packer.nvim"
 local packer = require "packer"
 
 packer.init {
+    auto_reload_compiled = true,
     display = {
         open_fn = function()
             return require("packer.util").float { border = "rounded" }
@@ -22,8 +23,25 @@ packer.startup(function(use)
 
     use {
         "catppuccin/nvim",
+        -- commit = "f079dda3dc23450d69b4bad11bfbd9af2c77f6f3",
+        as = "catppuccin",
         config = function()
-            require("catppuccin").setup { transparent_background = true }
+            require("catppuccin").setup { transparent_background = true,
+                -- styles = {
+                --     comments = "italic",
+                --     conditionals = "italic",
+                --     loops = "NONE",
+                --     functions = "NONE",
+                --     keywords = "NONE",
+                --     strings = "NONE",
+                --     variables = "NONE",
+                --     numbers = "NONE",
+                --     booleans = "NONE",
+                --     properties = "NONE",
+                --     types = "NONE",
+                --     operators = "NONE",
+                -- },
+            }
             vim.cmd "colorscheme catppuccin"
         end,
     }
@@ -139,16 +157,16 @@ packer.startup(function(use)
                     diagnostics.mypy,
                     formatting.reorder_python_imports,
                 },
-                on_attach = function(client)
-                    if client.resolved_capabilities.document_formatting then
-                        vim.cmd [[
-                        augroup LspFormatting
-                            autocmd! * <buffer>
-                            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-                        augroup END
-                        ]]
-                    end
-                end,
+                -- on_attach = function(client)
+                --     if client.resolved_capabilities.document_formatting then
+                --         vim.cmd [[
+                --         augroup LspFormatting
+                --             autocmd! * <buffer>
+                --             autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+                --         augroup END
+                --         ]]
+                --     end
+                -- end,
             }
         end,
     }
@@ -240,5 +258,29 @@ packer.startup(function(use)
         config = function()
             require 'alpha'.setup(require 'alpha.themes.startify'.config)
         end
+    }
+
+    use {
+        "akinsho/toggleterm.nvim",
+        tag = 'v2.*',
+        config = function()
+            require("toggleterm").setup {
+                open_mapping = [[<C-t>]],
+                direction = "float",
+                shell = "fish",
+            }
+        end
+    }
+
+    use {
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        config = function()
+            local saga = require("lspsaga")
+
+            saga.init_lsp_saga({
+                -- your configuration
+            })
+        end,
     }
 end)
