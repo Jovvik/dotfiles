@@ -76,7 +76,6 @@ cmp.setup {
         { name = "nvim_lsp" },
         { name = "crates" },
         { name = "luasnip" },
-        { name = "cmp_tabnine" },
         { name = "path" },
         { name = "buffer", keyword_length = 5 },
     },
