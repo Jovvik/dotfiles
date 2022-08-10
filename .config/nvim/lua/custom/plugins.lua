@@ -56,7 +56,7 @@ packer.startup(function(use)
     use "hrsh7th/cmp-nvim-lsp" -- LSP completions
     use "hrsh7th/cmp-nvim-lsp-signature-help" -- LSP function signature highlight
     use { "zbirenbaum/copilot-cmp", after = { "copilot.vim", "nvim-cmp" } }
-    use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" } -- Tabnine
+    -- use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" } -- Tabnine
     use {
         "saecki/crates.nvim",
         event = { "BufRead Cargo.toml" },
@@ -122,8 +122,8 @@ packer.startup(function(use)
     use {
         "simrat39/rust-tools.nvim",
         config = function()
-            require("rust-tools").setup {}
-            require("rust-tools.inlay_hints").set_inlay_hints()
+            require("rust-tools").setup { tools = { autoSetHints = true } }
+            -- require("rust-tools.inlay_hints").set_inlay_hints()
         end,
     }
 
@@ -279,7 +279,10 @@ packer.startup(function(use)
             local saga = require("lspsaga")
 
             saga.init_lsp_saga({
-                -- your configuration
+                code_action_lightbulb = {
+                    enabled = true,
+                    virtual_text = false
+                }
             })
         end,
     }
