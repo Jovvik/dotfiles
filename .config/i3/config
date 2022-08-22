@@ -8,14 +8,14 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 2
+default_border pixel 0
 # default_floating_border none
 
 # Hide borders
 hide_edge_borders smart
 
 # Force all windows to have borders, i.e. VSCode
-for_window [class=.*] border pixel 2
+for_window [class=.*] border pixel 0
 
 # change borders
 # bindsym $mod+u border none
@@ -129,9 +129,9 @@ bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
+set $ws1 
+set $ws2 
+set $ws3 
 set $ws4 4
 set $ws5 5
 set $ws6 6
@@ -252,6 +252,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # exec --no-startup-id deadd-notification-center
 exec --no-startup-id dunst
+exec --no-startup-id repos/xborder/xborders --border-rgba "#C6A0F6FF" --border-width 2 --border-radius 12
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
