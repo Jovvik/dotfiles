@@ -74,7 +74,7 @@ fixed-center = true
 padding-left = 0
 padding-right = 0
 
-modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard round-right
+modules-left = round-left i3 round-right empty round-left volume battery temperature backlight-acpi crypto xkeyboard openweathermap-forecast round-right
 modules-center =
 modules-right = round-left updates-arch-combined memory filesystem cpu date round-right
 
@@ -467,3 +467,10 @@ exec = ~/.config/polybar/crypto.py
 [module/empty]
 type = custom/text
 content = " "
+
+[module/openweathermap-forecast]
+inherit = module/base
+type = custom/script
+exec = ~/.config/polybar/openweathermap-forecast.sh
+interval = 600
+label-font = 5
