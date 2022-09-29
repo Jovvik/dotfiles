@@ -26,7 +26,8 @@ packer.startup(function(use)
         -- commit = "f079dda3dc23450d69b4bad11bfbd9af2c77f6f3",
         as = "catppuccin",
         config = function()
-            require("catppuccin").setup { transparent_background = true,
+            require("catppuccin").setup {
+                transparent_background = true,
                 -- styles = {
                 --     comments = "italic",
                 --     conditionals = "italic",
@@ -75,9 +76,9 @@ packer.startup(function(use)
         "L3MON4D3/LuaSnip",
         config = function()
             require("luasnip").config.set_config {
-                history = true,
-                updateevents = "TextChanged,TextChangedI",
-                enable_autosnippets = true,
+                history = false,
+                -- updateevents = "TextChanged,TextChangedI",
+                enable_autosnippets = false,
             }
         end,
     } -- snippet engine
@@ -90,7 +91,7 @@ packer.startup(function(use)
             vim.cmd "let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'"
             vim.cmd "let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/ultisnips']"
         end,
-    } -- for latex (autoexpanding)
+    } -- for latex (autoexpandng)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- LSP itself
@@ -122,8 +123,8 @@ packer.startup(function(use)
     use {
         "simrat39/rust-tools.nvim",
         config = function()
-            require("rust-tools").setup { tools = { autoSetHints = true } }
-            -- require("rust-tools.inlay_hints").set_inlay_hints()
+            require("rust-tools").setup()
+            require("rust-tools").inlay_hints.enable()
         end,
     }
 
@@ -192,27 +193,31 @@ packer.startup(function(use)
         end,
     }
 
+    use {
+        "lervag/vimtex",
+        config = function()
+            vim.g.vimtex_view_method = "zathura"
+            vim.g.tex_conceal = "abdmg"
+            vim.opt.conceallevel = 2
+        end,
+    }
+
     -- use {
-    --     "lervag/vimtex",
+    --     "Jovvik/tex-conceal.vim",
+    --     ft = "tex",
     --     config = function()
-    --         vim.cmd "let g:vimtex_view_method = 'zathura'"
+    --         vim.cmd "set conceallevel=2"
+    --         vim.cmd 'let g:tex_conceal="abdgm"'
     --     end,
     -- }
 
     use {
-        "Jovvik/tex-conceal.vim",
-        ft = "tex",
+        "github/copilot.vim",
         config = function()
-            vim.cmd "set conceallevel=2"
-            vim.cmd 'let g:tex_conceal="abdgm"'
+            vim.g.copilot_no_tab_map = true
+            vim.g.copilot_assume_mapped = true
+            vim.g.copilot_tab_fallback = ""
         end,
-    }
-
-    use { "github/copilot.vim", config = function()
-        vim.g.copilot_no_tab_map = true
-        vim.g.copilot_assume_mapped = true
-        vim.g.copilot_tab_fallback = ""
-    end
     }
 
     use "wakatime/vim-wakatime"
@@ -253,37 +258,97 @@ packer.startup(function(use)
     }
 
     use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
+        "goolord/alpha-nvim",
+        requires = { "kyazdani42/nvim-web-devicons" },
         config = function()
-            require 'alpha'.setup(require 'alpha.themes.startify'.config)
-        end
+            require("alpha").setup(require("alpha.themes.startify").config)
+        end,
     }
 
     use {
         "akinsho/toggleterm.nvim",
-        tag = 'v2.*',
+        tag = "v2.*",
         config = function()
             require("toggleterm").setup {
                 open_mapping = [[<C-t>]],
                 direction = "float",
                 shell = "fish",
             }
-        end
+        end,
     }
 
     use {
         "glepnir/lspsaga.nvim",
         branch = "main",
         config = function()
-            local saga = require("lspsaga")
+            local saga = require "lspsaga"
 
-            saga.init_lsp_saga({
+            saga.init_lsp_saga {
                 code_action_lightbulb = {
                     enabled = true,
-                    virtual_text = false
-                }
-            })
+                    virtual_text = false,
+                },
+            }
         end,
+    }
+
+    use {
+        "lewis6991/impatient.nvim",
+        config = function()
+            require "impatient"
+        end,
+    }
+
+    use {
+        "roxma/nvim-yarp",
+    }
+
+    use {
+        "gelguy/wilder.nvim",
+        config = function()
+            local wilder = require "wilder"
+            wilder.setup { modes = { ":", "/", "?" } }
+            wilder.set_option("pipeline", {
+                wilder.branch(
+                    wilder.python_file_finder_pipeline {
+                        -- to use ripgrep : {'rg', '--files'}
+                        -- to use fd      : {'fd', '-tf'}
+                        file_command = { "find", ".", "-type", "f", "-printf", "%P\n" },
+                        -- to use fd      : {'fd', '-td'}
+                        dir_command = { "find", ".", "-type", "d", "-printf", "%P\n" },
+                        -- use {'cpsm_filter'} for performance, requires cpsm vim plugin
+                        -- found at https://github.com/nixprime/cpsm
+                        filters = { "fuzzy_filter", "difflib_sorter" },
+                    },
+                    wilder.cmdline_pipeline(),
+                    wilder.python_search_pipeline()
+                ),
+            })
+            wilder.set_option(
+                "renderer",
+                wilder.popupmenu_renderer {
+                    highlighter = wilder.basic_highlighter(),
+                    left = { ' ', wilder.popupmenu_devicons() },
+                }
+            )
+        end,
+        run = ":UpdateRemotePlugins",
+    }
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {}
+        end
+    }
+
+    use {
+        'rmagatti/auto-session',
+        config = function()
+            require("auto-session").setup {
+                log_level = "error",
+                auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+            }
+        end
     }
 end)

@@ -91,8 +91,8 @@ snippet iff "iff" Ai
 \iff
 endsnippet
 
-snippet mk "Math" wA
-$${1}$`!p
+snippet im "Math" wA
+\($1\)`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
 else:
@@ -107,7 +107,7 @@ endsnippet
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -390,10 +390,6 @@ snippet ** "cdot" iA
 \cdot 
 endsnippet
 
-snippet norm "norm" iA
-\|$1\|$0
-endsnippet
-
 priority 100
 snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
@@ -564,6 +560,17 @@ snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
 endsnippet
 
+snippet "([a-zA-Z0-9])bb" "boldmath" riA
+\mathbb{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet "([a-zA-Z])cal" "calmath" riA
+\mathcal{`!p snip.rv=match.group(1)`}
+endsnippet
+
+snippet "([a-zA-Z])~" "tilde" riA
+\tilde{`!p snip.rv=match.group(1)`}
+endsnippet
 
 snippet HH "H" iA
 \mathbb{H}
@@ -572,5 +579,114 @@ endsnippet
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
+
+# Greek letters start
+snippet @a "alpha" iA
+\alpha
+endsnippet
+
+snippet @b "beta" iA
+\beta
+endsnippet
+
+snippet @c "chi" iA
+\chi
+endsnippet
+
+snippet @d "delta" iA
+\delta
+endsnippet
+
+snippet @D "Delta" iA
+\Delta
+endsnippet
+
+snippet @e "eta" iA
+\eta
+endsnippet
+
+snippet @F "Phi" iA
+\Phi
+endsnippet
+
+snippet @f "phi" iA
+\phi
+endsnippet
+
+snippet @g "gamma" iA
+\gamma
+endsnippet
+
+snippet @G "Gamma" iA
+\Gamma
+endsnippet
+
+snippet @l "lambda" iA
+\lambda
+endsnippet
+
+snippet @m "mu" iA
+\mu
+endsnippet
+
+snippet @n "nu" iA
+\nu
+endsnippet
+
+snippet @o "omega" iA
+\omega
+endsnippet
+
+snippet @O "Omega" iA
+\Omega
+endsnippet
+
+snippet @p "pi" iA
+\pi
+endsnippet
+
+snippet @r "rho" iA
+\rho
+endsnippet
+
+snippet @s "sigma" iA
+\sigma
+endsnippet
+
+snippet @q "theta" iA
+\theta
+endsnippet
+snippet @t "tau" iA
+\tau
+endsnippet
+
+snippet @x "xi" iA
+\xi
+endsnippet
+
+snippet @y "psi" iA
+\psi
+endsnippet
+
+snippet @Y "Psi" iA
+\Psi
+endsnippet
+
+snippet @z "zeta" iA
+\zeta
+endsnippet
+
+snippet @vf "varphi" iA
+\varphi
+endsnippet
+
+snippet @ve "varepsilon" iA
+\varepsilon
+endsnippet
+
+snippet @vq "vartheta" iA
+\vartheta
+endsnippet
+# Greek letters end
 
 # vim:ft=snippets
