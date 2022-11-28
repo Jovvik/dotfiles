@@ -8,14 +8,14 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 0
-# default_floating_border none
+default_border pixel 2 
+default_floating_border pixel 0
 
 # Hide borders
 hide_edge_borders smart
 
 # Force all windows to have borders, i.e. VSCode
-for_window [class=.*] border pixel 0
+for_window [class="^.*"] border pixel 2
 
 # change borders
 # bindsym $mod+u border none
@@ -239,7 +239,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id "prime-offload"
-exec_always --no-startup-id setxkbmap -layout "us, ru" -option "grp:caps_toggle" -model pc105
+exec_always --no-startup-id setxkbmap -layout "us,ru" -option "grp:caps_toggle" -model pc105
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton --experimental-backends -b
 exec --no-startup-id nm-applet
@@ -252,7 +252,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # exec --no-startup-id deadd-notification-center
 exec --no-startup-id dunst
-exec --no-startup-id repos/xborder/xborders --border-rgba "#C6A0F6FF" --border-width 2 --border-radius 12
+# exec --no-startup-id repos/xborder/xborders --border-rgba "#C6A0F6FF" --border-width 2 --border-radius 12
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -349,7 +349,7 @@ exec xrandr --output DP-0 --primary --mode 3440x1440 --pos 1920x0 --rotate norma
 
 # autostart apps
 exec --no-startup-id sh -c "i3-msg workspace $ws1; exec /usr/bin/firefox-nightly"
-exec --no-startup-id sh -c "sleep 1; i3-msg workspace $ws2; exec /usr/bin/code"
+# exec --no-startup-id sh -c "sleep 1; i3-msg workspace $ws2; exec /usr/bin/code"
 exec --no-startup-id sh -c "sleep 2; i3-msg workspace $ws3; exec /usr/bin/telegram-desktop"
 exec --no-startup-id sh -c "sleep 3; i3-msg workspace $ws3; exec /usr/bin/vk"
 
